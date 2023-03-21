@@ -22,6 +22,9 @@ class MobileScreen extends StatefulWidget {
 class _MobileScreenState extends State<MobileScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold(
+      backgroundColor: Colors.amber,
+      body: Center(child: Text('Mobile')),
+    );
   }
 }

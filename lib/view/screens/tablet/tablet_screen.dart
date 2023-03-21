@@ -23,6 +23,9 @@ class TabletScreen extends StatefulWidget {
 class _TabletScreenState extends State<TabletScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold(
+      backgroundColor: Colors.red,
+      body: Center(child: Text('Tablet')),
+    );
   }
 }

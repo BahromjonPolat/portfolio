@@ -12,6 +12,8 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/constants/app_colors.dart';
+import 'package:portfolio/view/screens/desktop/components/desktop_app_bar.dart';
 
 class DesktopScreen extends StatefulWidget {
   const DesktopScreen({super.key});
@@ -23,6 +25,10 @@ class DesktopScreen extends StatefulWidget {
 class _DesktopScreenState extends State<DesktopScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      backgroundColor: AppColors.background,
+      appBar: DesktopAppBar(),
+      body: Center(child: Text('Desktop')),
+    );
   }
 }

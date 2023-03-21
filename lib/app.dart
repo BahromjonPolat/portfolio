@@ -12,6 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/config.dart';
 import 'package:portfolio/view/screens/home/home_screen.dart';
 
 class AppWidget extends StatelessWidget {
@@ -22,8 +23,9 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Bahromjon Po'lat",
-      theme: ThemeData(useMaterial3: true),
+      theme: AppTheme.getTheme(),
       home: const HomeScreen(),
+      themeMode: ThemeMode.dark,
     );
   }
 }
