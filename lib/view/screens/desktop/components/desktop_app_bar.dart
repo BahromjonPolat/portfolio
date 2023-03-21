@@ -12,6 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/view/widgets/widgets.dart';
 
 class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
   const DesktopAppBar({super.key});
@@ -22,7 +23,11 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
       children: [
         const Text("Bahromon Po'lat"),
         const Spacer(),
-        TextButton(onPressed: () {}, child: const Text('Home'))
+        AppTextButton(
+          label: 'Home',
+          textColor: Colors.white54,
+          onPressed: () {},
+        ),
       ],
     );
   }
