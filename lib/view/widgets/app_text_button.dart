@@ -34,33 +34,20 @@ class AppTextButton extends StatefulWidget {
 
 class _AppTextButtonState extends State<AppTextButton> {
   late Color? textColor = widget.textColor;
-  double x = 0.0;
-  double y = 0.0;
 
-  void _incrementEnter(PointerEvent details) {
-    setState(() {});
+  void _onExit(PointerEvent details) {
+    setState(() => textColor = widget.textColor);
   }
 
-  void _incrementExit(PointerEvent details) {
-    setState(() {
-      textColor = widget.textColor;
-    });
-  }
-
-  void _updateLocation(PointerEvent details) {
-    setState(() {
-      textColor = widget.onHover;
-      x = details.position.dx;
-      y = details.position.dy;
-    });
+  void _onHover(PointerEvent details) {
+    setState(() => textColor = widget.onHover);
   }
 
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
-      onEnter: _incrementEnter,
-      onHover: _updateLocation,
-      onExit: _incrementExit,
+      onHover: _onHover,
+      onExit: _onExit,
       child: TextButton(
         onPressed: widget.onPressed,
         child: Text(

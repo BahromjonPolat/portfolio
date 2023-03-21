@@ -1,7 +1,7 @@
 /*
 
   Created by: Bakhromjon Polat
-  Created on: Mar 21 2023 19:28:39
+  Created on: Mar 21 2023 22:52:57
   Github:   https://github.com/BahromjonPolat
   Leetcode: https://leetcode.com/BahromjonPolat/
   LinkedIn: https://linkedin.com/in/bahromjon-polat
@@ -10,5 +10,5 @@
   Documentation: 
 
 */
-export 'app_text_button.dart';
-export 'home_title.dart';
+
+enum ScreenEnum { desktop, tablet, mobile }

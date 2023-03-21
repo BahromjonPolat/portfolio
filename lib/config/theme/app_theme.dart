@@ -12,7 +12,6 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/constants/app_colors.dart';
 
 class AppTheme {
   const AppTheme._();

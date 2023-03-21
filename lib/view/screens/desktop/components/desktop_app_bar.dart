@@ -12,6 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/constants/constants.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
 
 class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
@@ -20,11 +21,27 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         const Text("Bahromon Po'lat"),
         const Spacer(),
         AppTextButton(
-          label: 'Home',
+          label: AppStrings.home,
+          textColor: Colors.white54,
+          onPressed: () {},
+        ),
+        AppTextButton(
+          label: AppStrings.resume,
+          textColor: Colors.white54,
+          onPressed: () {},
+        ),
+        AppTextButton(
+          label: AppStrings.projects,
+          textColor: Colors.white54,
+          onPressed: () {},
+        ),
+        AppTextButton(
+          label: AppStrings.experiance,
           textColor: Colors.white54,
           onPressed: () {},
         ),
@@ -33,5 +50,5 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size(kToolbarHeight, 1200);
+  Size get preferredSize => const Size(kToolbarHeight, 1280);
 }
