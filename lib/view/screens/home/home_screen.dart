@@ -11,16 +11,24 @@
 
 */
 import 'package:flutter/material.dart';
+import 'package:portfolio/view/screens/desktop/desktop_screen.dart';
+import 'package:portfolio/view/screens/mobile/mobile.dart';
+import 'package:portfolio/view/screens/tablet/tablet_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("Bahromjon Po'lat"),
-      ),
+    return LayoutBuilder(
+      builder: (BuildContext context, constraints) {
+        if (constraints.maxWidth < 500) {
+          return const MobileScreen();
+        } else if (constraints.minWidth < 1100) {
+          return const TabletScreen();
+        }
+        return const DesktopScreen();
+      },
     );
   }
 }
