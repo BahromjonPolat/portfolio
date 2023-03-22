@@ -12,6 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/constants/app_colors.dart';
 
 class AppTheme {
   const AppTheme._();
@@ -22,6 +23,11 @@ class AppTheme {
             surfaceTintColor: Colors.amber,
             foregroundColor: Colors.white,
           ),
+        ),
+        textTheme: const TextTheme(
+          bodyMedium: TextStyle(color: AppColors.grey, fontSize: 16.0),
+          // bodySmall: TextStyle(color: Colors.red),
+          // bodyLarge: TextStyle(color: Colors.blue),
         ),
       );
 }

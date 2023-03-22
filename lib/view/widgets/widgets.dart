@@ -12,3 +12,5 @@
 */
 export 'app_text_button.dart';
 export 'home_title.dart';
+export 'data_with_title.dart';
+export 'about_me_widget.dart';

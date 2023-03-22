@@ -39,14 +39,14 @@ class _AppTextButtonState extends State<AppTextButton> {
     setState(() => textColor = widget.textColor);
   }
 
-  void _onHover(PointerEvent details) {
+  void _onEnter(PointerEvent details) {
     setState(() => textColor = widget.onHover);
   }
 
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
-      onHover: _onHover,
+      onEnter: _onEnter,
       onExit: _onExit,
       child: TextButton(
         onPressed: widget.onPressed,

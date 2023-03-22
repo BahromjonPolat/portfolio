@@ -11,22 +11,40 @@
 
 */
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/config.dart';
 import 'package:portfolio/models/models.dart';
 
-class HomeTitle extends StatefulWidget {
+class HomeTitle extends StatelessWidget {
   final ScreenEnum screenEnum;
   final List<TitleModel> titles;
   const HomeTitle({super.key, required this.screenEnum, required this.titles});
 
   @override
-  State<HomeTitle> createState() => _HomeTitleState();
-}
-
-class _HomeTitleState extends State<HomeTitle> {
-  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return AnimatedTextKit(
+      animatedTexts: [
+        TyperAnimatedText('It is not enough to do your best,'),
+        TyperAnimatedText('you must know what to do,'),
+        TyperAnimatedText('and then do your best'),
+        TyperAnimatedText('- W.Edwards Deming'),
+      ],
+      onTap: () {
+        print("Tap Event");
+      },
+    );
+  }
+
+  double _getFontSize() {
+    switch (screenEnum) {
+      case ScreenEnum.desktop:
+        return 64.0;
+
+      case ScreenEnum.tablet:
+        return 42.0;
+      case ScreenEnum.mobile:
+        return 24.0;
+    }
   }
 }

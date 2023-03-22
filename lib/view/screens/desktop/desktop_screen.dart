@@ -12,8 +12,10 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/config.dart';
 import 'package:portfolio/config/constants/app_colors.dart';
 import 'package:portfolio/view/screens/desktop/components/desktop_app_bar.dart';
+import 'package:portfolio/view/widgets/widgets.dart';
 
 class DesktopScreen extends StatefulWidget {
   const DesktopScreen({super.key});
@@ -28,7 +30,12 @@ class _DesktopScreenState extends State<DesktopScreen> {
     return const Scaffold(
       backgroundColor: AppColors.background,
       appBar: DesktopAppBar(),
-      body: Center(child: Text('Desktop')),
+      body: Center(
+        child: HomeTitle(
+          screenEnum: ScreenEnum.desktop,
+          titles: [],
+        ),
+      ),
     );
   }
 }
