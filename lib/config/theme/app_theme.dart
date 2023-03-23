@@ -18,6 +18,7 @@ class AppTheme {
   const AppTheme._();
 
   static ThemeData getTheme() => ThemeData.dark(useMaterial3: true).copyWith(
+        primaryColor: AppColors.primary,
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             surfaceTintColor: Colors.amber,
@@ -28,6 +29,11 @@ class AppTheme {
           bodyMedium: TextStyle(color: AppColors.grey, fontSize: 16.0),
           // bodySmall: TextStyle(color: Colors.red),
           // bodyLarge: TextStyle(color: Colors.blue),
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: OutlinedButton.styleFrom(
+              foregroundColor: AppColors.primary,
+              side: const BorderSide(color: AppColors.primary)),
         ),
       );
 }
