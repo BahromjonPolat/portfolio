@@ -30,21 +30,19 @@ class HomeTitle extends StatelessWidget {
         TyperAnimatedText('and then do your best'),
         TyperAnimatedText('- W.Edwards Deming'),
       ],
-      onTap: () {
-        print("Tap Event");
-      },
+      onTap: () {},
     );
   }
 
-  double _getFontSize() {
-    switch (screenEnum) {
-      case ScreenEnum.desktop:
-        return 64.0;
+  // double _getFontSize() {
+  //   switch (screenEnum) {
+  //     case ScreenEnum.desktop:
+  //       return 64.0;
 
-      case ScreenEnum.tablet:
-        return 42.0;
-      case ScreenEnum.mobile:
-        return 24.0;
-    }
-  }
+  //     case ScreenEnum.tablet:
+  //       return 42.0;
+  //     case ScreenEnum.mobile:
+  //       return 24.0;
+  //   }
+  // }
 }

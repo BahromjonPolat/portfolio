@@ -12,6 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/view/widgets/about_me_widget.dart';
 
 class TabletScreen extends StatefulWidget {
   const TabletScreen({super.key});
@@ -23,9 +24,8 @@ class TabletScreen extends StatefulWidget {
 class _TabletScreenState extends State<TabletScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.red,
-      body: Center(child: Text('Tablet')),
+    return Scaffold(
+      body: Center(child: AboutMeWidget.tablet()),
     );
   }
 }

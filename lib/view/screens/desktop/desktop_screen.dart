@@ -30,7 +30,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: const DesktopAppBar(),
-      body: Center(child: AboutMeWidget()),
+      body: Center(child: AboutMeWidget.desktop()),
     );
   }
 }

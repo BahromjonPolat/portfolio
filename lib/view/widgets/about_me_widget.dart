@@ -18,60 +18,103 @@ import 'package:portfolio/view/widgets/widgets.dart';
 // ignore: must_be_immutable
 class AboutMeWidget extends StatelessWidget {
   ScreenEnum screenEnum = ScreenEnum.desktop;
-  AboutMeWidget({super.key});
+  AboutMeWidget.desktop({super.key}) {
+    screenEnum = ScreenEnum.desktop;
+  }
   AboutMeWidget.mobile({super.key}) {
     screenEnum = ScreenEnum.mobile;
   }
+  AboutMeWidget.tablet({super.key}) {
+    screenEnum = ScreenEnum.tablet;
+  }
+
+  List<DataWithTitle> data = const [
+    DataWithTitle(title: 'Age', data: '28'),
+    DataWithTitle(title: 'Residence', data: 'UZB'),
+    DataWithTitle(title: 'Freelance', data: 'Available'),
+    DataWithTitle(title: 'Address', data: 'Tashkent'),
+    DataWithTitle(title: 'Phone', data: '+998931881333'),
+    DataWithTitle(
+      title: 'E-mail',
+      data: 'bahromjon.ergashboyev@gmail.com',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          AppStrings.about,
-          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                color: AppColors.white,
+    double width = MediaQuery.of(context).size.width;
+    return SizedBox(
+      width: _getWidth(width),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            AppStrings.about,
+            style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                  color: AppColors.white,
+                ),
+          ),
+          Row(
+            children: [
+              Container(
+                height: 180.0,
+                width: 160.0,
+                color: Colors.white24,
               ),
-        ),
-        Row(
-          children: [
-            Container(
-              height: 180.0,
-              width: 160.0,
-              color: Colors.white24,
-            ),
-            const SizedBox(width: 24.0),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(AppStrings.aboutMeFull),
-                  const SizedBox(width: 32.0),
-                  Wrap(
-                    children: const [
-                      DataWithTitle(title: 'Age', data: '28'),
-                      DataWithTitle(title: 'Residence', data: 'UZB'),
-                      DataWithTitle(title: 'Freelance', data: 'Available'),
-                      DataWithTitle(title: 'Address', data: 'Tashkent'),
-                      DataWithTitle(title: 'Phone', data: '+998931881333'),
-                      DataWithTitle(
-                        title: 'E-mail',
-                        data: 'bahromjon.ergashboyev@gmail.com',
+              const SizedBox(width: 24.0),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(AppStrings.aboutMeFull),
+                    const SizedBox(width: 32.0),
+                    GridView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: data.length,
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: _getCount(),
+                        mainAxisExtent: 24.0,
+                        mainAxisSpacing: 12.0,
                       ),
-                    ],
-                  ),
-                  const SizedBox(width: 24.0),
-                  OutlinedButton(
-                    onPressed: () {},
-                    child: const Text('Download CV'),
-                  )
-                ],
+                      itemBuilder: (context, index) {
+                        return data[index];
+                      },
+                    ),
+                    const SizedBox(height: 24.0),
+                    OutlinedButton(
+                      onPressed: () {},
+                      child: const Text('Download CV'),
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
-        )
-      ],
+            ],
+          )
+        ],
+      ),
     );
+  }
+
+  int _getCount() {
+    switch (screenEnum) {
+      case ScreenEnum.desktop:
+        return 3;
+      case ScreenEnum.tablet:
+        return 2;
+      case ScreenEnum.mobile:
+        return 1;
+    }
+  }
+
+  double? _getWidth(double width) {
+    switch (screenEnum) {
+      case ScreenEnum.desktop:
+        return width * .6;
+      case ScreenEnum.tablet:
+        return width * .8;
+      case ScreenEnum.mobile:
+        return null;
+    }
   }
 }
