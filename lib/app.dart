@@ -24,8 +24,33 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Bahromjon Po'lat",
       theme: AppTheme.getTheme(),
-      home: const HomeScreen(),
+      // home: const HomeScreen(),
       themeMode: ThemeMode.dark,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/test': (context) => const TestScreen(routeName: '/hello'),
+        '/hello': (context) => const TestScreen(routeName: '/')
+      },
+    );
+  }
+}
+
+class TestScreen extends StatelessWidget {
+  final String routeName;
+  const TestScreen({super.key, required this.routeName});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: TextButton(
+          child: const Text('Click here'),
+          onPressed: () {
+            Navigator.of(context).pushNamed(routeName);
+          },
+        ),
+      ),
     );
   }
 }

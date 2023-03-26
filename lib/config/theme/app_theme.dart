@@ -25,7 +25,11 @@ class AppTheme {
             foregroundColor: Colors.white,
           ),
         ),
+        chipTheme: const ChipThemeData(
+          labelStyle: TextStyle(color: AppColors.white),
+        ),
         textTheme: const TextTheme(
+          // displayMedium:  ,
           bodyMedium: TextStyle(color: AppColors.lightGrey, fontSize: 16.0),
           // bodySmall: TextStyle(color: Colors.red),
           // bodyLarge: TextStyle(color: Colors.blue),

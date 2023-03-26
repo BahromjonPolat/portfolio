@@ -11,11 +11,12 @@
 
 */
 
+import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/config.dart';
 import 'package:portfolio/config/constants/app_colors.dart';
 import 'package:portfolio/view/screens/desktop/components/desktop_app_bar.dart';
-import 'package:portfolio/view/widgets/widgets.dart';
+import 'package:portfolio/view/widgets/project_info_widget.dart';
 
 class DesktopScreen extends StatefulWidget {
   const DesktopScreen({super.key});
@@ -27,10 +28,10 @@ class DesktopScreen extends StatefulWidget {
 class _DesktopScreenState extends State<DesktopScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: AppColors.background,
-      appBar: const DesktopAppBar(),
-      body: Center(child: AboutMeWidget.desktop()),
+      appBar: DesktopAppBar(),
+      body: Center(child: ProjectInfoWidget()),
     );
   }
 }
