@@ -28,10 +28,12 @@ class DesktopScreen extends StatefulWidget {
 class _DesktopScreenState extends State<DesktopScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: AppColors.background,
-      appBar: DesktopAppBar(),
-      body: Center(child: ProjectInfoWidget()),
+      appBar: const DesktopAppBar(),
+      body: Column(children: const [
+        ProjectInfoWidget(),
+      ]),
     );
   }
 }

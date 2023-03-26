@@ -17,7 +17,9 @@ import 'package:portfolio/config/constants/app_colors.dart';
 class AppTheme {
   const AppTheme._();
 
-  static ThemeData getTheme() => ThemeData.dark(useMaterial3: true).copyWith(
+  static ThemeData getTheme() => ThemeData(
+        useMaterial3: true,
+        fontFamily: "Roboto",
         primaryColor: AppColors.primary,
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
@@ -26,7 +28,7 @@ class AppTheme {
           ),
         ),
         chipTheme: const ChipThemeData(
-          labelStyle: TextStyle(color: AppColors.white),
+          labelStyle: TextStyle(),
         ),
         textTheme: const TextTheme(
           // displayMedium:  ,

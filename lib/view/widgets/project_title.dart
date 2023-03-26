@@ -37,7 +37,7 @@ class ProjectTitle extends StatelessWidget {
         ),
         Text(
           projectName,
-          style: Theme.of(context).textTheme.displayMedium,
+          style: Theme.of(context).textTheme.displayLarge,
         ),
       ],
     );

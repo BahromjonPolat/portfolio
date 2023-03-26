@@ -24,8 +24,10 @@ class ProjectInfoWidget extends StatelessWidget {
       width: 400.0,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-          color: AppColors.lightGrey,
-          borderRadius: BorderRadius.circular(16.0)),
+        color: AppColors.greyF9,
+        borderRadius: BorderRadius.circular(16.0),
+      ),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -42,10 +44,14 @@ class ProjectInfoWidget extends StatelessWidget {
               ),
             ],
           ),
-          ProjectTitle(
+          const ProjectTitle(
             projectName: "Beeto",
             projectIcon:
                 "https://play-lh.googleusercontent.com/N5M7e1BXdHjP_kdQZskFxWPsGNvNq2Mgm83bqbxNqVv9wXQu_Ebkof8vGF6hA0rkf-I",
+          ),
+          Text(
+            "Laboris voluptate quis magna mollit labore sint duis mollit adipisicing qui nulla enim non veniam. Anim consectetur reprehenderit dolore nisi et duis. Laboris esse id in nostrud enim irure sit eiusmod aliquip voluptate velit. Laborum id aliquip excepteur officia eu duis exercitation reprehenderit aliqua non tempor nostrud.",
+            style: Theme.of(context).textTheme.bodySmall,
           )
         ],
       ),
