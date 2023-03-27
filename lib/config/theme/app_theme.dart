@@ -21,6 +21,7 @@ class AppTheme {
         useMaterial3: true,
         fontFamily: "Roboto",
         primaryColor: AppColors.primary,
+        // canvasColor: AppColors.background,
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             surfaceTintColor: Colors.amber,

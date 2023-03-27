@@ -11,8 +11,10 @@
 
 */
 
+import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/constants/app_colors.dart';
+import 'package:portfolio/view/widgets/store_widget.dart';
 import 'project_title.dart';
 
 class ProjectInfoWidget extends StatelessWidget {
@@ -31,6 +33,17 @@ class ProjectInfoWidget extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          SizedBox(
+            height: 240.0,
+            child: DeviceFrame(
+              device: Devices.ios.iPhone13ProMax,
+              screen: Image.network(
+                'https://source.unsplash.com/random/5',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          const SizedBox(height: 24.0),
           Wrap(
             spacing: 12.0,
             children: const [
@@ -52,6 +65,12 @@ class ProjectInfoWidget extends StatelessWidget {
           Text(
             "Laboris voluptate quis magna mollit labore sint duis mollit adipisicing qui nulla enim non veniam. Anim consectetur reprehenderit dolore nisi et duis. Laboris esse id in nostrud enim irure sit eiusmod aliquip voluptate velit. Laborum id aliquip excepteur officia eu duis exercitation reprehenderit aliqua non tempor nostrud.",
             style: Theme.of(context).textTheme.bodySmall,
+          ),
+          Row(
+            children: const [
+              StoreWidget(),
+              StoreWidget(),
+            ],
           )
         ],
       ),

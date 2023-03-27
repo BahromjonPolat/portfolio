@@ -12,7 +12,9 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:portfolio/config/constants/constants.dart';
 
 class StoreWidget extends StatelessWidget {
   const StoreWidget({super.key});
@@ -20,7 +22,46 @@ class StoreWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [],
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            SvgPicture.asset(AppIcons.apple),
+            Text(
+              'App Store',
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            RatingBar.builder(
+              ignoreGestures: true,
+              maxRating: 5.0,
+              minRating: 1.0,
+              allowHalfRating: true,
+              initialRating: 4.2,
+              itemSize: 16.0,
+              itemBuilder: (context, index) {
+                return const Icon(
+                  Icons.star,
+                  size: 12.0,
+                  color: Colors.amber,
+                );
+              },
+              onRatingUpdate: (value) {},
+            ),
+            Text(
+              '4.2',
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    color: AppColors.background,
+                  ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
