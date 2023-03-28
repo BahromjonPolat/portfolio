@@ -1,0 +1,35 @@
+/*
+
+  Created by: Bakhromjon Polat
+  Created on: Mar 27 2023 20:07:29
+  Github:   https://github.com/BahromjonPolat
+  Leetcode: https://leetcode.com/BahromjonPolat/
+  LinkedIn: https://linkedin.com/in/bahromjon-polat
+  Telegram: https://t.me/BahromjonPolat
+
+  Documentation: 
+
+*/
+
+import 'package:flutter/material.dart';
+import 'package:portfolio/config/constants/app_colors.dart';
+import 'package:portfolio/view/widgets/message_widget.dart';
+
+class ContactWidget extends StatelessWidget {
+  const ContactWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: AppColors.background,
+      alignment: Alignment.center,
+      padding: const EdgeInsets.symmetric(vertical: 42.0),
+      child: Wrap(
+        alignment: WrapAlignment.center,
+        children: [
+          MessageWidget(),
+        ],
+      ),
+    );
+  }
+}
