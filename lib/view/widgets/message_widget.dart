@@ -26,6 +26,7 @@ class _MessageWidgetState extends State<MessageWidget> {
   final GlobalKey<FormState> _formKey = GlobalKey();
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
+  final _subjectController = TextEditingController();
   final _messageController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -53,6 +54,7 @@ class _MessageWidgetState extends State<MessageWidget> {
                 AutofillHints.familyName,
               ],
             ),
+            const SizedBox(height: 12.0),
             TextFormField(
               controller: _emailController,
               decoration: const InputDecoration(hintText: "Email"),
@@ -61,6 +63,15 @@ class _MessageWidgetState extends State<MessageWidget> {
               validator: AppValidator.email,
               autofillHints: const [AutofillHints.email],
             ),
+            const SizedBox(height: 12.0),
+            TextFormField(
+              controller: _subjectController,
+              decoration: const InputDecoration(hintText: "Subject"),
+              textInputAction: TextInputAction.next,
+              validator: AppValidator.general,
+              textCapitalization: TextCapitalization.sentences,
+            ),
+            const SizedBox(height: 12.0),
             TextFormField(
               controller: _messageController,
               decoration: const InputDecoration(hintText: "Message"),
@@ -70,9 +81,10 @@ class _MessageWidgetState extends State<MessageWidget> {
               maxLines: 5,
               textCapitalization: TextCapitalization.sentences,
             ),
+            const SizedBox(height: 42.0),
             ElevatedButton(
               onPressed: () {},
-              child: const Text('Send'),
+              child: const Center(child: Text('Send')),
             ),
           ],
         ),

@@ -27,7 +27,22 @@ class ContactWidget extends StatelessWidget {
       child: Wrap(
         alignment: WrapAlignment.center,
         children: [
-          MessageWidget(),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Contacts',
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineLarge
+                    ?.copyWith(color: AppColors.white),
+              ),
+              const Text(
+                "Duis anim consequat nisi culpa et nulla aute irure do magna amet eu. Aliqua nulla qui minim consequat ut in veniam aliquip fugiat. Non ut laborum id ea cillum proident sint ea.",
+              ),
+            ],
+          ),
+          const MessageWidget(),
         ],
       ),
     );

@@ -42,5 +42,13 @@ class AppTheme {
               foregroundColor: AppColors.primary,
               side: const BorderSide(color: AppColors.primary)),
         ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.primary,
+              foregroundColor: AppColors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0),
+              )),
+        ),
       );
 }

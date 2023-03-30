@@ -23,7 +23,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        const Text("Bahromon Po'lat"),
+        const Text("Bahromjon Po'lat"),
         const Spacer(),
         AppTextButton(
           label: AppStrings.home,
@@ -44,7 +44,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
           onPressed: () {},
         ),
         AppTextButton(
-          label: AppStrings.experiance,
+          label: AppStrings.experience,
           textColor: Colors.grey,
           onHover: AppColors.primary,
           onPressed: () {},
