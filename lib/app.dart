@@ -30,7 +30,7 @@ class AppWidget extends StatelessWidget {
       routes: {
         '/': (context) => const HomeScreen(),
         '/test': (context) => const TestScreen(routeName: '/hello'),
-        '/hello': (context) => const TestScreen(routeName: '/')
+        '/hello': (context) => const TestScreen(routeName: '/'),
       },
     );
   }
