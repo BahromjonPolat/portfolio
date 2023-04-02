@@ -33,8 +33,12 @@ class AppTheme {
         ),
         textTheme: const TextTheme(
           // displayMedium:  ,
-          bodyMedium: TextStyle(color: AppColors.lightGrey, fontSize: 16.0),
-          // bodySmall: TextStyle(color: Colors.red),
+          bodyLarge: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+          bodyMedium: TextStyle(color: AppColors.background, fontSize: 16.0),
+          bodySmall: TextStyle(
+            color: Colors.grey,
+            fontWeight: FontWeight.w400,
+          ),
           // bodyLarge: TextStyle(color: Colors.blue),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
@@ -44,11 +48,12 @@ class AppTheme {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.primary,
-              foregroundColor: AppColors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12.0),
-              )),
+            backgroundColor: AppColors.primary,
+            foregroundColor: AppColors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+          ),
         ),
       );
 }

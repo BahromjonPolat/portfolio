@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/view/widgets/about_me_widget.dart';
+import 'package:portfolio/view/widgets/contact_widget.dart';
 
 class TabletScreen extends StatefulWidget {
   const TabletScreen({super.key});
@@ -24,8 +24,14 @@ class TabletScreen extends StatefulWidget {
 class _TabletScreenState extends State<TabletScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: AboutMeWidget.tablet()),
+    return const Scaffold(
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: ContactWidget(),
+          ),
+        ],
+      ),
     );
   }
 }
