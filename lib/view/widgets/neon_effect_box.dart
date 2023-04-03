@@ -23,7 +23,7 @@ class NeonEffectBox extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.all(12.0),
       padding: const EdgeInsets.all(24.0),
-      alignment: Alignment.center,
+      // alignment: Alignment.center,
       decoration: BoxDecoration(
         color: AppColors.background,
         borderRadius: BorderRadius.circular(12.0),

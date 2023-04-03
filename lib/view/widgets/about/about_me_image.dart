@@ -1,7 +1,7 @@
 /*
 
   Created by: Bakhromjon Polat
-  Created on: Apr 02 2023 23:42:53
+  Created on: Apr 03 2023 15:18:50
   Github:   https://github.com/BahromjonPolat
   Leetcode: https://leetcode.com/BahromjonPolat/
   LinkedIn: https://linkedin.com/in/bahromjon-polat
@@ -12,54 +12,17 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/constants/constants.dart';
-import 'package:portfolio/view/widgets/neon_effect_box.dart';
 
-class AboutMeImage extends StatefulWidget {
+class AboutMeImage extends StatelessWidget {
   const AboutMeImage({super.key});
 
   @override
-  State<AboutMeImage> createState() => _AboutMeImageState();
-}
-
-class _AboutMeImageState extends State<AboutMeImage> {
-  double width = 450.0;
-  double height = 400.0;
-  @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: onEnter,
-      onExit: onExit,
-      child: NeonEffectBox(
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 100),
-          width: width,
-          height: height,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: AppColors.background,
-            borderRadius: BorderRadius.circular(12.0),
-            image: const DecorationImage(
-              fit: BoxFit.cover,
-              image: NetworkImage('https://source.unsplash.com/random/5'),
-            ),
-          ),
-        ),
+    return Container(
+      constraints: const BoxConstraints(maxWidth: 400.0),
+      child: Image.network(
+        "https://rainbowit.net/html/inbio/assets/images/slider/banner-01.png",
       ),
     );
-  }
-
-  void onExit(event) {
-    setState(() {
-      width = 450.0;
-      height = 400.0;
-    });
-  }
-
-  void onEnter(event) {
-    setState(() {
-      width = 460.0;
-      height = 410.0;
-    });
   }
 }

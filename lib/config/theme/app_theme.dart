@@ -35,9 +35,9 @@ class AppTheme {
         textTheme: const TextTheme(
           // displayMedium:  ,
           bodyLarge: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
-          bodyMedium: TextStyle(color: AppColors.white, fontSize: 16.0),
+          bodyMedium: TextStyle(color: AppColors.bodyText, fontSize: 16.0),
           bodySmall: TextStyle(
-            color: Colors.grey,
+            color: AppColors.bodyText,
             fontWeight: FontWeight.w400,
           ),
           // bodyLarge: TextStyle(color: Colors.blue),
