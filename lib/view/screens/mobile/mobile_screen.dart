@@ -11,6 +11,8 @@
 
 */
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/enums/enums.dart';
+import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 import 'package:portfolio/view/widgets/about/about_me_widget.dart';
 
 class MobileScreen extends StatefulWidget {
@@ -24,8 +26,10 @@ class _MobileScreenState extends State<MobileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
-      body: Center(child: AboutMeWidget.mobile()),
-    );
+        body: ListView(
+      children: const [
+        AboutMeSimple(screenEnum: ScreenEnum.mobile),
+      ],
+    ));
   }
 }

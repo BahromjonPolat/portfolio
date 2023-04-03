@@ -13,7 +13,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/config.dart';
 import 'package:portfolio/view/widgets/about/about_me_image.dart';
-import 'package:portfolio/view/widgets/about/about_me_image_card.dart';
 import 'package:portfolio/view/widgets/about/about_me_with_description.dart';
 
 class AboutMeSimple extends StatelessWidget {
@@ -34,10 +33,26 @@ class AboutMeSimple extends StatelessWidget {
         );
 
       case ScreenEnum.tablet:
-        return const SizedBox();
+        return Wrap(
+          runSpacing: 32.0,
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: const [
+            AboutMeImage(),
+            AboutMeWithDescription(),
+          ],
+        );
 
       case ScreenEnum.mobile:
-        return const SizedBox();
+        return Wrap(
+          runSpacing: 32.0,
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: const [
+            AboutMeImage(),
+            AboutMeWithDescription(),
+          ],
+        );
     }
   }
 }

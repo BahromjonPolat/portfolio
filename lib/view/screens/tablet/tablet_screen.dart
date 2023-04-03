@@ -12,6 +12,8 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/config.dart';
+import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 import 'package:portfolio/view/widgets/contact_widget.dart';
 
 class TabletScreen extends StatefulWidget {
@@ -28,7 +30,7 @@ class _TabletScreenState extends State<TabletScreen> {
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: ContactWidget(),
+            child: AboutMeSimple(screenEnum: ScreenEnum.tablet),
           ),
         ],
       ),
