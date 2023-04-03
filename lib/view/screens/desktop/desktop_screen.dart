@@ -12,6 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/config.dart';
 import 'package:portfolio/view/widgets/about/about_me_with_image.dart';
 import 'components/desktop_app_bar.dart';
 
@@ -32,7 +33,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
         appBar: const DesktopAppBar(),
         body: ListView(
           children: const [
-            AboutMeWithImage(),
+            AboutMeWithImage(screenEnum: ScreenEnum.desktop),
           ],
         ));
   }

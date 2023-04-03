@@ -12,18 +12,34 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/config.dart';
+import 'package:portfolio/view/widgets/about/about_me_contacts.dart';
 import 'package:portfolio/view/widgets/about/about_me_image.dart';
 
 class AboutMeWithImage extends StatelessWidget {
-  const AboutMeWithImage({super.key});
+  final ScreenEnum screenEnum;
+  const AboutMeWithImage({super.key, required this.screenEnum});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        AboutMeImage(),
-      ],
-    );
+    return screenEnum == ScreenEnum.desktop
+        ? Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: const [
+                  AboutMeContacts(),
+                ],
+              ),
+              const SizedBox(width: 24.0),
+              const AboutMeImage(),
+            ],
+          )
+        : Column(
+            children: const [
+              AboutMeContacts(),
+              AboutMeImage(),
+            ],
+          );
   }
 }

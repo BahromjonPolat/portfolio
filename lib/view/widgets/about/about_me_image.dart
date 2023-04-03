@@ -32,7 +32,7 @@ class _AboutMeImageState extends State<AboutMeImage> {
       onExit: onExit,
       child: NeonEffectBox(
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
+          duration: const Duration(milliseconds: 100),
           width: width,
           height: height,
           alignment: Alignment.center,
@@ -41,9 +41,7 @@ class _AboutMeImageState extends State<AboutMeImage> {
             borderRadius: BorderRadius.circular(12.0),
             image: const DecorationImage(
               fit: BoxFit.cover,
-              image: NetworkImage(
-                'https://source.unsplash.com/random/5',
-              ),
+              image: NetworkImage('https://source.unsplash.com/random/5'),
             ),
           ),
         ),
@@ -60,8 +58,8 @@ class _AboutMeImageState extends State<AboutMeImage> {
 
   void onEnter(event) {
     setState(() {
-      width = 500.0;
-      height = 450.0;
+      width = 460.0;
+      height = 410.0;
     });
   }
 }
