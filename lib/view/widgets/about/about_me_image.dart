@@ -12,6 +12,8 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/config/constants/constants.dart';
+import 'package:portfolio/view/widgets/neon_effect_box.dart';
 
 class AboutMeImage extends StatefulWidget {
   const AboutMeImage({super.key});
@@ -28,18 +30,22 @@ class _AboutMeImageState extends State<AboutMeImage> {
     return MouseRegion(
       onEnter: onEnter,
       onExit: onExit,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        width: width,
-        height: height,
-        decoration: BoxDecoration(
-            // image: DecorationImage(image: )
-            ),
-        child: Image.network(
-          'https://source.unsplash.com/random/5',
-          fit: BoxFit.cover,
-          height: height,
+      child: NeonEffectBox(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
           width: width,
+          height: height,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: AppColors.background,
+            borderRadius: BorderRadius.circular(12.0),
+            image: const DecorationImage(
+              fit: BoxFit.cover,
+              image: NetworkImage(
+                'https://source.unsplash.com/random/5',
+              ),
+            ),
+          ),
         ),
       ),
     );

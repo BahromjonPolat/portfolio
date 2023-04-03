@@ -20,38 +20,42 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        const Text("Bahromjon Po'lat"),
-        const Spacer(),
-        AppTextButton(
-          label: AppStrings.home,
-          textColor: Colors.grey,
-          onHover: AppColors.primary,
-          onPressed: () {
-            Navigator.pushNamed(context, '/env');
-          },
-        ),
-        AppTextButton(
-          label: AppStrings.resume,
-          textColor: Colors.grey,
-          onHover: AppColors.primary,
-          onPressed: () {},
-        ),
-        AppTextButton(
-          label: AppStrings.projects,
-          textColor: Colors.grey,
-          onHover: AppColors.primary,
-          onPressed: () {},
-        ),
-        AppTextButton(
-          label: AppStrings.experience,
-          textColor: Colors.grey,
-          onHover: AppColors.primary,
-          onPressed: () {},
-        ),
-      ],
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 24.0),
+      color: AppColors.background.withOpacity(.9),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          const Text("Bahromjon Po'lat"),
+          const Spacer(),
+          AppTextButton(
+            label: AppStrings.home,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {
+              Navigator.pushNamed(context, '/env');
+            },
+          ),
+          AppTextButton(
+            label: AppStrings.resume,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {},
+          ),
+          AppTextButton(
+            label: AppStrings.projects,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {},
+          ),
+          AppTextButton(
+            label: AppStrings.experience,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {},
+          ),
+        ],
+      ),
     );
   }
 

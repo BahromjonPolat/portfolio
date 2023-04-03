@@ -20,6 +20,7 @@ class AppTheme {
   static ThemeData getTheme() => ThemeData(
         useMaterial3: true,
         fontFamily: "Roboto",
+        scaffoldBackgroundColor: AppColors.background,
         primaryColor: AppColors.primary,
         // canvasColor: AppColors.background,
         textButtonTheme: TextButtonThemeData(

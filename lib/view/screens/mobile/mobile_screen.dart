@@ -11,7 +11,7 @@
 
 */
 import 'package:flutter/material.dart';
-import 'package:portfolio/view/widgets/about_me_widget.dart';
+import 'package:portfolio/view/widgets/about/about_me_widget.dart';
 
 class MobileScreen extends StatefulWidget {
   const MobileScreen({super.key});
