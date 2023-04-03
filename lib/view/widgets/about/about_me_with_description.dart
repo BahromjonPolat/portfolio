@@ -13,6 +13,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/config.dart';
+import 'package:portfolio/view/widgets/square_button.dart';
 
 class AboutMeWithDescription extends StatelessWidget {
   const AboutMeWithDescription({super.key});
@@ -67,6 +68,30 @@ class AboutMeWithDescription extends StatelessWidget {
             "Et elit sunt minim eiusmod laboris esse consectetur. Nulla ea mollit aliquip et dolor labore proident irure labore cillum. Nisi Lorem cillum laborum ullamco dolore mollit aliqua. Non reprehenderit magna excepteur sint aliquip pariatur culpa minim consectetur proident commodo esse. In dolore mollit sint pariatur est excepteur eu laborum anim.",
             style: Theme.of(context).textTheme.bodySmall?.copyWith(height: 2.0),
           ),
+          const SizedBox(height: 64.0),
+          Text(
+            "FOLLOW ME",
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
+          const SizedBox(height: 12.0),
+          Row(
+            children: [
+              SquareButton(
+                assetImage: AppIcons.playStore,
+                onPressed: () {},
+              ),
+              const SizedBox(width: 24.0),
+              SquareButton(
+                assetImage: AppIcons.appStore,
+                onPressed: () {},
+              ),
+              const SizedBox(width: 24.0),
+              SquareButton(
+                assetImage: AppIcons.apple,
+                onPressed: () {},
+              ),
+            ],
+          )
         ],
       ),
     );
