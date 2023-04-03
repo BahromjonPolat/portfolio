@@ -19,7 +19,7 @@ class AppTheme {
 
   static ThemeData getTheme() => ThemeData(
         useMaterial3: true,
-        fontFamily: "Roboto",
+        fontFamily: "Poppins",
         scaffoldBackgroundColor: AppColors.background,
         primaryColor: AppColors.primary,
         // canvasColor: AppColors.background,

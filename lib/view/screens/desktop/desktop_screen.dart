@@ -29,12 +29,13 @@ class _DesktopScreenState extends State<DesktopScreen> {
     // double width = MediaQuery.of(context).size.width;
     // double padding = (width - 1200) / 2.0;
     return Scaffold(
-        // extendBodyBehindAppBar: true,
-        appBar: const DesktopAppBar(),
-        body: ListView(
-          children: const [
-            AboutMeWithImage(screenEnum: ScreenEnum.desktop),
-          ],
-        ));
+      // extendBodyBehindAppBar: true,
+      appBar: const DesktopAppBar(),
+      body: ListView(
+        children: const [
+          AboutMeWithImage(screenEnum: ScreenEnum.desktop),
+        ],
+      ),
+    );
   }
 }

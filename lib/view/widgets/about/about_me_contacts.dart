@@ -22,41 +22,50 @@ class AboutMeContacts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NeonEffectBox(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text.rich(
-            const TextSpan(
-              text: "Hi, I'm",
-              children: [
-                TextSpan(
-                  text: "Bahromjon Po'lat",
-                  style: TextStyle(color: AppColors.primary),
-                )
-              ],
+      child: SizedBox(
+        height: 400.0,
+        width: 400.0,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text.rich(
+              const TextSpan(
+                text: "Hi, I'm ",
+                children: [
+                  TextSpan(
+                    text: "Bahromjon Po'lat",
+                    style: TextStyle(color: AppColors.primary),
+                  )
+                ],
+              ),
+              style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                    color: AppColors.white,
+                  ),
             ),
-            style: Theme.of(context).textTheme.displayLarge?.copyWith(
-                  color: AppColors.white,
-                ),
-          ),
-          Text(
-            'Flutter developer with 2 years experience',
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
-          const SizedBox(height: 12.0),
-          const TextWithIcon(
-            icon: Icons.person_2_outlined,
-            data: "Flutter Developer",
-          ),
-          const TextWithIcon(
-            icon: Icons.email_outlined,
-            data: "bahromjon.ergashboyev@gmail.com",
-          ),
-          const TextWithIcon(
-            icon: Icons.place_outlined,
-            data: "Tashkent, Uzbekistan",
-          ),
-        ],
+            Text(
+              'Flutter developer with 2 years experience',
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+            const SizedBox(height: 12.0),
+            const TextWithIcon(
+              icon: Icons.person_2_outlined,
+              data: "Flutter Developer",
+            ),
+            const TextWithIcon(
+              icon: Icons.email_outlined,
+              data: "bahromjon.ergashboyev@gmail.com",
+            ),
+            const TextWithIcon(
+              icon: Icons.place_outlined,
+              data: "Tashkent, Uzbekistan",
+            ),
+            const Spacer(),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Download CV'),
+            )
+          ],
+        ),
       ),
     );
   }

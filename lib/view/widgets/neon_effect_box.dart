@@ -21,7 +21,7 @@ class NeonEffectBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(4.0),
+      margin: const EdgeInsets.all(12.0),
       padding: const EdgeInsets.all(24.0),
       alignment: Alignment.center,
       decoration: BoxDecoration(
