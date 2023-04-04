@@ -14,7 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/config.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
-import 'package:portfolio/view/widgets/about/about_me_with_image.dart';
+import 'package:portfolio/view/widgets/contacts/contact_widget.dart';
 import 'components/desktop_app_bar.dart';
 
 class DesktopScreen extends StatefulWidget {
@@ -35,6 +35,8 @@ class _DesktopScreenState extends State<DesktopScreen> {
       body: ListView(
         children: const [
           AboutMeSimple(screenEnum: ScreenEnum.desktop),
+          SizedBox(height: 32.0),
+          ContactWidget(screenEnum: ScreenEnum.desktop),
         ],
       ),
     );

@@ -14,7 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/config.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
-import 'package:portfolio/view/widgets/contact_widget.dart';
+import 'package:portfolio/view/widgets/contacts/contact_widget.dart';
 
 class TabletScreen extends StatefulWidget {
   const TabletScreen({super.key});
@@ -32,6 +32,10 @@ class _TabletScreenState extends State<TabletScreen> {
           SliverToBoxAdapter(
             child: AboutMeSimple(screenEnum: ScreenEnum.tablet),
           ),
+          SizedBox(height: 32.0),
+          SliverToBoxAdapter(
+            child: ContactWidget(screenEnum: ScreenEnum.tablet),
+          )
         ],
       ),
     );

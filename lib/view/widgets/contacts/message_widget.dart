@@ -31,8 +31,8 @@ class _MessageWidgetState extends State<MessageWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 500.0,
       padding: const EdgeInsets.all(32.0),
+      constraints: const BoxConstraints(maxWidth: 500.0),
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.circular(24.0),
@@ -48,7 +48,7 @@ class _MessageWidgetState extends State<MessageWidget> {
               textInputAction: TextInputAction.next,
               validator: AppValidator.general,
               textCapitalization: TextCapitalization.words,
-              // autocorrect: false,
+              // auto correct: false,
               autofillHints: const [
                 AutofillHints.name,
                 AutofillHints.familyName,

@@ -21,6 +21,7 @@ class AboutMeSimple extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     switch (screenEnum) {
       case ScreenEnum.desktop:
         return Wrap(
@@ -33,14 +34,24 @@ class AboutMeSimple extends StatelessWidget {
         );
 
       case ScreenEnum.tablet:
+        List<Widget> children = const [
+          AboutMeImage(),
+          AboutMeWithDescription(),
+        ];
+        if (width > 900) {
+          children = const [
+            SizedBox(
+              width: 600,
+              child: AboutMeWithDescription(),
+            ),
+            SizedBox(width: 300.0, child: AboutMeImage()),
+          ];
+        }
         return Wrap(
           runSpacing: 32.0,
           alignment: WrapAlignment.center,
           crossAxisAlignment: WrapCrossAlignment.center,
-          children: const [
-            AboutMeImage(),
-            AboutMeWithDescription(),
-          ],
+          children: children,
         );
 
       case ScreenEnum.mobile:

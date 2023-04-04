@@ -19,7 +19,7 @@ class AboutMeImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: const BoxConstraints(maxWidth: 400.0),
+      constraints: const BoxConstraints(maxWidth: 400.0, minHeight: 300.0),
       child: Image.network(
         "https://rainbowit.net/html/inbio/assets/images/slider/banner-01.png",
       ),

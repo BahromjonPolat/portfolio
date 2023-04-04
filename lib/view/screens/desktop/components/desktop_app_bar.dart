@@ -54,6 +54,12 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
             onHover: AppColors.primary,
             onPressed: () {},
           ),
+          AppTextButton(
+            label: AppStrings.contacts,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {},
+          ),
         ],
       ),
     );

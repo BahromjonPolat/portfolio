@@ -13,7 +13,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/enums/enums.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
-import 'package:portfolio/view/widgets/about/about_me_widget.dart';
+import 'package:portfolio/view/widgets/contacts/contact_widget.dart';
 
 class MobileScreen extends StatefulWidget {
   const MobileScreen({super.key});
@@ -26,10 +26,13 @@ class _MobileScreenState extends State<MobileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      children: const [
-        AboutMeSimple(screenEnum: ScreenEnum.mobile),
-      ],
-    ));
+      body: ListView(
+        children: const [
+          AboutMeSimple(screenEnum: ScreenEnum.mobile),
+          SizedBox(height: 32.0),
+          ContactWidget(screenEnum: ScreenEnum.mobile),
+        ],
+      ),
+    );
   }
 }
