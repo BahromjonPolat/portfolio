@@ -28,6 +28,7 @@ class ContactWidget extends StatelessWidget {
     switch (screenEnum) {
       case ScreenEnum.desktop:
         return Wrap(
+          runAlignment: WrapAlignment.center,
           alignment: WrapAlignment.center,
           spacing: 32.0,
           runSpacing: 32.0,
@@ -37,23 +38,33 @@ class ContactWidget extends StatelessWidget {
           ],
         );
       case ScreenEnum.tablet:
-        return Wrap(
-          alignment: WrapAlignment.center,
-          spacing: 32.0,
-          runSpacing: 32.0,
-          children: [
+        List<Widget> children = const [
+          ContactsDataWidget(),
+          MessageWidget(),
+        ];
+
+        if (isBig) {
+          children = [
             SizedBox(
-              width: isBig ? width * .58 : 500,
+              width: width * .58,
               child: const ContactsDataWidget(),
             ),
             SizedBox(
-              width: isBig ? width * .38 : 500,
+              width: width * .38,
               child: const MessageWidget(),
             ),
-          ],
+          ];
+        }
+        return Wrap(
+          runAlignment: WrapAlignment.center,
+          alignment: WrapAlignment.center,
+          spacing: 32.0,
+          runSpacing: 32.0,
+          children: children,
         );
       case ScreenEnum.mobile:
         return Wrap(
+          runAlignment: WrapAlignment.center,
           alignment: WrapAlignment.center,
           spacing: 32.0,
           runSpacing: 32.0,

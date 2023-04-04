@@ -26,16 +26,12 @@ class TabletScreen extends StatefulWidget {
 class _TabletScreenState extends State<TabletScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: AboutMeSimple(screenEnum: ScreenEnum.tablet),
-          ),
+    return Scaffold(
+      body: ListView(
+        children: const [
+          AboutMeSimple(screenEnum: ScreenEnum.tablet),
           SizedBox(height: 32.0),
-          SliverToBoxAdapter(
-            child: ContactWidget(screenEnum: ScreenEnum.tablet),
-          )
+          ContactWidget(screenEnum: ScreenEnum.tablet)
         ],
       ),
     );

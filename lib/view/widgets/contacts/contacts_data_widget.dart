@@ -14,6 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/constants/constants.dart';
 import 'package:portfolio/view/widgets/about/text_with_icon.dart';
+import 'package:portfolio/view/widgets/follow_me_widget.dart';
 
 class ContactsDataWidget extends StatelessWidget {
   const ContactsDataWidget({super.key});
@@ -23,6 +24,7 @@ class ContactsDataWidget extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints(maxWidth: 500),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
@@ -45,6 +47,8 @@ class ContactsDataWidget extends StatelessWidget {
             icon: Icons.email_outlined,
             data: "bahromjon.ergashboyev@gmail.com",
           ),
+          const SizedBox(height: 64.0),
+          const FollowMeOnWidget()
         ],
       ),
     );
