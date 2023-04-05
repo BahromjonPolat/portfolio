@@ -14,7 +14,6 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/config.dart';
 import 'package:portfolio/view/widgets/follow_me_widget.dart';
-import 'package:portfolio/view/widgets/square_button.dart';
 
 class AboutMeWithDescription extends StatelessWidget {
   const AboutMeWithDescription({super.key});

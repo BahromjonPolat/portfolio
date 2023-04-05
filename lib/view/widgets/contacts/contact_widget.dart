@@ -27,11 +27,8 @@ class ContactWidget extends StatelessWidget {
 
     switch (screenEnum) {
       case ScreenEnum.desktop:
-        return Wrap(
-          runAlignment: WrapAlignment.center,
-          alignment: WrapAlignment.center,
-          spacing: 32.0,
-          runSpacing: 32.0,
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             ContactsDataWidget(),
             MessageWidget(),

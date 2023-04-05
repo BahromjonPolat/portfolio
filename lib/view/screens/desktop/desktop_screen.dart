@@ -27,12 +27,14 @@ class DesktopScreen extends StatefulWidget {
 class _DesktopScreenState extends State<DesktopScreen> {
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-    // double padding = (width - 1200) / 2.0;
+    double width = MediaQuery.of(context).size.width;
+    double padding = (width - 1100) / 2.0;
+
     return Scaffold(
       // extendBodyBehindAppBar: true,
       appBar: const DesktopAppBar(),
       body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: padding),
         children: const [
           AboutMeSimple(screenEnum: ScreenEnum.desktop),
           SizedBox(height: 32.0),

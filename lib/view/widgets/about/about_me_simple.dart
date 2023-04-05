@@ -24,9 +24,9 @@ class AboutMeSimple extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     switch (screenEnum) {
       case ScreenEnum.desktop:
-        return Wrap(
-          alignment: WrapAlignment.center,
-          crossAxisAlignment: WrapCrossAlignment.center,
+        return Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             AboutMeWithDescription(),
             AboutMeImage(),
