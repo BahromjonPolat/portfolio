@@ -23,11 +23,13 @@ class HomeScreen extends StatelessWidget {
     return SelectionArea(
       child: LayoutBuilder(
         builder: (BuildContext context, constraints) {
-          if (constraints.maxWidth < 500) {
+          double maxWidth = constraints.maxWidth;
+          if (maxWidth < 500) {
             return const MobileScreen();
-          } else if (constraints.minWidth < 1100) {
+          } else if (maxWidth < 1100) {
             return const TabletScreen();
           }
+
           return const DesktopScreen();
         },
       ),
