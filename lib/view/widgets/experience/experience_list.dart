@@ -1,7 +1,7 @@
 /*
 
   Created by: Bakhromjon Polat
-  Created on: Apr 03 2023 15:18:50
+  Created on: Apr 05 2023 18:12:20
   Github:   https://github.com/BahromjonPolat
   Leetcode: https://leetcode.com/BahromjonPolat/
   LinkedIn: https://linkedin.com/in/bahromjon-polat
@@ -12,17 +12,15 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/view/widgets/experience/education_or_experience_widget.dart';
 
-class AboutMeImage extends StatelessWidget {
-  const AboutMeImage({super.key});
+class ExperienceListWidget extends StatelessWidget {
+  const ExperienceListWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      constraints: const BoxConstraints(maxWidth: 400.0, minWidth: 300.0),
-      child: Image.network(
-        "https://rainbowit.net/html/inbio/assets/images/slider/banner-01.png",
-      ),
+    return Column(
+      children: List.generate(3, (index) => const EducationOrExperience()),
     );
   }
 }

@@ -15,6 +15,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/config/config.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 import 'package:portfolio/view/widgets/contacts/contact_widget.dart';
+import 'package:portfolio/view/widgets/experience/education_and_experience_list.dart';
+import 'package:portfolio/view/widgets/experience/experience_list.dart';
 import 'components/desktop_app_bar.dart';
 
 class DesktopScreen extends StatefulWidget {
@@ -37,6 +39,8 @@ class _DesktopScreenState extends State<DesktopScreen> {
         padding: EdgeInsets.symmetric(horizontal: padding),
         children: const [
           AboutMeSimple(screenEnum: ScreenEnum.desktop),
+          SizedBox(height: 32.0),
+          EducationAndExperienceList(screenEnum: ScreenEnum.desktop),
           SizedBox(height: 32.0),
           ContactWidget(screenEnum: ScreenEnum.desktop),
         ],

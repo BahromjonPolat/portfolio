@@ -47,17 +47,20 @@ class AboutMeContacts extends StatelessWidget {
               style: Theme.of(context).textTheme.bodySmall,
             ),
             const SizedBox(height: 12.0),
-            const TextWithIcon(
+            TextWithIcon(
               icon: Icons.person_2_outlined,
               data: "Flutter Developer",
+              onPressed: () {},
             ),
-            const TextWithIcon(
+            TextWithIcon(
               icon: Icons.email_outlined,
               data: "bahromjon.ergashboyev@gmail.com",
+              onPressed: () {},
             ),
-            const TextWithIcon(
+            TextWithIcon(
               icon: Icons.place_outlined,
               data: "Tashkent, Uzbekistan",
+              onPressed: () {},
             ),
             const Spacer(),
             ElevatedButton(

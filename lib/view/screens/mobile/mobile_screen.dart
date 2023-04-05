@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/config/enums/enums.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 import 'package:portfolio/view/widgets/contacts/contact_widget.dart';
+import 'package:portfolio/view/widgets/experience/education_and_experience_list.dart';
 
 class MobileScreen extends StatefulWidget {
   const MobileScreen({super.key});
@@ -29,6 +30,8 @@ class _MobileScreenState extends State<MobileScreen> {
       body: ListView(
         children: const [
           AboutMeSimple(screenEnum: ScreenEnum.mobile),
+          SizedBox(height: 32.0),
+          EducationAndExperienceList(screenEnum: ScreenEnum.mobile),
           SizedBox(height: 32.0),
           ContactWidget(screenEnum: ScreenEnum.mobile),
         ],

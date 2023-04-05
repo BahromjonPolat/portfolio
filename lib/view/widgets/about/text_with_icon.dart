@@ -17,15 +17,23 @@ import 'package:portfolio/config/constants/app_colors.dart';
 class TextWithIcon extends StatelessWidget {
   final IconData icon;
   final String data;
+  final VoidCallback? onPressed;
   const TextWithIcon({
     super.key,
     required this.icon,
     required this.data,
+    required this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return TextButton.icon(
+      onPressed: onPressed,
+      icon: Icon(icon, color: AppColors.primary),
+      label: Text(data),
+    );
+
+    Row(
       children: [
         Icon(icon, color: AppColors.primary),
         const SizedBox(width: 8.0),

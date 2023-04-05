@@ -31,6 +31,7 @@ class ContactWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             ContactsDataWidget(),
+            SizedBox(width: 32.0),
             MessageWidget(),
           ],
         );

@@ -38,14 +38,16 @@ class ContactsDataWidget extends StatelessWidget {
             "Duis anim consequat nisi culpa et nulla aute irure do magna amet eu. Aliqua nulla qui minim consequat ut in veniam aliquip fugiat. Non ut laborum id ea cillum proident sint ea.",
           ),
           const SizedBox(height: 32.0),
-          const TextWithIcon(
+          TextWithIcon(
             icon: Icons.phone_outlined,
             data: "+998931234567",
+            onPressed: () {},
           ),
           const SizedBox(height: 12.0),
-          const TextWithIcon(
+          TextWithIcon(
             icon: Icons.email_outlined,
             data: "bahromjon.ergashboyev@gmail.com",
+            onPressed: () {},
           ),
           const SizedBox(height: 64.0),
           const FollowMeOnWidget()

@@ -32,7 +32,7 @@ class _MessageWidgetState extends State<MessageWidget> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(32.0),
-      constraints: const BoxConstraints(maxWidth: 500.0),
+      constraints: const BoxConstraints(maxWidth: 460.0),
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.circular(24.0),

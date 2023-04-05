@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/config/config.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 import 'package:portfolio/view/widgets/contacts/contact_widget.dart';
+import 'package:portfolio/view/widgets/experience/education_and_experience_list.dart';
 
 class TabletScreen extends StatefulWidget {
   const TabletScreen({super.key});
@@ -31,6 +32,7 @@ class _TabletScreenState extends State<TabletScreen> {
         children: const [
           AboutMeSimple(screenEnum: ScreenEnum.tablet),
           SizedBox(height: 32.0),
+          EducationAndExperienceList(screenEnum: ScreenEnum.tablet),
           ContactWidget(screenEnum: ScreenEnum.tablet)
         ],
       ),

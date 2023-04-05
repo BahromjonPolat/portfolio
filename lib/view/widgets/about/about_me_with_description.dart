@@ -22,8 +22,9 @@ class AboutMeWithDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       constraints: const BoxConstraints(
-        maxWidth: 700.0,
+        maxWidth: 600.0,
         minHeight: 500.0,
+        minWidth: 500.0,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

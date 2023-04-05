@@ -14,30 +14,31 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/config/constants/app_colors.dart';
 
+// ignore: must_be_immutable
 class NeonEffectBox extends StatelessWidget {
   final Widget child;
-  const NeonEffectBox({super.key, required this.child});
+  Color? color;
+  NeonEffectBox({super.key, required this.child, this.color});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(12.0),
       padding: const EdgeInsets.all(24.0),
-      // alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: AppColors.background,
+        color: color ?? AppColors.background,
         borderRadius: BorderRadius.circular(12.0),
         boxShadow: [
           for (int i = 0; i < 5; i++)
             BoxShadow(
-              blurRadius: 3.0 * i,
-              color: AppColors.white,
+              blurRadius: 1.0 * i,
+              color: AppColors.white.withOpacity(0.6),
               blurStyle: BlurStyle.outer,
               offset: const Offset(-1.0, -1.0),
             ),
           for (int i = 0; i < 5; i++)
             BoxShadow(
-              blurRadius: 3.0 * i,
+              blurRadius: 1.0 * i,
               color: Colors.black,
               blurStyle: BlurStyle.outer,
               offset: const Offset(1.0, 1.0),
