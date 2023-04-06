@@ -32,9 +32,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
             label: AppStrings.home,
             textColor: Colors.grey,
             onHover: AppColors.primary,
-            onPressed: () {
-              Navigator.pushNamed(context, '/env');
-            },
+            onPressed: () {},
           ),
           AppTextButton(
             label: AppStrings.resume,
