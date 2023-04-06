@@ -12,3 +12,6 @@
 */
 export 'title_model.dart';
 export 'project/project_model.dart';
+export 'experience/experience.dart';
+export 'platform/platform_model.dart';
+export 'category/category.dart';

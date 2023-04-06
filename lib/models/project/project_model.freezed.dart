@@ -20,12 +20,16 @@ ProjectModel _$ProjectModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProjectModel {
-  String get jobTitle => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
-  String get companyName => throw _privateConstructorUsedError;
+  String get logo => throw _privateConstructorUsedError;
+  String get primaryScreenshot => throw _privateConstructorUsedError;
+  String get secondaryScreenshot => throw _privateConstructorUsedError;
   int get startedDate => throw _privateConstructorUsedError;
   int get endDate => throw _privateConstructorUsedError;
-  String get logo => throw _privateConstructorUsedError;
+  List<PlatformModel> get platforms => throw _privateConstructorUsedError;
+  List<Category> get categories => throw _privateConstructorUsedError;
+  Experience? get experience => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,12 +44,18 @@ abstract class $ProjectModelCopyWith<$Res> {
       _$ProjectModelCopyWithImpl<$Res, ProjectModel>;
   @useResult
   $Res call(
-      {String jobTitle,
+      {String title,
       String description,
-      String companyName,
+      String logo,
+      String primaryScreenshot,
+      String secondaryScreenshot,
       int startedDate,
       int endDate,
-      String logo});
+      List<PlatformModel> platforms,
+      List<Category> categories,
+      Experience? experience});
+
+  $ExperienceCopyWith<$Res>? get experience;
 }
 
 /// @nodoc
@@ -61,25 +71,37 @@ class _$ProjectModelCopyWithImpl<$Res, $Val extends ProjectModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? jobTitle = null,
+    Object? title = null,
     Object? description = null,
-    Object? companyName = null,
+    Object? logo = null,
+    Object? primaryScreenshot = null,
+    Object? secondaryScreenshot = null,
     Object? startedDate = null,
     Object? endDate = null,
-    Object? logo = null,
+    Object? platforms = null,
+    Object? categories = null,
+    Object? experience = freezed,
   }) {
     return _then(_value.copyWith(
-      jobTitle: null == jobTitle
-          ? _value.jobTitle
-          : jobTitle // ignore: cast_nullable_to_non_nullable
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
               as String,
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      companyName: null == companyName
-          ? _value.companyName
-          : companyName // ignore: cast_nullable_to_non_nullable
+      logo: null == logo
+          ? _value.logo
+          : logo // ignore: cast_nullable_to_non_nullable
+              as String,
+      primaryScreenshot: null == primaryScreenshot
+          ? _value.primaryScreenshot
+          : primaryScreenshot // ignore: cast_nullable_to_non_nullable
+              as String,
+      secondaryScreenshot: null == secondaryScreenshot
+          ? _value.secondaryScreenshot
+          : secondaryScreenshot // ignore: cast_nullable_to_non_nullable
               as String,
       startedDate: null == startedDate
           ? _value.startedDate
@@ -89,11 +111,31 @@ class _$ProjectModelCopyWithImpl<$Res, $Val extends ProjectModel>
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as int,
-      logo: null == logo
-          ? _value.logo
-          : logo // ignore: cast_nullable_to_non_nullable
-              as String,
+      platforms: null == platforms
+          ? _value.platforms
+          : platforms // ignore: cast_nullable_to_non_nullable
+              as List<PlatformModel>,
+      categories: null == categories
+          ? _value.categories
+          : categories // ignore: cast_nullable_to_non_nullable
+              as List<Category>,
+      experience: freezed == experience
+          ? _value.experience
+          : experience // ignore: cast_nullable_to_non_nullable
+              as Experience?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ExperienceCopyWith<$Res>? get experience {
+    if (_value.experience == null) {
+      return null;
+    }
+
+    return $ExperienceCopyWith<$Res>(_value.experience!, (value) {
+      return _then(_value.copyWith(experience: value) as $Val);
+    });
   }
 }
 
@@ -106,12 +148,19 @@ abstract class _$$_ProjectModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String jobTitle,
+      {String title,
       String description,
-      String companyName,
+      String logo,
+      String primaryScreenshot,
+      String secondaryScreenshot,
       int startedDate,
       int endDate,
-      String logo});
+      List<PlatformModel> platforms,
+      List<Category> categories,
+      Experience? experience});
+
+  @override
+  $ExperienceCopyWith<$Res>? get experience;
 }
 
 /// @nodoc
@@ -125,25 +174,37 @@ class __$$_ProjectModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? jobTitle = null,
+    Object? title = null,
     Object? description = null,
-    Object? companyName = null,
+    Object? logo = null,
+    Object? primaryScreenshot = null,
+    Object? secondaryScreenshot = null,
     Object? startedDate = null,
     Object? endDate = null,
-    Object? logo = null,
+    Object? platforms = null,
+    Object? categories = null,
+    Object? experience = freezed,
   }) {
     return _then(_$_ProjectModel(
-      jobTitle: null == jobTitle
-          ? _value.jobTitle
-          : jobTitle // ignore: cast_nullable_to_non_nullable
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
               as String,
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      companyName: null == companyName
-          ? _value.companyName
-          : companyName // ignore: cast_nullable_to_non_nullable
+      logo: null == logo
+          ? _value.logo
+          : logo // ignore: cast_nullable_to_non_nullable
+              as String,
+      primaryScreenshot: null == primaryScreenshot
+          ? _value.primaryScreenshot
+          : primaryScreenshot // ignore: cast_nullable_to_non_nullable
+              as String,
+      secondaryScreenshot: null == secondaryScreenshot
+          ? _value.secondaryScreenshot
+          : secondaryScreenshot // ignore: cast_nullable_to_non_nullable
               as String,
       startedDate: null == startedDate
           ? _value.startedDate
@@ -153,10 +214,18 @@ class __$$_ProjectModelCopyWithImpl<$Res>
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as int,
-      logo: null == logo
-          ? _value.logo
-          : logo // ignore: cast_nullable_to_non_nullable
-              as String,
+      platforms: null == platforms
+          ? _value._platforms
+          : platforms // ignore: cast_nullable_to_non_nullable
+              as List<PlatformModel>,
+      categories: null == categories
+          ? _value._categories
+          : categories // ignore: cast_nullable_to_non_nullable
+              as List<Category>,
+      experience: freezed == experience
+          ? _value.experience
+          : experience // ignore: cast_nullable_to_non_nullable
+              as Experience?,
     ));
   }
 }
@@ -165,38 +234,67 @@ class __$$_ProjectModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ProjectModel implements _ProjectModel {
   const _$_ProjectModel(
-      {this.jobTitle = "",
+      {this.title = "",
       this.description = "",
-      this.companyName = "",
+      this.logo = "",
+      this.primaryScreenshot = "",
+      this.secondaryScreenshot = "",
       this.startedDate = 0,
       this.endDate = 0,
-      this.logo = ""});
+      final List<PlatformModel> platforms = const [],
+      final List<Category> categories = const [],
+      this.experience})
+      : _platforms = platforms,
+        _categories = categories;
 
   factory _$_ProjectModel.fromJson(Map<String, dynamic> json) =>
       _$$_ProjectModelFromJson(json);
 
   @override
   @JsonKey()
-  final String jobTitle;
+  final String title;
   @override
   @JsonKey()
   final String description;
   @override
   @JsonKey()
-  final String companyName;
+  final String logo;
+  @override
+  @JsonKey()
+  final String primaryScreenshot;
+  @override
+  @JsonKey()
+  final String secondaryScreenshot;
   @override
   @JsonKey()
   final int startedDate;
   @override
   @JsonKey()
   final int endDate;
+  final List<PlatformModel> _platforms;
   @override
   @JsonKey()
-  final String logo;
+  List<PlatformModel> get platforms {
+    if (_platforms is EqualUnmodifiableListView) return _platforms;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_platforms);
+  }
+
+  final List<Category> _categories;
+  @override
+  @JsonKey()
+  List<Category> get categories {
+    if (_categories is EqualUnmodifiableListView) return _categories;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_categories);
+  }
+
+  @override
+  final Experience? experience;
 
   @override
   String toString() {
-    return 'ProjectModel(jobTitle: $jobTitle, description: $description, companyName: $companyName, startedDate: $startedDate, endDate: $endDate, logo: $logo)';
+    return 'ProjectModel(title: $title, description: $description, logo: $logo, primaryScreenshot: $primaryScreenshot, secondaryScreenshot: $secondaryScreenshot, startedDate: $startedDate, endDate: $endDate, platforms: $platforms, categories: $categories, experience: $experience)';
   }
 
   @override
@@ -204,22 +302,39 @@ class _$_ProjectModel implements _ProjectModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ProjectModel &&
-            (identical(other.jobTitle, jobTitle) ||
-                other.jobTitle == jobTitle) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.companyName, companyName) ||
-                other.companyName == companyName) &&
+            (identical(other.logo, logo) || other.logo == logo) &&
+            (identical(other.primaryScreenshot, primaryScreenshot) ||
+                other.primaryScreenshot == primaryScreenshot) &&
+            (identical(other.secondaryScreenshot, secondaryScreenshot) ||
+                other.secondaryScreenshot == secondaryScreenshot) &&
             (identical(other.startedDate, startedDate) ||
                 other.startedDate == startedDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate) &&
-            (identical(other.logo, logo) || other.logo == logo));
+            const DeepCollectionEquality()
+                .equals(other._platforms, _platforms) &&
+            const DeepCollectionEquality()
+                .equals(other._categories, _categories) &&
+            (identical(other.experience, experience) ||
+                other.experience == experience));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, jobTitle, description,
-      companyName, startedDate, endDate, logo);
+  int get hashCode => Object.hash(
+      runtimeType,
+      title,
+      description,
+      logo,
+      primaryScreenshot,
+      secondaryScreenshot,
+      startedDate,
+      endDate,
+      const DeepCollectionEquality().hash(_platforms),
+      const DeepCollectionEquality().hash(_categories),
+      experience);
 
   @JsonKey(ignore: true)
   @override
@@ -237,28 +352,40 @@ class _$_ProjectModel implements _ProjectModel {
 
 abstract class _ProjectModel implements ProjectModel {
   const factory _ProjectModel(
-      {final String jobTitle,
+      {final String title,
       final String description,
-      final String companyName,
+      final String logo,
+      final String primaryScreenshot,
+      final String secondaryScreenshot,
       final int startedDate,
       final int endDate,
-      final String logo}) = _$_ProjectModel;
+      final List<PlatformModel> platforms,
+      final List<Category> categories,
+      final Experience? experience}) = _$_ProjectModel;
 
   factory _ProjectModel.fromJson(Map<String, dynamic> json) =
       _$_ProjectModel.fromJson;
 
   @override
-  String get jobTitle;
+  String get title;
   @override
   String get description;
   @override
-  String get companyName;
+  String get logo;
+  @override
+  String get primaryScreenshot;
+  @override
+  String get secondaryScreenshot;
   @override
   int get startedDate;
   @override
   int get endDate;
   @override
-  String get logo;
+  List<PlatformModel> get platforms;
+  @override
+  List<Category> get categories;
+  @override
+  Experience? get experience;
   @override
   @JsonKey(ignore: true)
   _$$_ProjectModelCopyWith<_$_ProjectModel> get copyWith =>

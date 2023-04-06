@@ -12,6 +12,7 @@
 */
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:portfolio/models/models.dart';
 
 part 'project_model.freezed.dart';
 part 'project_model.g.dart';
@@ -19,12 +20,16 @@ part 'project_model.g.dart';
 @freezed
 class ProjectModel with _$ProjectModel {
   const factory ProjectModel({
-    @Default("") String jobTitle,
+    @Default("") String title,
     @Default("") String description,
-    @Default("") String companyName,
+    @Default("") String logo,
+    @Default("") String primaryScreenshot,
+    @Default("") String secondaryScreenshot,
     @Default(0) int startedDate,
     @Default(0) int endDate,
-    @Default("") String logo,
+    @Default([]) List<PlatformModel> platforms,
+    @Default([]) List<Category> categories,
+    Experience? experience,
   }) = _ProjectModel;
 
   factory ProjectModel.fromJson(Map<String, dynamic> json) =>

@@ -8,20 +8,36 @@ part of 'project_model.dart';
 
 _$_ProjectModel _$$_ProjectModelFromJson(Map<String, dynamic> json) =>
     _$_ProjectModel(
-      jobTitle: json['jobTitle'] as String? ?? "",
+      title: json['title'] as String? ?? "",
       description: json['description'] as String? ?? "",
-      companyName: json['companyName'] as String? ?? "",
+      logo: json['logo'] as String? ?? "",
+      primaryScreenshot: json['primaryScreenshot'] as String? ?? "",
+      secondaryScreenshot: json['secondaryScreenshot'] as String? ?? "",
       startedDate: json['startedDate'] as int? ?? 0,
       endDate: json['endDate'] as int? ?? 0,
-      logo: json['logo'] as String? ?? "",
+      platforms: (json['platforms'] as List<dynamic>?)
+              ?.map((e) => PlatformModel.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      categories: (json['categories'] as List<dynamic>?)
+              ?.map((e) => Category.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const [],
+      experience: json['experience'] == null
+          ? null
+          : Experience.fromJson(json['experience'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ProjectModelToJson(_$_ProjectModel instance) =>
     <String, dynamic>{
-      'jobTitle': instance.jobTitle,
+      'title': instance.title,
       'description': instance.description,
-      'companyName': instance.companyName,
+      'logo': instance.logo,
+      'primaryScreenshot': instance.primaryScreenshot,
+      'secondaryScreenshot': instance.secondaryScreenshot,
       'startedDate': instance.startedDate,
       'endDate': instance.endDate,
-      'logo': instance.logo,
+      'platforms': instance.platforms,
+      'categories': instance.categories,
+      'experience': instance.experience,
     };
