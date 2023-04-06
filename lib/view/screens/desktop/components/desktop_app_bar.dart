@@ -32,13 +32,25 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
             label: AppStrings.home,
             textColor: Colors.grey,
             onHover: AppColors.primary,
-            onPressed: () {},
+            onPressed: () {
+              BuildContext? context = AppKeys.homeKey.currentContext;
+              Scrollable.ensureVisible(
+                context!,
+                duration: const Duration(milliseconds: 300),
+              );
+            },
           ),
           AppTextButton(
             label: AppStrings.resume,
             textColor: Colors.grey,
             onHover: AppColors.primary,
-            onPressed: () {},
+            onPressed: () {
+              BuildContext? context = AppKeys.projectsKey.currentContext;
+              Scrollable.ensureVisible(
+                context!,
+                duration: const Duration(milliseconds: 300),
+              );
+            },
           ),
           AppTextButton(
             label: AppStrings.projects,
@@ -56,7 +68,13 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
             label: AppStrings.contacts,
             textColor: Colors.grey,
             onHover: AppColors.primary,
-            onPressed: () {},
+            onPressed: () {
+              BuildContext? context = AppKeys.contactsKey.currentContext;
+              Scrollable.ensureVisible(
+                context!,
+                duration: const Duration(milliseconds: 300),
+              );
+            },
           ),
         ],
       ),

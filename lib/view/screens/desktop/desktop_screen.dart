@@ -44,10 +44,14 @@ class _DesktopScreenState extends State<DesktopScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const AboutMeSimple(screenEnum: ScreenEnum.desktop),
+                  AboutMeSimple(
+                    key: AppKeys.homeKey,
+                    screenEnum: ScreenEnum.desktop,
+                  ),
                   const SizedBox(height: 32.0),
                   Text(
                     'Projects',
+                    key: AppKeys.projectsKey,
                     style: Theme.of(context).textTheme.displayMedium?.copyWith(
                           color: AppColors.white,
                         ),
@@ -72,11 +76,15 @@ class _DesktopScreenState extends State<DesktopScreen> {
               delegate: SliverChildListDelegate(
                 [
                   const SizedBox(height: 32.0),
-                  const EducationAndExperienceList(
+                  EducationAndExperienceList(
+                    key: AppKeys.educationKey,
                     screenEnum: ScreenEnum.desktop,
                   ),
                   const SizedBox(height: 32.0),
-                  const ContactWidget(screenEnum: ScreenEnum.desktop),
+                  ContactWidget(
+                    key: AppKeys.contactsKey,
+                    screenEnum: ScreenEnum.desktop,
+                  ),
                 ],
               ),
             ),
