@@ -11,3 +11,4 @@
 
 */
 export 'title_model.dart';
+export 'project/project_model.dart';
