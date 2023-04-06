@@ -35,9 +35,10 @@ class ProjectTitle extends StatelessWidget {
             width: 32.0,
           ),
         ),
+        const SizedBox(width: 12.0),
         Text(
           projectName,
-          style: Theme.of(context).textTheme.headlineLarge,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
       ],
     );

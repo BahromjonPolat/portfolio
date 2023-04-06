@@ -30,8 +30,9 @@ class AppTheme {
           ),
         ),
         chipTheme: const ChipThemeData(
-          labelStyle: TextStyle(),
-        ),
+            labelStyle: TextStyle(color: AppColors.white),
+            backgroundColor: AppColors.background,
+            iconTheme: IconThemeData(color: Colors.amber)),
         textTheme: const TextTheme(
           // displayMedium:  ,
           bodyLarge: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),

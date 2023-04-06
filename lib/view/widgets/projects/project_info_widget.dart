@@ -14,6 +14,7 @@
 import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
+import 'package:portfolio/view/widgets/neon_effect_box.dart';
 import 'package:portfolio/view/widgets/store_widget.dart';
 import 'project_title.dart';
 
@@ -26,14 +27,7 @@ class ProjectInfoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 400.0,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: AppColors.greyF9,
-        borderRadius: BorderRadius.circular(16.0),
-      ),
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+    return NeonEffectBox(
       child: screenEnum == ScreenEnum.desktop
           ? Row(
               children: [
@@ -73,7 +67,9 @@ class ProjectInfoWidget extends StatelessWidget {
 
   Column _showData(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      // mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const SizedBox(height: 24.0),
         Wrap(
@@ -89,15 +85,18 @@ class ProjectInfoWidget extends StatelessWidget {
             ),
           ],
         ),
+        const SizedBox(height: 12.0),
         const ProjectTitle(
           projectName: "Beeto",
           projectIcon:
               "https://play-lh.googleusercontent.com/N5M7e1BXdHjP_kdQZskFxWPsGNvNq2Mgm83bqbxNqVv9wXQu_Ebkof8vGF6hA0rkf-I",
         ),
+        const SizedBox(height: 12.0),
         Text(
           "Laboris voluptate quis magna mollit labore sint duis mollit adipisicing qui nulla enim non veniam. Anim consectetur reprehenderit dolore nisi et duis. Laboris esse id in nostrud enim irure sit eiusmod aliquip voluptate velit. Laborum id aliquip excepteur officia eu duis exercitation reprehenderit aliqua non tempor nostrud.",
           style: Theme.of(context).textTheme.bodySmall,
         ),
+        const SizedBox(height: 12.0),
         Row(
           children: const [
             StoreWidget(),

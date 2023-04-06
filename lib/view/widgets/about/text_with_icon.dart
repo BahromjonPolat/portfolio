@@ -32,16 +32,5 @@ class TextWithIcon extends StatelessWidget {
       icon: Icon(icon, color: AppColors.primary),
       label: Text(data),
     );
-
-    Row(
-      children: [
-        Icon(icon, color: AppColors.primary),
-        const SizedBox(width: 8.0),
-        Text(
-          data,
-          style: Theme.of(context).textTheme.bodySmall,
-        ),
-      ],
-    );
   }
 }
