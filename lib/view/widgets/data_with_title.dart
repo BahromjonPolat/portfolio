@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/constants/app_colors.dart';
+import 'package:portfolio/core/constants/app_colors.dart';
 
 class DataWithTitle extends StatelessWidget {
   final String title;

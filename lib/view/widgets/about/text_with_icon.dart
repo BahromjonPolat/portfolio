@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/constants/app_colors.dart';
+import 'package:portfolio/core/constants/app_colors.dart';
 
 class TextWithIcon extends StatelessWidget {
   final IconData icon;

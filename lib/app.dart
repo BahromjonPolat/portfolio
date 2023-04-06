@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/config.dart';
+import 'package:portfolio/core/config.dart';
 import 'package:portfolio/view/screens/home/home_screen.dart';
 
 class AppWidget extends StatelessWidget {

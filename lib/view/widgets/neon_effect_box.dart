@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/constants/app_colors.dart';
+import 'package:portfolio/core/constants/app_colors.dart';
 
 // ignore: must_be_immutable
 class NeonEffectBox extends StatelessWidget {
@@ -29,14 +29,14 @@ class NeonEffectBox extends StatelessWidget {
         color: color ?? AppColors.background,
         borderRadius: BorderRadius.circular(12.0),
         boxShadow: [
-          for (int i = 0; i < 5; i++)
+          for (int i = 0; i < 3; i++)
             BoxShadow(
               blurRadius: 1.0 * i,
-              color: AppColors.white.withOpacity(0.6),
+              color: Colors.grey.shade600,
               blurStyle: BlurStyle.outer,
               offset: const Offset(-1.0, -1.0),
             ),
-          for (int i = 0; i < 5; i++)
+          for (int i = 0; i < 3; i++)
             BoxShadow(
               blurRadius: 1.0 * i,
               color: Colors.black,

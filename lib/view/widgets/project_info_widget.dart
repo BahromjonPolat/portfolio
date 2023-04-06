@@ -13,7 +13,7 @@
 
 import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/config.dart';
+import 'package:portfolio/core/config.dart';
 import 'package:portfolio/view/widgets/store_widget.dart';
 import 'project_title.dart';
 

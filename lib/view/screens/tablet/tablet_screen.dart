@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/config.dart';
+import 'package:portfolio/core/config.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 import 'package:portfolio/view/widgets/contacts/contact_widget.dart';
 import 'package:portfolio/view/widgets/experience/education_and_experience_list.dart';

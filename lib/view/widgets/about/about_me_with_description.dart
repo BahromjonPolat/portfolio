@@ -12,7 +12,7 @@
 */
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/config.dart';
+import 'package:portfolio/core/config.dart';
 import 'package:portfolio/view/widgets/follow_me_widget.dart';
 
 class AboutMeWithDescription extends StatelessWidget {

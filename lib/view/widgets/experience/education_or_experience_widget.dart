@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/constants/app_colors.dart';
+import 'package:portfolio/core/constants/app_colors.dart';
 import 'package:portfolio/view/widgets/neon_effect_box.dart';
 
 class EducationOrExperience extends StatefulWidget {
@@ -28,31 +28,26 @@ class _EducationOrExperienceState extends State<EducationOrExperience> {
   @override
   Widget build(BuildContext context) {
     return NeonEffectBox(
-      color: backgroundColor,
-      child: MouseRegion(
-        onEnter: onEnter,
-        onExit: onExit,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Flutter Developer',
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: AppColors.white,
-                  ),
-            ),
-            const SizedBox(height: 8.0),
-            Text(
-              'Mirrikh Software (Feb 2022 - to present)',
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-            const SizedBox(height: 24.0),
-            Text(
-              "Nostrud cupidatat sint esse consectetur nostrud ad nostrud. Sit enim incididunt voluptate minim nisi eu in. Deserunt consequat officia enim ad aute cillum. Ex cupidatat est adipisicing id commodo. Voluptate voluptate consequat commodo adipisicing amet et commodo magna cillum reprehenderit. Voluptate pariatur magna voluptate nisi veniam commodo et voluptate nostrud.",
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-          ],
-        ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Flutter Developer',
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: AppColors.white,
+                ),
+          ),
+          const SizedBox(height: 8.0),
+          Text(
+            'Mirrikh Software (Feb 2022 - to present)',
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
+          const SizedBox(height: 24.0),
+          Text(
+            "Nostrud cupidatat sint esse consectetur nostrud ad nostrud. Sit enim incididunt voluptate minim nisi eu in. Deserunt consequat officia enim ad aute cillum. Ex cupidatat est adipisicing id commodo. Voluptate voluptate consequat commodo adipisicing amet et commodo magna cillum reprehenderit. Voluptate pariatur magna voluptate nisi veniam commodo et voluptate nostrud.",
+            style: Theme.of(context).textTheme.bodySmall,
+          ),
+        ],
       ),
     );
   }

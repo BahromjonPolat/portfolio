@@ -13,7 +13,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/config.dart';
+import 'package:portfolio/core/config.dart';
 import 'package:portfolio/view/widgets/experience/experience_list.dart';
 
 class EducationAndExperienceList extends StatelessWidget {

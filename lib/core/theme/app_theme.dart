@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/constants/app_colors.dart';
+import 'package:portfolio/core/constants/app_colors.dart';
 
 class AppTheme {
   const AppTheme._();
@@ -49,12 +49,13 @@ class AppTheme {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-              backgroundColor: AppColors.background,
-              foregroundColor: AppColors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12.0),
-              ),
-              fixedSize: const Size(double.infinity, 56.0)),
+            backgroundColor: AppColors.background,
+            foregroundColor: AppColors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+            fixedSize: const Size(double.infinity, 56.0),
+          ),
         ),
       );
 }

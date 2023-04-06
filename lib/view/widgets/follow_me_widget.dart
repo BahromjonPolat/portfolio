@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/constants/constants.dart';
+import 'package:portfolio/core/constants/constants.dart';
 
 import 'square_button.dart';
 

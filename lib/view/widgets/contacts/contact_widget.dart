@@ -12,7 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/config.dart';
+import 'package:portfolio/core/config.dart';
 import 'package:portfolio/view/widgets/contacts/contacts_data_widget.dart';
 import 'package:portfolio/view/widgets/contacts/message_widget.dart';
 

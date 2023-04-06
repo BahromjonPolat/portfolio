@@ -14,7 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:portfolio/config/constants/constants.dart';
+import 'package:portfolio/core/constants/constants.dart';
 
 class StoreWidget extends StatelessWidget {
   const StoreWidget({super.key});

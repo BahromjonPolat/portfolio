@@ -12,7 +12,8 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/config/constants/constants.dart';
+import 'package:portfolio/core/constants/constants.dart';
+import 'package:portfolio/services/launch_service.dart';
 import 'package:portfolio/view/widgets/about/text_with_icon.dart';
 import 'package:portfolio/view/widgets/follow_me_widget.dart';
 
@@ -41,13 +42,24 @@ class ContactsDataWidget extends StatelessWidget {
           TextWithIcon(
             icon: Icons.phone_outlined,
             data: "+998931234567",
-            onPressed: () {},
+            onPressed: () {
+              Uri url = Uri.parse('tel:+998931234567');
+              LaunchService.launch(url);
+            },
           ),
           const SizedBox(height: 12.0),
           TextWithIcon(
             icon: Icons.email_outlined,
             data: "bahromjon.ergashboyev@gmail.com",
-            onPressed: () {},
+            onPressed: () {
+              Uri url = Uri(
+                scheme: 'mailto',
+                path: 'bahromjon.ergashboyev@gmail.com',
+                queryParameters: {'subject': '', 'body': ''},
+              );
+
+              LaunchService.launch(url);
+            },
           ),
           const SizedBox(height: 64.0),
           const FollowMeOnWidget()
