@@ -27,7 +27,13 @@ class _EducationOrExperienceState extends State<EducationOrExperience> {
 
   @override
   Widget build(BuildContext context) {
-    return NeonEffectBox(
+    return Container(
+      padding: EdgeInsets.all(24.0),
+      margin: EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        color: AppColors.white.withOpacity(.07),
+        borderRadius: BorderRadius.circular(24.0),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -50,13 +56,5 @@ class _EducationOrExperienceState extends State<EducationOrExperience> {
         ],
       ),
     );
-  }
-
-  void onExit(event) {
-    setState(() => backgroundColor = AppColors.cardBody);
-  }
-
-  void onEnter(event) {
-    setState(() => backgroundColor = AppColors.background);
   }
 }

@@ -8,6 +8,7 @@ part of 'experience.dart';
 
 _$_Experience _$$_ExperienceFromJson(Map<String, dynamic> json) =>
     _$_Experience(
+      id: json['id'] as String? ?? "",
       companyName: json['companyName'] as String? ?? "",
       jobTitle: json['jobTitle'] as String? ?? "",
       description: json['description'] as String? ?? "",
@@ -18,6 +19,7 @@ _$_Experience _$$_ExperienceFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ExperienceToJson(_$_Experience instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'companyName': instance.companyName,
       'jobTitle': instance.jobTitle,
       'description': instance.description,

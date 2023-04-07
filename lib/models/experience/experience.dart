@@ -18,6 +18,7 @@ part 'experience.g.dart';
 @freezed
 class Experience with _$Experience {
   factory Experience({
+    @Default("") String id,
     @Default("") String companyName,
     @Default("") String jobTitle,
     @Default("") String description,

@@ -20,6 +20,7 @@ Experience _$ExperienceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Experience {
+  String get id => throw _privateConstructorUsedError;
   String get companyName => throw _privateConstructorUsedError;
   String get jobTitle => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
@@ -40,7 +41,8 @@ abstract class $ExperienceCopyWith<$Res> {
       _$ExperienceCopyWithImpl<$Res, Experience>;
   @useResult
   $Res call(
-      {String companyName,
+      {String id,
+      String companyName,
       String jobTitle,
       String description,
       String logo,
@@ -61,6 +63,7 @@ class _$ExperienceCopyWithImpl<$Res, $Val extends Experience>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? companyName = null,
     Object? jobTitle = null,
     Object? description = null,
@@ -69,6 +72,10 @@ class _$ExperienceCopyWithImpl<$Res, $Val extends Experience>
     Object? endDate = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       companyName: null == companyName
           ? _value.companyName
           : companyName // ignore: cast_nullable_to_non_nullable
@@ -106,7 +113,8 @@ abstract class _$$_ExperienceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String companyName,
+      {String id,
+      String companyName,
       String jobTitle,
       String description,
       String logo,
@@ -125,6 +133,7 @@ class __$$_ExperienceCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? companyName = null,
     Object? jobTitle = null,
     Object? description = null,
@@ -133,6 +142,10 @@ class __$$_ExperienceCopyWithImpl<$Res>
     Object? endDate = null,
   }) {
     return _then(_$_Experience(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       companyName: null == companyName
           ? _value.companyName
           : companyName // ignore: cast_nullable_to_non_nullable
@@ -165,7 +178,8 @@ class __$$_ExperienceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Experience implements _Experience {
   _$_Experience(
-      {this.companyName = "",
+      {this.id = "",
+      this.companyName = "",
       this.jobTitle = "",
       this.description = "",
       this.logo = "",
@@ -175,6 +189,9 @@ class _$_Experience implements _Experience {
   factory _$_Experience.fromJson(Map<String, dynamic> json) =>
       _$$_ExperienceFromJson(json);
 
+  @override
+  @JsonKey()
+  final String id;
   @override
   @JsonKey()
   final String companyName;
@@ -196,7 +213,7 @@ class _$_Experience implements _Experience {
 
   @override
   String toString() {
-    return 'Experience(companyName: $companyName, jobTitle: $jobTitle, description: $description, logo: $logo, startedDate: $startedDate, endDate: $endDate)';
+    return 'Experience(id: $id, companyName: $companyName, jobTitle: $jobTitle, description: $description, logo: $logo, startedDate: $startedDate, endDate: $endDate)';
   }
 
   @override
@@ -204,6 +221,7 @@ class _$_Experience implements _Experience {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Experience &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.companyName, companyName) ||
                 other.companyName == companyName) &&
             (identical(other.jobTitle, jobTitle) ||
@@ -218,7 +236,7 @@ class _$_Experience implements _Experience {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, companyName, jobTitle,
+  int get hashCode => Object.hash(runtimeType, id, companyName, jobTitle,
       description, logo, startedDate, endDate);
 
   @JsonKey(ignore: true)
@@ -237,7 +255,8 @@ class _$_Experience implements _Experience {
 
 abstract class _Experience implements Experience {
   factory _Experience(
-      {final String companyName,
+      {final String id,
+      final String companyName,
       final String jobTitle,
       final String description,
       final String logo,
@@ -247,6 +266,8 @@ abstract class _Experience implements Experience {
   factory _Experience.fromJson(Map<String, dynamic> json) =
       _$_Experience.fromJson;
 
+  @override
+  String get id;
   @override
   String get companyName;
   @override

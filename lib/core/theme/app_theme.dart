@@ -29,6 +29,10 @@ class AppTheme {
             foregroundColor: Colors.white,
           ),
         ),
+        cardTheme: CardTheme(
+          color: AppColors.cardBody,
+          shadowColor: AppColors.white,
+        ),
         chipTheme: const ChipThemeData(
             labelStyle: TextStyle(color: AppColors.white),
             backgroundColor: AppColors.background,

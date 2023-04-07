@@ -20,6 +20,7 @@ ProjectModel _$ProjectModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProjectModel {
+  String get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   String get logo => throw _privateConstructorUsedError;
@@ -44,7 +45,8 @@ abstract class $ProjectModelCopyWith<$Res> {
       _$ProjectModelCopyWithImpl<$Res, ProjectModel>;
   @useResult
   $Res call(
-      {String title,
+      {String id,
+      String title,
       String description,
       String logo,
       String primaryScreenshot,
@@ -71,6 +73,7 @@ class _$ProjectModelCopyWithImpl<$Res, $Val extends ProjectModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? title = null,
     Object? description = null,
     Object? logo = null,
@@ -83,6 +86,10 @@ class _$ProjectModelCopyWithImpl<$Res, $Val extends ProjectModel>
     Object? experience = freezed,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -148,7 +155,8 @@ abstract class _$$_ProjectModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String title,
+      {String id,
+      String title,
       String description,
       String logo,
       String primaryScreenshot,
@@ -174,6 +182,7 @@ class __$$_ProjectModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? title = null,
     Object? description = null,
     Object? logo = null,
@@ -186,6 +195,10 @@ class __$$_ProjectModelCopyWithImpl<$Res>
     Object? experience = freezed,
   }) {
     return _then(_$_ProjectModel(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -231,10 +244,12 @@ class __$$_ProjectModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(fieldRename: FieldRename.snake)
 class _$_ProjectModel implements _ProjectModel {
   const _$_ProjectModel(
-      {this.title = "",
+      {this.id = "",
+      this.title = "",
       this.description = "",
       this.logo = "",
       this.primaryScreenshot = "",
@@ -250,6 +265,9 @@ class _$_ProjectModel implements _ProjectModel {
   factory _$_ProjectModel.fromJson(Map<String, dynamic> json) =>
       _$$_ProjectModelFromJson(json);
 
+  @override
+  @JsonKey()
+  final String id;
   @override
   @JsonKey()
   final String title;
@@ -294,7 +312,7 @@ class _$_ProjectModel implements _ProjectModel {
 
   @override
   String toString() {
-    return 'ProjectModel(title: $title, description: $description, logo: $logo, primaryScreenshot: $primaryScreenshot, secondaryScreenshot: $secondaryScreenshot, startedDate: $startedDate, endDate: $endDate, platforms: $platforms, categories: $categories, experience: $experience)';
+    return 'ProjectModel(id: $id, title: $title, description: $description, logo: $logo, primaryScreenshot: $primaryScreenshot, secondaryScreenshot: $secondaryScreenshot, startedDate: $startedDate, endDate: $endDate, platforms: $platforms, categories: $categories, experience: $experience)';
   }
 
   @override
@@ -302,6 +320,7 @@ class _$_ProjectModel implements _ProjectModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ProjectModel &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.description, description) ||
                 other.description == description) &&
@@ -325,6 +344,7 @@ class _$_ProjectModel implements _ProjectModel {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      id,
       title,
       description,
       logo,
@@ -352,7 +372,8 @@ class _$_ProjectModel implements _ProjectModel {
 
 abstract class _ProjectModel implements ProjectModel {
   const factory _ProjectModel(
-      {final String title,
+      {final String id,
+      final String title,
       final String description,
       final String logo,
       final String primaryScreenshot,
@@ -366,6 +387,8 @@ abstract class _ProjectModel implements ProjectModel {
   factory _ProjectModel.fromJson(Map<String, dynamic> json) =
       _$_ProjectModel.fromJson;
 
+  @override
+  String get id;
   @override
   String get title;
   @override

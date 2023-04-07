@@ -8,6 +8,7 @@ part of 'platform_model.dart';
 
 _$_PlatformModel _$$_PlatformModelFromJson(Map<String, dynamic> json) =>
     _$_PlatformModel(
+      id: json['id'] as String? ?? "",
       platform: $enumDecode(_$PlatformEnumEnumMap, json['platform']),
       link: json['link'] as String? ?? "",
       rating: (json['rating'] as num?)?.toDouble() ?? 5.0,
@@ -15,6 +16,7 @@ _$_PlatformModel _$$_PlatformModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_PlatformModelToJson(_$_PlatformModel instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'platform': _$PlatformEnumEnumMap[instance.platform]!,
       'link': instance.link,
       'rating': instance.rating,

@@ -25,4 +25,5 @@ class AppColors {
   static const Color red = Color(0xFFCA3F43);
   static const Color bodyText = Color(0xFFC4CFDE);
   static const Color cardBody = Color(0xFF22262A);
+  static const Color whiteWithOpacity = Color(0xAAFFFFFF);
 }

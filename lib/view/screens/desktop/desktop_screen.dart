@@ -65,9 +65,12 @@ class _DesktopScreenState extends State<DesktopScreen> {
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisExtent: 350.0,
+                mainAxisSpacing: 32.0,
+                crossAxisSpacing: 32.0,
               ),
               itemBuilder: (context, index) {
-                return const ProjectInfoWidget(
+                return ProjectInfoWidget(
+                  key: ValueKey(index),
                   screenEnum: ScreenEnum.desktop,
                 );
               },

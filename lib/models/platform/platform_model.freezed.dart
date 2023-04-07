@@ -20,6 +20,7 @@ PlatformModel _$PlatformModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PlatformModel {
+  String get id => throw _privateConstructorUsedError;
   PlatformEnum get platform => throw _privateConstructorUsedError;
   String get link => throw _privateConstructorUsedError;
   double get rating => throw _privateConstructorUsedError;
@@ -36,7 +37,7 @@ abstract class $PlatformModelCopyWith<$Res> {
           PlatformModel value, $Res Function(PlatformModel) then) =
       _$PlatformModelCopyWithImpl<$Res, PlatformModel>;
   @useResult
-  $Res call({PlatformEnum platform, String link, double rating});
+  $Res call({String id, PlatformEnum platform, String link, double rating});
 }
 
 /// @nodoc
@@ -52,11 +53,16 @@ class _$PlatformModelCopyWithImpl<$Res, $Val extends PlatformModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? platform = null,
     Object? link = null,
     Object? rating = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
@@ -81,7 +87,7 @@ abstract class _$$_PlatformModelCopyWith<$Res>
       __$$_PlatformModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({PlatformEnum platform, String link, double rating});
+  $Res call({String id, PlatformEnum platform, String link, double rating});
 }
 
 /// @nodoc
@@ -95,11 +101,16 @@ class __$$_PlatformModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? platform = null,
     Object? link = null,
     Object? rating = null,
   }) {
     return _then(_$_PlatformModel(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
@@ -119,11 +130,18 @@ class __$$_PlatformModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlatformModel implements _PlatformModel {
-  _$_PlatformModel({required this.platform, this.link = "", this.rating = 5.0});
+  _$_PlatformModel(
+      {this.id = "",
+      required this.platform,
+      this.link = "",
+      this.rating = 5.0});
 
   factory _$_PlatformModel.fromJson(Map<String, dynamic> json) =>
       _$$_PlatformModelFromJson(json);
 
+  @override
+  @JsonKey()
+  final String id;
   @override
   final PlatformEnum platform;
   @override
@@ -135,7 +153,7 @@ class _$_PlatformModel implements _PlatformModel {
 
   @override
   String toString() {
-    return 'PlatformModel(platform: $platform, link: $link, rating: $rating)';
+    return 'PlatformModel(id: $id, platform: $platform, link: $link, rating: $rating)';
   }
 
   @override
@@ -143,6 +161,7 @@ class _$_PlatformModel implements _PlatformModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlatformModel &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.platform, platform) ||
                 other.platform == platform) &&
             (identical(other.link, link) || other.link == link) &&
@@ -151,7 +170,7 @@ class _$_PlatformModel implements _PlatformModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, platform, link, rating);
+  int get hashCode => Object.hash(runtimeType, id, platform, link, rating);
 
   @JsonKey(ignore: true)
   @override
@@ -169,13 +188,16 @@ class _$_PlatformModel implements _PlatformModel {
 
 abstract class _PlatformModel implements PlatformModel {
   factory _PlatformModel(
-      {required final PlatformEnum platform,
+      {final String id,
+      required final PlatformEnum platform,
       final String link,
       final double rating}) = _$_PlatformModel;
 
   factory _PlatformModel.fromJson(Map<String, dynamic> json) =
       _$_PlatformModel.fromJson;
 
+  @override
+  String get id;
   @override
   PlatformEnum get platform;
   @override
