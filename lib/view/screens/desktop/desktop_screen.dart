@@ -32,35 +32,32 @@ class _DesktopScreenState extends State<DesktopScreen> {
     double padding = (width - 1300) / 2.0;
 
     return Scaffold(
-      // extendBodyBehindAppBar: true,
-      appBar: const DesktopAppBar(),
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: padding.isNegative ? 50 : padding + 50,
-        ),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  AboutMeSimple(
-                    key: AppKeys.homeKey,
-                    screenEnum: ScreenEnum.desktop,
-                  ),
-                  const SizedBox(height: 32.0),
-                  Text(
-                    'Projects',
-                    key: AppKeys.projectsKey,
-                    style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                          color: AppColors.white,
-                        ),
-                  ),
-                  const SizedBox(height: 16.0),
-                ],
-              ),
+      extendBodyBehindAppBar: true,
+      // appBar: const DesktopAppBar(),
+      body: CustomScrollView(
+        slivers: [
+          DesktopAppBar(),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: padding),
+            sliver: SliverList(
+              delegate: SliverChildListDelegate([
+                AboutMeSimple(
+                  key: AppKeys.homeKey,
+                  screenEnum: ScreenEnum.desktop,
+                ),
+                const SizedBox(height: 32.0),
+                Text(
+                  'Projects',
+                  key: AppKeys.projectsKey,
+                  style: Theme.of(context).textTheme.displayMedium,
+                ),
+                const SizedBox(height: 16.0),
+              ]),
             ),
-            SliverGrid.builder(
+          ),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: padding),
+            sliver: SliverGrid.builder(
               itemCount: 5,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
@@ -75,12 +72,24 @@ class _DesktopScreenState extends State<DesktopScreen> {
                 );
               },
             ),
-            SliverList(
+          ),
+          SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: padding),
+            sliver: SliverList(
               delegate: SliverChildListDelegate(
                 [
                   const SizedBox(height: 32.0),
+                  Row(
+                    children: [
+                      Text(
+                        'Educations',
+                        key: AppKeys.educationKey,
+                        style: Theme.of(context).textTheme.displayMedium,
+                      )
+                    ],
+                  ),
                   EducationAndExperienceList(
-                    key: AppKeys.educationKey,
+                    // key: AppKeys.educationKey,
                     screenEnum: ScreenEnum.desktop,
                   ),
                   const SizedBox(height: 32.0),
@@ -91,8 +100,8 @@ class _DesktopScreenState extends State<DesktopScreen> {
                 ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

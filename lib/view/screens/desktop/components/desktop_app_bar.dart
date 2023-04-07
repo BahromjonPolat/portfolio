@@ -20,64 +20,59 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 24.0),
-      color: AppColors.background.withOpacity(.9),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          const Text("Bahromjon Po'lat"),
-          const Spacer(),
-          AppTextButton(
-            label: AppStrings.home,
-            textColor: Colors.grey,
-            onHover: AppColors.primary,
-            onPressed: () {
-              BuildContext? context = AppKeys.homeKey.currentContext;
-              Scrollable.ensureVisible(
-                context!,
-                duration: const Duration(milliseconds: 300),
-              );
-            },
-          ),
-          AppTextButton(
-            label: AppStrings.resume,
-            textColor: Colors.grey,
-            onHover: AppColors.primary,
-            onPressed: () {
-              BuildContext? context = AppKeys.projectsKey.currentContext;
-              Scrollable.ensureVisible(
-                context!,
-                duration: const Duration(milliseconds: 300),
-              );
-            },
-          ),
-          AppTextButton(
-            label: AppStrings.projects,
-            textColor: Colors.grey,
-            onHover: AppColors.primary,
-            onPressed: () {},
-          ),
-          AppTextButton(
-            label: AppStrings.experience,
-            textColor: Colors.grey,
-            onHover: AppColors.primary,
-            onPressed: () {},
-          ),
-          AppTextButton(
-            label: AppStrings.contacts,
-            textColor: Colors.grey,
-            onHover: AppColors.primary,
-            onPressed: () {
-              BuildContext? context = AppKeys.contactsKey.currentContext;
-              Scrollable.ensureVisible(
-                context!,
-                duration: const Duration(milliseconds: 300),
-              );
-            },
-          ),
-        ],
-      ),
+    return SliverAppBar(
+      title: const Text("Bahromjon Po'lat"),
+      pinned: true,
+      actions: [
+        AppTextButton(
+          label: AppStrings.home,
+          textColor: Colors.grey,
+          onHover: AppColors.primary,
+          onPressed: () {
+            BuildContext? context = AppKeys.homeKey.currentContext;
+            Scrollable.ensureVisible(
+              context!,
+              duration: const Duration(milliseconds: 300),
+            );
+          },
+        ),
+        AppTextButton(
+          label: AppStrings.resume,
+          textColor: Colors.grey,
+          onHover: AppColors.primary,
+          onPressed: () {
+            BuildContext? context = AppKeys.projectsKey.currentContext;
+            Scrollable.ensureVisible(
+              context!,
+              duration: const Duration(milliseconds: 300),
+            );
+          },
+        ),
+        AppTextButton(
+          label: AppStrings.projects,
+          textColor: Colors.grey,
+          onHover: AppColors.primary,
+          onPressed: () {},
+        ),
+        AppTextButton(
+          label: AppStrings.experience,
+          textColor: Colors.grey,
+          onHover: AppColors.primary,
+          onPressed: () {},
+        ),
+        AppTextButton(
+          label: AppStrings.contacts,
+          textColor: Colors.grey,
+          onHover: AppColors.primary,
+          onPressed: () {
+            BuildContext? context = AppKeys.contactsKey.currentContext;
+            Scrollable.ensureVisible(
+              context!,
+              duration: const Duration(milliseconds: 300),
+            );
+          },
+        ),
+      ],
     );
   }
 
