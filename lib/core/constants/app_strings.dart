@@ -22,6 +22,7 @@ class AppStrings {
   static const String projects = 'Projects';
   static const String followMe = 'Follow me';
   static const String about = 'About';
+  static const String downloadCv = 'Download CV';
   static const String aboutMeFull =
       "I graduated with a degree in Flutter Programming(Developing). And I have experience as a Flutter Programming. I excel at multitasking and I'm a team player. Sometimes, I miss deadlines because I want everything to be perfect.";
 }

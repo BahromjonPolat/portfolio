@@ -20,8 +20,8 @@ PlatformModel _$PlatformModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PlatformModel {
-  String get id => throw _privateConstructorUsedError;
   PlatformEnum get platform => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get link => throw _privateConstructorUsedError;
   double get rating => throw _privateConstructorUsedError;
 
@@ -37,7 +37,7 @@ abstract class $PlatformModelCopyWith<$Res> {
           PlatformModel value, $Res Function(PlatformModel) then) =
       _$PlatformModelCopyWithImpl<$Res, PlatformModel>;
   @useResult
-  $Res call({String id, PlatformEnum platform, String link, double rating});
+  $Res call({PlatformEnum platform, String id, String link, double rating});
 }
 
 /// @nodoc
@@ -53,20 +53,20 @@ class _$PlatformModelCopyWithImpl<$Res, $Val extends PlatformModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
     Object? platform = null,
+    Object? id = null,
     Object? link = null,
     Object? rating = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
       platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as PlatformEnum,
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       link: null == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
@@ -87,7 +87,7 @@ abstract class _$$_PlatformModelCopyWith<$Res>
       __$$_PlatformModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, PlatformEnum platform, String link, double rating});
+  $Res call({PlatformEnum platform, String id, String link, double rating});
 }
 
 /// @nodoc
@@ -101,20 +101,20 @@ class __$$_PlatformModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
     Object? platform = null,
+    Object? id = null,
     Object? link = null,
     Object? rating = null,
   }) {
     return _then(_$_PlatformModel(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
       platform: null == platform
           ? _value.platform
           : platform // ignore: cast_nullable_to_non_nullable
               as PlatformEnum,
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       link: null == link
           ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
@@ -131,8 +131,8 @@ class __$$_PlatformModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_PlatformModel implements _PlatformModel {
   _$_PlatformModel(
-      {this.id = "",
-      required this.platform,
+      {required this.platform,
+      this.id = "",
       this.link = "",
       this.rating = 5.0});
 
@@ -140,10 +140,10 @@ class _$_PlatformModel implements _PlatformModel {
       _$$_PlatformModelFromJson(json);
 
   @override
+  final PlatformEnum platform;
+  @override
   @JsonKey()
   final String id;
-  @override
-  final PlatformEnum platform;
   @override
   @JsonKey()
   final String link;
@@ -153,7 +153,7 @@ class _$_PlatformModel implements _PlatformModel {
 
   @override
   String toString() {
-    return 'PlatformModel(id: $id, platform: $platform, link: $link, rating: $rating)';
+    return 'PlatformModel(platform: $platform, id: $id, link: $link, rating: $rating)';
   }
 
   @override
@@ -161,16 +161,16 @@ class _$_PlatformModel implements _PlatformModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlatformModel &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.platform, platform) ||
                 other.platform == platform) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.link, link) || other.link == link) &&
             (identical(other.rating, rating) || other.rating == rating));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, platform, link, rating);
+  int get hashCode => Object.hash(runtimeType, platform, id, link, rating);
 
   @JsonKey(ignore: true)
   @override
@@ -188,8 +188,8 @@ class _$_PlatformModel implements _PlatformModel {
 
 abstract class _PlatformModel implements PlatformModel {
   factory _PlatformModel(
-      {final String id,
-      required final PlatformEnum platform,
+      {required final PlatformEnum platform,
+      final String id,
       final String link,
       final double rating}) = _$_PlatformModel;
 
@@ -197,9 +197,9 @@ abstract class _PlatformModel implements PlatformModel {
       _$_PlatformModel.fromJson;
 
   @override
-  String get id;
-  @override
   PlatformEnum get platform;
+  @override
+  String get id;
   @override
   String get link;
   @override

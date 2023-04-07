@@ -19,8 +19,8 @@ part 'platform_model.g.dart';
 @freezed
 class PlatformModel with _$PlatformModel {
   factory PlatformModel({
-    @Default("") String id,
     required PlatformEnum platform,
+    @Default("") String id,
     @Default("") String link,
     @Default(5.0) double rating,
   }) = _PlatformModel;

@@ -10,8 +10,11 @@
   Documentation: 
 
 */
+import 'dart:io';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/view/widgets/follow_me_widget.dart';
 
@@ -71,6 +74,11 @@ class AboutMeWithDescription extends StatelessWidget {
             style: Theme.of(context).textTheme.bodySmall?.copyWith(height: 2.0),
           ),
           const SizedBox(height: 64.0),
+          OutlinedButton(
+            onPressed: () {},
+            child: Text(AppStrings.downloadCv),
+          ),
+          const SizedBox(height: 24.0),
           const FollowMeOnWidget(),
         ],
       ),

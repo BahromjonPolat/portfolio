@@ -15,3 +15,4 @@ export 'project/project_model.dart';
 export 'experience/experience.dart';
 export 'platform/platform_model.dart';
 export 'category/category.dart';
+export 'skills/skills_model.dart';
