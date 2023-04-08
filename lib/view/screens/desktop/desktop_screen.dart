@@ -13,6 +13,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
+import 'package:portfolio/core/data/projects_data.dart';
+import 'package:portfolio/models/project/project_model.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 
 import 'package:portfolio/view/widgets/widgets.dart';
@@ -26,6 +28,7 @@ class DesktopScreen extends StatefulWidget {
 }
 
 class _DesktopScreenState extends State<DesktopScreen> {
+  List<ProjectModel> projects = ProjectsData().projects;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -62,7 +65,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
             key: AppKeys.projectsKey,
             padding: EdgeInsets.symmetric(horizontal: padding),
             sliver: SliverGrid.builder(
-              itemCount: 5,
+              itemCount: projects.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisExtent: 350.0,
@@ -70,9 +73,11 @@ class _DesktopScreenState extends State<DesktopScreen> {
                 crossAxisSpacing: 32.0,
               ),
               itemBuilder: (context, index) {
+                ProjectModel project = projects[index];
                 return ProjectInfoWidget(
                   key: ValueKey(index),
                   screenEnum: ScreenEnum.desktop,
+                  project: project,
                 );
               },
             ),

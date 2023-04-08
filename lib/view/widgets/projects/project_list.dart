@@ -13,35 +13,47 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
+import 'package:portfolio/models/project/project_model.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
 
 class ProjectList extends StatelessWidget {
   final ScreenEnum screenEnum;
-  const ProjectList({super.key, required this.screenEnum});
+  final List<ProjectModel> projects;
+  const ProjectList({
+    super.key,
+    required this.screenEnum,
+    required this.projects,
+  });
 
   @override
   Widget build(BuildContext context) {
     switch (screenEnum) {
       case ScreenEnum.desktop:
         return Wrap(
-          children: List.generate(
-            6,
-            (index) => ProjectInfoWidget(screenEnum: screenEnum),
-          ),
+          children: projects
+              .map((project) => ProjectInfoWidget(
+                    screenEnum: screenEnum,
+                    project: project,
+                  ))
+              .toList(),
         );
       case ScreenEnum.tablet:
         return Wrap(
-          children: List.generate(
-            6,
-            (index) => ProjectInfoWidget(screenEnum: screenEnum),
-          ),
+          children: projects
+              .map((project) => ProjectInfoWidget(
+                    screenEnum: screenEnum,
+                    project: project,
+                  ))
+              .toList(),
         );
       case ScreenEnum.mobile:
         return Wrap(
-          children: List.generate(
-            6,
-            (index) => ProjectInfoWidget(screenEnum: screenEnum),
-          ),
+          children: projects
+              .map((project) => ProjectInfoWidget(
+                    screenEnum: screenEnum,
+                    project: project,
+                  ))
+              .toList(),
         );
     }
   }

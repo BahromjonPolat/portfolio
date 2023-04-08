@@ -13,6 +13,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
+import 'package:portfolio/core/data/projects_data.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
 
@@ -28,10 +29,13 @@ class _TabletScreenState extends State<TabletScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: const [
+        children: [
           AboutMeSimple(screenEnum: ScreenEnum.tablet),
           SizedBox(height: 32.0),
-          ProjectList(screenEnum: ScreenEnum.tablet),
+          ProjectList(
+            screenEnum: ScreenEnum.tablet,
+            projects: ProjectsData().projects,
+          ),
           SizedBox(height: 32.0),
           EducationAndExperienceList(screenEnum: ScreenEnum.tablet),
           ContactWidget(screenEnum: ScreenEnum.tablet)

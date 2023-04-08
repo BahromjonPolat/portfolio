@@ -14,13 +14,16 @@
 import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
+import 'package:portfolio/models/project/project_model.dart';
 import 'package:portfolio/view/widgets/projects/project_data_widget.dart';
 
 class ProjectInfoWidget extends StatelessWidget {
   final ScreenEnum screenEnum;
+  final ProjectModel project;
   const ProjectInfoWidget({
     super.key,
     required this.screenEnum,
+    required this.project,
   });
 
   @override
@@ -35,14 +38,14 @@ class ProjectInfoWidget extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Expanded(child: ProjectDataWidget()),
+              Expanded(child: ProjectDataWidget(project: project)),
               const SizedBox(width: 32.0),
               SizedBox(
                 height: 240.0,
                 child: DeviceFrame(
                   device: Devices.ios.iPhone13ProMax,
                   screen: Image.network(
-                    'https://cdn.pixabay.com/photo/2018/01/28/10/59/internet-3113279_960_720.jpg',
+                    project.primaryScreenshot,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -65,12 +68,12 @@ class ProjectInfoWidget extends StatelessWidget {
                 child: DeviceFrame(
                   device: Devices.ios.iPhone13ProMax,
                   screen: Image.network(
-                    'https://cdn.pixabay.com/photo/2018/01/28/10/59/internet-3113279_960_720.jpg',
+                    project.primaryScreenshot,
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
-              ProjectDataWidget(),
+              ProjectDataWidget(project: project),
             ],
           ),
         );

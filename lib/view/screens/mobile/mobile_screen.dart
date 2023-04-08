@@ -11,6 +11,7 @@
 
 */
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/data/projects_data.dart';
 import 'package:portfolio/core/enums/enums.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
@@ -27,10 +28,13 @@ class _MobileScreenState extends State<MobileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: const [
+        children: [
           AboutMeSimple(screenEnum: ScreenEnum.mobile),
           SizedBox(height: 32.0),
-          ProjectList(screenEnum: ScreenEnum.mobile),
+          ProjectList(
+            screenEnum: ScreenEnum.mobile,
+            projects: ProjectsData().projects,
+          ),
           SizedBox(height: 32.0),
           EducationAndExperienceList(screenEnum: ScreenEnum.mobile),
           SizedBox(height: 32.0),
