@@ -13,6 +13,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/constants.dart';
+import 'package:portfolio/services/launch_service.dart';
 
 import 'square_button.dart';
 
@@ -32,18 +33,36 @@ class FollowMeOnWidget extends StatelessWidget {
         Row(
           children: [
             SquareButton(
+              assetImage: AppIcons.linkedin,
+              onPressed: () {
+                String url = 'https://www.linkedin.com/in/bahromjon-polat/';
+                LaunchService.launch(Uri.parse(url));
+              },
+            ),
+            const SizedBox(width: 24.0),
+            SquareButton(
               assetImage: AppIcons.playStore,
-              onPressed: () {},
+              onPressed: () {
+                String url =
+                    'https://play.google.com/store/apps/dev?id=7896681899586309203';
+                LaunchService.launch(Uri.parse(url));
+              },
             ),
             const SizedBox(width: 24.0),
             SquareButton(
-              assetImage: AppIcons.appStore,
-              onPressed: () {},
+              assetImage: AppIcons.github,
+              onPressed: () {
+                String url = "https://github.com/BahromjonPolat/";
+                LaunchService.launch(Uri.parse(url));
+              },
             ),
             const SizedBox(width: 24.0),
             SquareButton(
-              assetImage: AppIcons.apple,
-              onPressed: () {},
+              assetImage: AppIcons.facebook,
+              onPressed: () {
+                String url = "https://www.facebook.com/Bahromjon.Polat/";
+                LaunchService.launch(Uri.parse(url));
+              },
             ),
           ],
         ),

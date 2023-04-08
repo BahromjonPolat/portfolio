@@ -51,7 +51,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
                 const SizedBox(height: 32.0),
                 Text(
                   'Projects',
-                  key: AppKeys.projectsKey,
+                  // key: AppKeys.projectsKey,
                   style: Theme.of(context).textTheme.displayMedium,
                 ),
                 const SizedBox(height: 16.0),

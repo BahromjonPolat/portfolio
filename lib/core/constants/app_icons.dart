@@ -17,4 +17,12 @@ class AppIcons {
   static const String apple = 'assets/icons/apple.svg';
   static const String appStore = 'assets/icons/app_store.svg';
   static const String playStore = 'assets/icons/play_store.svg';
+  static const String devices = 'assets/icons/devices.svg';
+  static const String facebook = 'assets/icons/facebook.svg';
+  static const String git = 'assets/icons/git.svg';
+  static const String github = 'assets/icons/github.svg';
+  static const String instagram = 'assets/icons/instagram.svg';
+  static const String kotlin = 'assets/icons/kotlin.svg';
+  static const String linkedin = 'assets/icons/linkedin.svg';
+  static const String telegram = 'assets/icons/telegram.svg';
 }
