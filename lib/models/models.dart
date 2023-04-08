@@ -16,3 +16,4 @@ export 'experience/experience.dart';
 export 'platform/platform_model.dart';
 export 'category/category.dart';
 export 'skills/skills_model.dart';
+export 'message/message.dart';

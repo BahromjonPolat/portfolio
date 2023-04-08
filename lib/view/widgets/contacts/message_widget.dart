@@ -14,6 +14,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/app_colors.dart';
 import 'package:portfolio/core/utils/app_validator.dart';
+import 'package:portfolio/models/models.dart';
+import 'package:portfolio/services/message_service.dart';
 
 class MessageWidget extends StatefulWidget {
   const MessageWidget({super.key});
@@ -83,7 +85,27 @@ class _MessageWidgetState extends State<MessageWidget> {
             ),
             const SizedBox(height: 42.0),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                FormState? formState = _formKey.currentState;
+                bool isValidate = formState?.validate() ?? false;
+                if (!isValidate) return;
+
+                String name = _nameController.text.trim();
+                String email = _emailController.text;
+                String subject = _subjectController.text.trim();
+                String msg = _messageController.text.trim();
+
+                Message message = Message(
+                  name: name,
+                  lastName: "",
+                  email: email,
+                  subject: subject,
+                  message: msg,
+                  date: DateTime.now(),
+                );
+
+                MessageService().sendMessage(message);
+              },
               child: const Center(child: Text('Send')),
             ),
           ],

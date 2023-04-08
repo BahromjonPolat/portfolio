@@ -12,3 +12,4 @@
 */
 
 export 'launch_service.dart';
+export 'message_service.dart';

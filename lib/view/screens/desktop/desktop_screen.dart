@@ -29,20 +29,23 @@ class _DesktopScreenState extends State<DesktopScreen> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    double padding = (width - 1300) / 2.0;
+    double horizontal = (width - 1300) / 2.0;
+    double padding = horizontal.isNegative ? horizontal + 150 : horizontal;
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-      // appBar: const DesktopAppBar(),
       body: CustomScrollView(
         slivers: [
           DesktopAppBar(),
           SliverPadding(
-            padding: EdgeInsets.symmetric(horizontal: padding),
+            key: AppKeys.homeKey,
+            padding: EdgeInsets.symmetric(
+              horizontal: padding,
+            ),
             sliver: SliverList(
               delegate: SliverChildListDelegate([
                 AboutMeSimple(
-                  key: AppKeys.homeKey,
+                  // key: AppKeys.homeKey,
                   screenEnum: ScreenEnum.desktop,
                 ),
                 const SizedBox(height: 32.0),
@@ -56,6 +59,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
             ),
           ),
           SliverPadding(
+            key: AppKeys.projectsKey,
             padding: EdgeInsets.symmetric(horizontal: padding),
             sliver: SliverGrid.builder(
               itemCount: 5,
@@ -74,6 +78,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
             ),
           ),
           SliverPadding(
+            key: AppKeys.educationKey,
             padding: EdgeInsets.symmetric(horizontal: padding),
             sliver: SliverList(
               delegate: SliverChildListDelegate(
@@ -83,7 +88,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
                     children: [
                       Text(
                         'Educations',
-                        key: AppKeys.educationKey,
+                        // key: AppKeys.educationKey,
                         style: Theme.of(context).textTheme.displayMedium,
                       )
                     ],
