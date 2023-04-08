@@ -68,7 +68,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
               itemCount: projects.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                mainAxisExtent: 350.0,
+                mainAxisExtent: 364.0,
                 mainAxisSpacing: 32.0,
                 crossAxisSpacing: 32.0,
               ),

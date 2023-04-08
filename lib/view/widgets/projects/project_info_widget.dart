@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/models/project/project_model.dart';
 import 'package:portfolio/view/widgets/projects/project_data_widget.dart';
+import 'package:portfolio/view/widgets/projects/project_devices.dart';
 
 class ProjectInfoWidget extends StatelessWidget {
   final ScreenEnum screenEnum;
@@ -40,15 +41,10 @@ class ProjectInfoWidget extends StatelessWidget {
             children: [
               Expanded(child: ProjectDataWidget(project: project)),
               const SizedBox(width: 32.0),
-              SizedBox(
-                height: 240.0,
-                child: DeviceFrame(
-                  device: Devices.ios.iPhone13ProMax,
-                  screen: Image.network(
-                    project.primaryScreenshot,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+              ProjectDevices(
+                primaryScreenshot: project.primaryScreenshot,
+                secondaryScreenshot: project.secondaryScreenshot,
+                platform: project.platforms.first.platform,
               ),
             ],
           ),
@@ -63,15 +59,10 @@ class ProjectInfoWidget extends StatelessWidget {
           ),
           child: Column(
             children: [
-              SizedBox(
-                height: 240.0,
-                child: DeviceFrame(
-                  device: Devices.ios.iPhone13ProMax,
-                  screen: Image.network(
-                    project.primaryScreenshot,
-                    fit: BoxFit.cover,
-                  ),
-                ),
+              ProjectDevices(
+                primaryScreenshot: project.primaryScreenshot,
+                secondaryScreenshot: project.secondaryScreenshot,
+                platform: project.platforms.first.platform,
               ),
               ProjectDataWidget(project: project),
             ],
