@@ -18,7 +18,7 @@ class LaunchService {
 
   static Future<void> launch(Uri url) async {
     if (await canLaunchUrl(url)) {
-      await launchUrl(url, mode: LaunchMode.externalNonBrowserApplication);
+      await launchUrl(url);
     }
   }
 }

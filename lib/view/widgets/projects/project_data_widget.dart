@@ -48,7 +48,9 @@ class ProjectDataWidget extends StatelessWidget {
         ),
         const SizedBox(height: 12.0),
         Row(
-          children: project.platforms.map((platform) => StoreWidget()).toList(),
+          children: project.platforms
+              .map((platform) => StoreWidget(platform: platform))
+              .toList(),
         )
       ],
     );

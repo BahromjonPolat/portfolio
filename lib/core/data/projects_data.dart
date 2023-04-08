@@ -124,7 +124,7 @@ class ProjectsData {
       id: "3",
       title: "Inventory App",
       description:
-          "Multi-user app for stock management and tracking sales and purchases. Especially useful for small retailers or warehouses but also suitable for wholesale business. You can control multiple stores and multiple employees in a single application. Our unique technology allows working online or offline and syncing data when a connection becomes available.",
+          "Multi-user app for stock management and tracking sales and purchases. Especially useful for small retailers or warehouses but also suitable for wholesale business. You can control multiple stores and multiple employees in a single application.",
       startedDate: DateTime(2022, 12).millisecondsSinceEpoch,
       endDate: DateTime(2023, 02).millisecondsSinceEpoch,
       experience: ExperienceData.invanSoft,
@@ -178,6 +178,100 @@ class ProjectsData {
           id: "2",
           icon: "",
           name: "Inventory",
+        ),
+      ],
+    ),
+
+    ProjectModel(
+      id: "6",
+      title: "Timecard",
+      description:
+          "Timecard allows you the recording of your working hours with a simple push of a button. You can easily add breaks, expenses and notes.",
+      startedDate: DateTime(2022, 12).millisecondsSinceEpoch,
+      endDate: DateTime(2023, 03).millisecondsSinceEpoch,
+      experience: ExperienceData.invanSoft,
+      logo:
+          "https://play-lh.googleusercontent.com/n220dd0I2RvdFbjr7aYuR61gP0VGiajegZiFeIi_BdPJuGPtqdC1aWLoUCdsuAqPGHp6=w240-h480-rw",
+      primaryScreenshot:
+          "https://play-lh.googleusercontent.com/bo71D5_pXce9Xdiviy1rbJhAyxWmQrWLRlYxa98RvLA1ngxcm9EWEQKTUN6N0xoqjQ=w526-h296-rw",
+      secondaryScreenshot:
+          "https://play-lh.googleusercontent.com/bo71D5_pXce9Xdiviy1rbJhAyxWmQrWLRlYxa98RvLA1ngxcm9EWEQKTUN6N0xoqjQ=w526-h296-rw",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 5.0,
+          id: "1",
+          link:
+              "https://play.google.com/store/apps/details?id=uz.in1.time_card",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "Productivity",
+        ),
+      ],
+    ),
+    ProjectModel(
+      id: "7",
+      title: "Yosin surasi",
+      description:
+          "Arabic text, transcription and translation of meanings of Surah Yasin. There is also an audio of the surah.",
+      startedDate: DateTime(2021, 06).millisecondsSinceEpoch,
+      endDate: DateTime(2023, 03).millisecondsSinceEpoch,
+      experience: ExperienceData.invanSoft,
+      logo:
+          "https://play-lh.googleusercontent.com/12zCiNhSY2yY0sXb-07VSjiavXY3FY0rbBJemTm7XDfSr7I8mwA8OKSOrJ_NPJDjvg=w240-h480-rw",
+      primaryScreenshot:
+          "https://play-lh.googleusercontent.com/MXwvmaEM00IJ2Bl_TXDh1Gtsc9J_MfaxUpFGwvCdHyMp7CfS_5FF2qD8R0EZiaYAF2A=w526-h296-rw",
+      secondaryScreenshot:
+          "https://play-lh.googleusercontent.com/IQsKwo49pPBcWLISG90g7mG_TuxeHUwqNxUMwxO5MhAzC8IhMJGo2Ci8Fj5kHJ6bK3g=w526-h296-rw",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 4.7,
+          id: "1",
+          link:
+              "https://play.google.com/store/apps/details?id=uz.mirrikh.yaaseen",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "Religion",
+        ),
+      ],
+    ),
+    ProjectModel(
+      id: "8",
+      title: "Qur'oni karim",
+      description:
+          "Translation of the Arabic text and meanings of the Holy Quran.",
+      startedDate: DateTime(2022, 08).millisecondsSinceEpoch,
+      endDate: DateTime(2023, 03).millisecondsSinceEpoch,
+      experience: ExperienceData.invanSoft,
+      logo:
+          "https://play-lh.googleusercontent.com/i4Ngy_DqVTNUsaimflvzHiJQuQkFXLr7j5osB1JXkTmaPvHjsUY-XhlfQ460L2uS4iM=w240-h480-rw",
+      primaryScreenshot:
+          "https://play-lh.googleusercontent.com/_DzVh_ZxVhPxUS-cPCtxjoqIoxTYWoWSQZ25Xb4eV5O_p1BnFDMM55oUUTPAIOIH_Eg=w526-h296-rw",
+      secondaryScreenshot:
+          "https://play-lh.googleusercontent.com/C826zHKLzMQB_6Z_9-op07HNdm_6RBQNh_04dXCcfl0tRmtkGxZfk3xma_oAoG80Gv0=w526-h296-rw",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 5.0,
+          id: "1",
+          link:
+              "https://play.google.com/store/apps/details?id=uz.mirrikhsoftware.quran",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "Religion",
         ),
       ],
     ),
