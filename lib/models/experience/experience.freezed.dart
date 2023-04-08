@@ -25,6 +25,8 @@ mixin _$Experience {
   String get jobTitle => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   String get logo => throw _privateConstructorUsedError;
+  String get workingType => throw _privateConstructorUsedError;
+  String get webSite => throw _privateConstructorUsedError;
   int get startedDate => throw _privateConstructorUsedError;
   int get endDate => throw _privateConstructorUsedError;
 
@@ -46,6 +48,8 @@ abstract class $ExperienceCopyWith<$Res> {
       String jobTitle,
       String description,
       String logo,
+      String workingType,
+      String webSite,
       int startedDate,
       int endDate});
 }
@@ -68,6 +72,8 @@ class _$ExperienceCopyWithImpl<$Res, $Val extends Experience>
     Object? jobTitle = null,
     Object? description = null,
     Object? logo = null,
+    Object? workingType = null,
+    Object? webSite = null,
     Object? startedDate = null,
     Object? endDate = null,
   }) {
@@ -91,6 +97,14 @@ class _$ExperienceCopyWithImpl<$Res, $Val extends Experience>
       logo: null == logo
           ? _value.logo
           : logo // ignore: cast_nullable_to_non_nullable
+              as String,
+      workingType: null == workingType
+          ? _value.workingType
+          : workingType // ignore: cast_nullable_to_non_nullable
+              as String,
+      webSite: null == webSite
+          ? _value.webSite
+          : webSite // ignore: cast_nullable_to_non_nullable
               as String,
       startedDate: null == startedDate
           ? _value.startedDate
@@ -118,6 +132,8 @@ abstract class _$$_ExperienceCopyWith<$Res>
       String jobTitle,
       String description,
       String logo,
+      String workingType,
+      String webSite,
       int startedDate,
       int endDate});
 }
@@ -138,6 +154,8 @@ class __$$_ExperienceCopyWithImpl<$Res>
     Object? jobTitle = null,
     Object? description = null,
     Object? logo = null,
+    Object? workingType = null,
+    Object? webSite = null,
     Object? startedDate = null,
     Object? endDate = null,
   }) {
@@ -162,6 +180,14 @@ class __$$_ExperienceCopyWithImpl<$Res>
           ? _value.logo
           : logo // ignore: cast_nullable_to_non_nullable
               as String,
+      workingType: null == workingType
+          ? _value.workingType
+          : workingType // ignore: cast_nullable_to_non_nullable
+              as String,
+      webSite: null == webSite
+          ? _value.webSite
+          : webSite // ignore: cast_nullable_to_non_nullable
+              as String,
       startedDate: null == startedDate
           ? _value.startedDate
           : startedDate // ignore: cast_nullable_to_non_nullable
@@ -183,6 +209,8 @@ class _$_Experience implements _Experience {
       this.jobTitle = "",
       this.description = "",
       this.logo = "",
+      this.workingType = "",
+      this.webSite = "",
       this.startedDate = 0,
       this.endDate = 0});
 
@@ -206,6 +234,12 @@ class _$_Experience implements _Experience {
   final String logo;
   @override
   @JsonKey()
+  final String workingType;
+  @override
+  @JsonKey()
+  final String webSite;
+  @override
+  @JsonKey()
   final int startedDate;
   @override
   @JsonKey()
@@ -213,7 +247,7 @@ class _$_Experience implements _Experience {
 
   @override
   String toString() {
-    return 'Experience(id: $id, companyName: $companyName, jobTitle: $jobTitle, description: $description, logo: $logo, startedDate: $startedDate, endDate: $endDate)';
+    return 'Experience(id: $id, companyName: $companyName, jobTitle: $jobTitle, description: $description, logo: $logo, workingType: $workingType, webSite: $webSite, startedDate: $startedDate, endDate: $endDate)';
   }
 
   @override
@@ -229,6 +263,9 @@ class _$_Experience implements _Experience {
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.logo, logo) || other.logo == logo) &&
+            (identical(other.workingType, workingType) ||
+                other.workingType == workingType) &&
+            (identical(other.webSite, webSite) || other.webSite == webSite) &&
             (identical(other.startedDate, startedDate) ||
                 other.startedDate == startedDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate));
@@ -237,7 +274,7 @@ class _$_Experience implements _Experience {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, companyName, jobTitle,
-      description, logo, startedDate, endDate);
+      description, logo, workingType, webSite, startedDate, endDate);
 
   @JsonKey(ignore: true)
   @override
@@ -260,6 +297,8 @@ abstract class _Experience implements Experience {
       final String jobTitle,
       final String description,
       final String logo,
+      final String workingType,
+      final String webSite,
       final int startedDate,
       final int endDate}) = _$_Experience;
 
@@ -276,6 +315,10 @@ abstract class _Experience implements Experience {
   String get description;
   @override
   String get logo;
+  @override
+  String get workingType;
+  @override
+  String get webSite;
   @override
   int get startedDate;
   @override

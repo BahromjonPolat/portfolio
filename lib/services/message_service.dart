@@ -15,7 +15,11 @@ import 'package:http/http.dart' as http;
 import 'package:portfolio/core/constants/secure.dart';
 import 'package:portfolio/models/models.dart';
 
-class MessageService {
+abstract class IMessageService {
+  Future<void> sendMessage(Message message);
+}
+
+class MessageService extends IMessageService {
   Future<void> sendMessage(Message message) async {
     try {
       String token = AppSecure.botToken;

@@ -23,6 +23,8 @@ class Experience with _$Experience {
     @Default("") String jobTitle,
     @Default("") String description,
     @Default("") String logo,
+    @Default("") String workingType,
+    @Default("") String webSite,
     @Default(0) int startedDate,
     @Default(0) int endDate,
   }) = _Experience;
