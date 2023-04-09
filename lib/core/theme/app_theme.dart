@@ -51,7 +51,11 @@ class AppTheme {
             iconTheme: IconThemeData(color: Colors.amber)),
         textTheme: const TextTheme(
           // displayMedium:  ,
-          bodyLarge: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+          bodyLarge: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16.0,
+            color: AppColors.white,
+          ),
           bodyMedium: TextStyle(color: AppColors.bodyText, fontSize: 16.0),
           bodySmall: TextStyle(
             color: AppColors.bodyText,

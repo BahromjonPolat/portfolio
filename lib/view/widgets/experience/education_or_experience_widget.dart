@@ -13,6 +13,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/app_colors.dart';
+import 'package:portfolio/core/utils/app_formatter.dart';
 import 'package:portfolio/models/experience/experience.dart';
 
 class EducationOrExperience extends StatelessWidget {
@@ -34,13 +35,11 @@ class EducationOrExperience extends StatelessWidget {
         children: [
           Text(
             experience.jobTitle,
-            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  color: AppColors.white,
-                ),
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           const SizedBox(height: 8.0),
           Text(
-            '${experience.companyName} (Feb 2022 - to present)',
+            _getCompanyNameAndDate(),
             style: Theme.of(context).textTheme.bodySmall,
           ),
           const SizedBox(height: 24.0),
@@ -51,5 +50,11 @@ class EducationOrExperience extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String _getCompanyNameAndDate() {
+    String started = AppFormatter.formatDateFromMills(experience.startedDate);
+    String end = AppFormatter.formatDateFromMills(experience.endDate);
+    return '${experience.companyName} ($started - to $end)';
   }
 }

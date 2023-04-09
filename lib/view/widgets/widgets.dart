@@ -13,8 +13,9 @@
 export 'app_text_button.dart';
 export 'home_title.dart';
 export 'data_with_title.dart';
-export 'about/about_me_widget.dart';
+export 'about/about.dart';
 export 'experience/experience.dart';
 export 'contacts/contacts.dart';
 export 'projects/projects.dart';
 export 'store_widget.dart';
+export 'drawer/drawer.dart';

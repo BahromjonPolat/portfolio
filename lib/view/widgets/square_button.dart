@@ -35,7 +35,7 @@ class SquareButton extends StatelessWidget {
       ),
       child: SvgPicture.asset(
         assetImage,
-        color: AppColors.white,
+        colorFilter: ColorFilter.mode(AppColors.white, BlendMode.srcIn),
       ),
     );
   }

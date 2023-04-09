@@ -14,8 +14,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/core/data/experience_data.dart';
 import 'package:portfolio/core/data/projects_data.dart';
-import 'package:portfolio/view/widgets/about/about_me_simple.dart';
-import 'package:portfolio/view/widgets/drawer/app_drawer.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
 
 class MobileScreen extends StatefulWidget {
@@ -72,6 +70,14 @@ class _MobileScreenState extends State<MobileScreen> {
               key: AppKeys.contactsKey,
               screenEnum: ScreenEnum.mobile,
             ),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 12.0),
+              alignment: Alignment.center,
+              child: Text(
+                "By Bakromjon Polat | 2023",
+                textAlign: TextAlign.center,
+              ),
+            )
           ],
         ),
       ),

@@ -12,6 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/config.dart';
 import 'package:portfolio/models/project/project_model.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
 
@@ -43,6 +44,11 @@ class ProjectDataWidget extends StatelessWidget {
         ),
         const SizedBox(height: 12.0),
         Text(
+          _getCompanyNameAndDate(),
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
+        const SizedBox(height: 12.0),
+        Text(
           project.description,
           style: Theme.of(context).textTheme.bodySmall,
         ),
@@ -54,5 +60,11 @@ class ProjectDataWidget extends StatelessWidget {
         )
       ],
     );
+  }
+
+  String _getCompanyNameAndDate() {
+    String started = AppFormatter.formatDateFromMills(project.startedDate);
+    String end = AppFormatter.formatDateFromMills(project.endDate);
+    return '${project.experience?.companyName} ($started - to $end)';
   }
 }

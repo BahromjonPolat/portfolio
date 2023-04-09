@@ -29,6 +29,7 @@ class MessageService extends IMessageService {
           "https://api.telegram.org/bot$token/sendMessage?chat_id=$chatId&parse_mode=HTML&text=$msg";
       Uri url = Uri.parse(uri);
       http.Response response = await http.get(url);
+      response;
     } catch (err) {
       print(err);
     }

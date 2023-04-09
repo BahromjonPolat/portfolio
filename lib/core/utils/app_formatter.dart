@@ -40,10 +40,40 @@ class AppFormatter {
         formatted = '$year-$month-$day';
         break;
 
+      case 'MM yyyy':
+        String month = getMonthName(date.month);
+        formatted = "$month $year";
+        break;
+
       default:
         formatted = '$day/$month/$year $hh:$mm';
     }
 
     return formatted;
+  }
+
+  static String formatDateFromMills(int mills, {String pattern = "MM yyyy"}) {
+    if (mills == 0) return "present";
+    return formatDate(
+      DateTime.fromMillisecondsSinceEpoch(mills),
+      pattern: pattern,
+    );
+  }
+
+  static String getMonthName(int month) {
+    return [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ][month - 1];
   }
 }

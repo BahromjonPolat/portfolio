@@ -11,12 +11,11 @@
 
 */
 
-import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/models/project/project_model.dart';
-import 'package:portfolio/view/widgets/projects/project_data_widget.dart';
-import 'package:portfolio/view/widgets/projects/project_devices.dart';
+import 'project_data_widget.dart';
+import 'project_devices.dart';
 
 class ProjectInfoWidget extends StatelessWidget {
   final ScreenEnum screenEnum;

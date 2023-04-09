@@ -14,7 +14,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/core/data/projects_data.dart';
-import 'package:portfolio/view/widgets/about/about_me_simple.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
 
 class TabletScreen extends StatefulWidget {
