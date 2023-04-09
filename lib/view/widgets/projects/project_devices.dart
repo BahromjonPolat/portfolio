@@ -56,8 +56,30 @@ class ProjectDevices extends StatelessWidget {
         ],
       );
     }
-    return Row(
-      children: [],
+    return Stack(
+      alignment: Alignment.bottomRight,
+      children: [
+        SizedBox(
+          height: 160.0,
+          child: DeviceFrame(
+            device: Devices.windows.wideMonitor,
+            screen: Image.network(
+              secondaryScreenshot,
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 100.0,
+          child: DeviceFrame(
+            device: Devices.windows.laptop,
+            screen: Image.network(
+              primaryScreenshot,
+              fit: BoxFit.cover,
+            ),
+          ),
+        )
+      ],
     );
   }
 }

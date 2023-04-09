@@ -89,7 +89,7 @@ class StoreWidget extends StatelessWidget {
       case PlatformEnum.ios:
         return AppIcons.appStore;
       case PlatformEnum.windows:
-        return "";
+        return AppIcons.windows;
       case PlatformEnum.linux:
         return "";
       case PlatformEnum.macOS:

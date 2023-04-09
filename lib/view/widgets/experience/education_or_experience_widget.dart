@@ -13,23 +13,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/constants/app_colors.dart';
-import 'package:portfolio/view/widgets/neon_effect_box.dart';
+import 'package:portfolio/models/experience/experience.dart';
 
-class EducationOrExperience extends StatefulWidget {
-  const EducationOrExperience({super.key});
-
-  @override
-  State<EducationOrExperience> createState() => _EducationOrExperienceState();
-}
-
-class _EducationOrExperienceState extends State<EducationOrExperience> {
-  Color backgroundColor = AppColors.background;
+class EducationOrExperience extends StatelessWidget {
+  final Experience experience;
+  const EducationOrExperience({super.key, required this.experience});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(24.0),
       margin: EdgeInsets.all(8.0),
+      width: double.infinity,
       decoration: BoxDecoration(
         color: AppColors.white.withOpacity(.07),
         borderRadius: BorderRadius.circular(24.0),
@@ -38,19 +33,19 @@ class _EducationOrExperienceState extends State<EducationOrExperience> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Flutter Developer',
+            experience.jobTitle,
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.white,
                 ),
           ),
           const SizedBox(height: 8.0),
           Text(
-            'Mirrikh Software (Feb 2022 - to present)',
+            '${experience.companyName} (Feb 2022 - to present)',
             style: Theme.of(context).textTheme.bodySmall,
           ),
           const SizedBox(height: 24.0),
           Text(
-            "Nostrud cupidatat sint esse consectetur nostrud ad nostrud. Sit enim incididunt voluptate minim nisi eu in. Deserunt consequat officia enim ad aute cillum. Ex cupidatat est adipisicing id commodo. Voluptate voluptate consequat commodo adipisicing amet et commodo magna cillum reprehenderit. Voluptate pariatur magna voluptate nisi veniam commodo et voluptate nostrud.",
+            experience.description,
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ],

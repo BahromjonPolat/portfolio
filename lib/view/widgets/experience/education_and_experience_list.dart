@@ -14,6 +14,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
+import 'package:portfolio/core/data/experience_data.dart';
+import 'package:portfolio/models/experience/experience.dart';
 import 'package:portfolio/view/widgets/experience/experience_list.dart';
 
 class EducationAndExperienceList extends StatelessWidget {
@@ -22,20 +24,21 @@ class EducationAndExperienceList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Experience> experience = ExperienceData.experience;
     double width = MediaQuery.of(context).size.width;
     switch (screenEnum) {
       case ScreenEnum.desktop:
         return Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
-            Expanded(child: ExperienceListWidget()),
-            Expanded(child: ExperienceListWidget()),
+          children: [
+            Expanded(child: ExperienceListWidget(experience: experience)),
+            Expanded(child: ExperienceListWidget(experience: experience)),
           ],
         );
       case ScreenEnum.tablet:
-        List<Expanded> children = const [
-          Expanded(child: ExperienceListWidget()),
-          Expanded(child: ExperienceListWidget()),
+        List<Expanded> children = [
+          Expanded(child: ExperienceListWidget(experience: experience)),
+          Expanded(child: ExperienceListWidget(experience: experience)),
         ];
 
         if (width > 900) {
@@ -44,14 +47,14 @@ class EducationAndExperienceList extends StatelessWidget {
             children: children,
           );
         }
-        return Column(children: const [
-          ExperienceListWidget(),
-          ExperienceListWidget(),
+        return Column(children: [
+          ExperienceListWidget(experience: experience),
+          ExperienceListWidget(experience: experience),
         ]);
       case ScreenEnum.mobile:
-        return Column(children: const [
-          ExperienceListWidget(),
-          ExperienceListWidget(),
+        return Column(children: [
+          ExperienceListWidget(experience: experience),
+          ExperienceListWidget(experience: experience),
         ]);
     }
   }

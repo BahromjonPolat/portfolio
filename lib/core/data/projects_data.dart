@@ -275,5 +275,123 @@ class ProjectsData {
         ),
       ],
     ),
+    ProjectModel(
+      id: "9",
+      title: "Invan POS",
+      description: "Desktop application for POS (Point of sale). ",
+      startedDate: DateTime(2022, 09).millisecondsSinceEpoch,
+      endDate: DateTime(2023, 04).millisecondsSinceEpoch,
+      experience: ExperienceData.invanSoft,
+      logo:
+          "https://play-lh.googleusercontent.com/XsR74TLnoi3-phB9AcLsze5fG5_dD2tFMlYkqlntGkUhKLv_N8pxjViaPb_KWAadrlTv=w240-h480-rw",
+      primaryScreenshot:
+          "https://in1.uz/_next/image?url=%2Fimages%2Fblog%2Fblog-1.webp&w=384&q=75",
+      secondaryScreenshot:
+          "https://in1.uz/_next/image?url=%2Fimages%2Fequipment.png&w=640&q=75",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.windows,
+          rating: 5.0,
+          id: "1",
+          link: "https://in1.uz/",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "POS",
+        ),
+      ],
+    ),
+    ProjectModel(
+      id: "10",
+      title: "InCom (Invan communicator)",
+      description: "Integration with Soliq",
+      startedDate: DateTime(2022, 05).millisecondsSinceEpoch,
+      endDate: DateTime(2023, 04).millisecondsSinceEpoch,
+      experience: ExperienceData.invanSoft,
+      logo:
+          "https://play-lh.googleusercontent.com/XsR74TLnoi3-phB9AcLsze5fG5_dD2tFMlYkqlntGkUhKLv_N8pxjViaPb_KWAadrlTv=w240-h480-rw",
+      primaryScreenshot:
+          "https://in1.uz/_next/image?url=%2Fimages%2Fblog%2Fblog-1.webp&w=384&q=75",
+      secondaryScreenshot:
+          "https://in1.uz/_next/image?url=%2Fimages%2Fequipment.png&w=640&q=75",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.windows,
+          rating: 5.0,
+          id: "1",
+          link: "https://in1.uz/",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "POS",
+        ),
+      ],
+    ),
+    ProjectModel(
+      id: "11",
+      title: "Foodly (UI Template)",
+      description: "There are 45+ screens in application for Food delivery.",
+      startedDate: DateTime(2022, 01).millisecondsSinceEpoch,
+      endDate: DateTime(2022, 04).millisecondsSinceEpoch,
+      experience: ExperienceData.invanSoft,
+      logo:
+          "https://play-lh.googleusercontent.com/nJV9xPlUhORzw_5rFifLrRoBnxdjAh3vBInJ3HALE_6Y0tPVWbhtS4HWQ7R1nsmDRcE=w240-h480-rw",
+      primaryScreenshot:
+          "https://play-lh.googleusercontent.com/-I8VuHMZc7W-5lorJOB7F_osxFo67hgbYVIe5bjSow2F2TcOsRgcz6FWkgnrG2EZIw=w526-h296-rw",
+      secondaryScreenshot:
+          "https://play-lh.googleusercontent.com/KqEKNqQY8t9gPF89poCRfwDDo2Z6pjUot9PbCTfTifSa5vHW6LbX7SokyhDoGPqJSw=w526-h296-rw",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 5.0,
+          id: "1",
+          link:
+              "https://play.google.com/store/apps/details?id=uz.mirrikh.foodly",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "POS",
+        ),
+      ],
+    ),
+    ProjectModel(
+      id: "11",
+      title: "Bahromjon Po'lat",
+      description: "My personal application",
+      startedDate: DateTime(2022, 01).millisecondsSinceEpoch,
+      endDate: DateTime(2022, 04).millisecondsSinceEpoch,
+      experience: ExperienceData.invanSoft,
+      logo:
+          "https://play-lh.googleusercontent.com/GiA-NuSxfCVkYLiPOPC_r6Ec3i2GMmf8SK6NigFDw0aCf7jeIH1tlJNe_ZLCPhfcWc4D=w240-h480-rw",
+      primaryScreenshot:
+          "https://play-lh.googleusercontent.com/8dmcP_vO3Py-rY9pNC9iTXYGpJeK7jCwe1jvLnr-UHbXt9PpCMwp9HJ6BhTuT7fIYaEm=w526-h296-rw",
+      secondaryScreenshot:
+          "https://play-lh.googleusercontent.com/6DLc8RCkXRdq_qAetYNArrCOAgeXabcJZwzdU_uu5c8Br-vQDEbMyQH5BrQJSyGfXg=w526-h296-rw",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 5.0,
+          id: "1",
+          link:
+              "https://play.google.com/store/apps/details?id=uz.mirrikh.profile",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "Personal",
+        ),
+      ],
+    ),
   ];
 }

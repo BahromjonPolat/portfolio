@@ -25,4 +25,5 @@ class AppIcons {
   static const String kotlin = 'assets/icons/kotlin.svg';
   static const String linkedin = 'assets/icons/linkedin.svg';
   static const String telegram = 'assets/icons/telegram.svg';
+  static const String windows = 'assets/icons/windows.svg';
 }
