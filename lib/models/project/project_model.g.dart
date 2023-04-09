@@ -6,16 +6,31 @@ part of 'project_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+Map<String, dynamic> _$ProjectModelToJson(ProjectModel instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'description': instance.description,
+      'logo': instance.logo,
+      'primary_screenshot': instance.primaryScreenshot,
+      'secondary_screenshot': instance.secondaryScreenshot,
+      'started_date': instance.startedDate,
+      'end_date': instance.endDate,
+      'platforms': instance.platforms,
+      'categories': instance.categories,
+      'experience': instance.experience,
+    };
+
 _$_ProjectModel _$$_ProjectModelFromJson(Map<String, dynamic> json) =>
     _$_ProjectModel(
       id: json['id'] as String? ?? "",
       title: json['title'] as String? ?? "",
       description: json['description'] as String? ?? "",
       logo: json['logo'] as String? ?? "",
-      primaryScreenshot: json['primary_screenshot'] as String? ?? "",
-      secondaryScreenshot: json['secondary_screenshot'] as String? ?? "",
-      startedDate: json['started_date'] as int? ?? 0,
-      endDate: json['end_date'] as int? ?? 0,
+      primaryScreenshot: json['primaryScreenshot'] as String? ?? "",
+      secondaryScreenshot: json['secondaryScreenshot'] as String? ?? "",
+      startedDate: json['startedDate'] as int? ?? 0,
+      endDate: json['endDate'] as int? ?? 0,
       platforms: (json['platforms'] as List<dynamic>?)
               ?.map((e) => PlatformModel.fromJson(e as Map<String, dynamic>))
               .toList() ??
@@ -35,10 +50,10 @@ Map<String, dynamic> _$$_ProjectModelToJson(_$_ProjectModel instance) =>
       'title': instance.title,
       'description': instance.description,
       'logo': instance.logo,
-      'primary_screenshot': instance.primaryScreenshot,
-      'secondary_screenshot': instance.secondaryScreenshot,
-      'started_date': instance.startedDate,
-      'end_date': instance.endDate,
+      'primaryScreenshot': instance.primaryScreenshot,
+      'secondaryScreenshot': instance.secondaryScreenshot,
+      'startedDate': instance.startedDate,
+      'endDate': instance.endDate,
       'platforms': instance.platforms,
       'categories': instance.categories,
       'experience': instance.experience,

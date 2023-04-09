@@ -21,9 +21,10 @@ class SkillModel with _$SkillModel {
   factory SkillModel({
     @Default("") String name,
     @Default("") String url,
-    @Default("") String image,
+    @Default("") String imageUrl,
     @Default("") String description,
   }) = _SkillModel;
+
   factory SkillModel.fromJson(Map<String, dynamic> json) =>
       _$SkillModelFromJson(json);
 }

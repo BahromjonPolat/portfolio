@@ -18,7 +18,7 @@ part 'project_model.freezed.dart';
 part 'project_model.g.dart';
 
 @freezed
-@JsonSerializable(fieldRename: FieldRename.screamingSnake)
+@JsonSerializable(fieldRename: FieldRename.snake)
 class ProjectModel with _$ProjectModel {
   const factory ProjectModel({
     @Default("") String id,

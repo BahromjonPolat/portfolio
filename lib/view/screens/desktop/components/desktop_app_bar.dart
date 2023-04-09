@@ -20,62 +20,77 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverAppBar(
-      title: const Text("Bahromjon Po'lat"),
-      pinned: true,
-      actions: [
-        AppTextButton(
-          label: AppStrings.home,
-          textColor: Colors.grey,
-          onHover: AppColors.primary,
-          onPressed: () {
-            BuildContext? context = AppKeys.homeKey.currentContext;
-            Scrollable.ensureVisible(
-              context!,
-              duration: const Duration(milliseconds: 300),
-            );
-          },
-        ),
-        AppTextButton(
-          label: AppStrings.resume,
-          textColor: Colors.grey,
-          onHover: AppColors.primary,
-          onPressed: () {
-            BuildContext? context = AppKeys.projectsKey.currentContext;
-            Scrollable.ensureVisible(
-              context!,
-              duration: const Duration(milliseconds: 300),
-            );
-          },
-        ),
-        AppTextButton(
-          label: AppStrings.projects,
-          textColor: Colors.grey,
-          onHover: AppColors.primary,
-          onPressed: () {},
-        ),
-        AppTextButton(
-          label: AppStrings.experience,
-          textColor: Colors.grey,
-          onHover: AppColors.primary,
-          onPressed: () {},
-        ),
-        AppTextButton(
-          label: AppStrings.contacts,
-          textColor: Colors.grey,
-          onHover: AppColors.primary,
-          onPressed: () {
-            BuildContext? context = AppKeys.contactsKey.currentContext;
-            Scrollable.ensureVisible(
-              context!,
-              duration: const Duration(milliseconds: 300),
-            );
-          },
-        ),
-      ],
+    return Container(
+      padding: EdgeInsets.all(12.0),
+      child: Row(
+        children: [
+          const Text("Bahromjon Po'lat"),
+          const Spacer(),
+          AppTextButton(
+            label: AppStrings.home,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {
+              BuildContext? context = AppKeys.homeKey.currentContext;
+              Scrollable.ensureVisible(
+                context!,
+                duration: const Duration(milliseconds: 500),
+              );
+            },
+          ),
+          AppTextButton(
+            label: AppStrings.skills,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {
+              BuildContext? context = AppKeys.skillsKey.currentContext;
+              Scrollable.ensureVisible(
+                context!,
+                duration: const Duration(milliseconds: 500),
+              );
+            },
+          ),
+          AppTextButton(
+            label: AppStrings.projects,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {
+              BuildContext? context = AppKeys.projectsKey.currentContext;
+              Scrollable.ensureVisible(
+                context!,
+                duration: const Duration(milliseconds: 500),
+              );
+            },
+          ),
+          AppTextButton(
+            label: AppStrings.experience,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {
+              BuildContext? context = AppKeys.experienceKey.currentContext;
+              Scrollable.ensureVisible(
+                context!,
+                duration: const Duration(milliseconds: 500),
+              );
+            },
+          ),
+          AppTextButton(
+            label: AppStrings.contacts,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {
+              BuildContext? context = AppKeys.contactsKey.currentContext;
+              Scrollable.ensureVisible(
+                context!,
+                duration: const Duration(milliseconds: 500),
+              );
+            },
+          ),
+        ],
+      ),
     );
   }
 
   @override
-  Size get preferredSize => const Size(kToolbarHeight, 1280);
+  Size get preferredSize => const Size(double.infinity, kToolbarHeight);
 }

@@ -244,8 +244,7 @@ class __$$_ProjectModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
-@JsonSerializable(fieldRename: FieldRename.snake)
+@JsonSerializable()
 class _$_ProjectModel implements _ProjectModel {
   const _$_ProjectModel(
       {this.id = "",

@@ -15,6 +15,7 @@ class AppStrings {
   const AppStrings._();
 
   static const String home = 'Home';
+  static const String skills = 'Skills';
   static const String resume = 'Resume';
   static const String portfolio = 'Portfolio';
   static const String experience = 'Experience';

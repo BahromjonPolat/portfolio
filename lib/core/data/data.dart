@@ -10,3 +10,6 @@
   Documentation: 
 
 */
+export 'experience_data.dart';
+export 'projects_data.dart';
+export 'skills_data.dart';

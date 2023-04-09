@@ -33,7 +33,7 @@ class AboutMeSimple extends StatelessWidget {
           ],
         );
 
-      case ScreenEnum.tablet:
+      case ScreenEnum.tabletLandscape:
         List<Widget> children = const [
           AboutMeImage(),
           AboutMeWithDescription(),
@@ -64,6 +64,8 @@ class AboutMeSimple extends StatelessWidget {
             AboutMeWithDescription(),
           ],
         );
+      case ScreenEnum.tabletPortrait:
+        return Container();
     }
   }
 }

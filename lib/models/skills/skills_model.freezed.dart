@@ -22,7 +22,7 @@ SkillModel _$SkillModelFromJson(Map<String, dynamic> json) {
 mixin _$SkillModel {
   String get name => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
-  String get image => throw _privateConstructorUsedError;
+  String get imageUrl => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ abstract class $SkillModelCopyWith<$Res> {
           SkillModel value, $Res Function(SkillModel) then) =
       _$SkillModelCopyWithImpl<$Res, SkillModel>;
   @useResult
-  $Res call({String name, String url, String image, String description});
+  $Res call({String name, String url, String imageUrl, String description});
 }
 
 /// @nodoc
@@ -55,7 +55,7 @@ class _$SkillModelCopyWithImpl<$Res, $Val extends SkillModel>
   $Res call({
     Object? name = null,
     Object? url = null,
-    Object? image = null,
+    Object? imageUrl = null,
     Object? description = null,
   }) {
     return _then(_value.copyWith(
@@ -67,9 +67,9 @@ class _$SkillModelCopyWithImpl<$Res, $Val extends SkillModel>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
       description: null == description
           ? _value.description
@@ -87,7 +87,7 @@ abstract class _$$_SkillModelCopyWith<$Res>
       __$$_SkillModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String url, String image, String description});
+  $Res call({String name, String url, String imageUrl, String description});
 }
 
 /// @nodoc
@@ -103,7 +103,7 @@ class __$$_SkillModelCopyWithImpl<$Res>
   $Res call({
     Object? name = null,
     Object? url = null,
-    Object? image = null,
+    Object? imageUrl = null,
     Object? description = null,
   }) {
     return _then(_$_SkillModel(
@@ -115,9 +115,9 @@ class __$$_SkillModelCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      image: null == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
       description: null == description
           ? _value.description
@@ -131,7 +131,10 @@ class __$$_SkillModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SkillModel implements _SkillModel {
   _$_SkillModel(
-      {this.name = "", this.url = "", this.image = "", this.description = ""});
+      {this.name = "",
+      this.url = "",
+      this.imageUrl = "",
+      this.description = ""});
 
   factory _$_SkillModel.fromJson(Map<String, dynamic> json) =>
       _$$_SkillModelFromJson(json);
@@ -144,14 +147,14 @@ class _$_SkillModel implements _SkillModel {
   final String url;
   @override
   @JsonKey()
-  final String image;
+  final String imageUrl;
   @override
   @JsonKey()
   final String description;
 
   @override
   String toString() {
-    return 'SkillModel(name: $name, url: $url, image: $image, description: $description)';
+    return 'SkillModel(name: $name, url: $url, imageUrl: $imageUrl, description: $description)';
   }
 
   @override
@@ -161,14 +164,16 @@ class _$_SkillModel implements _SkillModel {
             other is _$_SkillModel &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url) &&
-            (identical(other.image, image) || other.image == image) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
             (identical(other.description, description) ||
                 other.description == description));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, url, image, description);
+  int get hashCode =>
+      Object.hash(runtimeType, name, url, imageUrl, description);
 
   @JsonKey(ignore: true)
   @override
@@ -188,7 +193,7 @@ abstract class _SkillModel implements SkillModel {
   factory _SkillModel(
       {final String name,
       final String url,
-      final String image,
+      final String imageUrl,
       final String description}) = _$_SkillModel;
 
   factory _SkillModel.fromJson(Map<String, dynamic> json) =
@@ -199,7 +204,7 @@ abstract class _SkillModel implements SkillModel {
   @override
   String get url;
   @override
-  String get image;
+  String get imageUrl;
   @override
   String get description;
   @override

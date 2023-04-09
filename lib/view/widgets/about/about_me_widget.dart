@@ -25,7 +25,7 @@ class AboutMeWidget extends StatelessWidget {
     screenEnum = ScreenEnum.mobile;
   }
   AboutMeWidget.tablet({super.key}) {
-    screenEnum = ScreenEnum.tablet;
+    screenEnum = ScreenEnum.tabletLandscape;
   }
 
   List<DataWithTitle> data = const [
@@ -100,10 +100,12 @@ class AboutMeWidget extends StatelessWidget {
     switch (screenEnum) {
       case ScreenEnum.desktop:
         return 3;
-      case ScreenEnum.tablet:
+      case ScreenEnum.tabletLandscape:
         return 2;
       case ScreenEnum.mobile:
         return 1;
+      case ScreenEnum.tabletPortrait:
+        return 0;
     }
   }
 
@@ -111,10 +113,12 @@ class AboutMeWidget extends StatelessWidget {
     switch (screenEnum) {
       case ScreenEnum.desktop:
         return width * .6;
-      case ScreenEnum.tablet:
+      case ScreenEnum.tabletLandscape:
         return width * .8;
       case ScreenEnum.mobile:
         return null;
+      case ScreenEnum.tabletPortrait:
+        return width;
     }
   }
 }

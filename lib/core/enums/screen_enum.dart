@@ -11,4 +11,4 @@
 
 */
 
-enum ScreenEnum { desktop, tablet, mobile }
+enum ScreenEnum { desktop, tabletLandscape, tabletPortrait, mobile }

@@ -29,22 +29,37 @@ class ProjectList extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (screenEnum) {
       case ScreenEnum.desktop:
-        return Wrap(
-          children: projects
-              .map((project) => ProjectInfoWidget(
-                    screenEnum: screenEnum,
-                    project: project,
-                  ))
-              .toList(),
+        return GridView.builder(
+          shrinkWrap: true,
+          itemCount: projects.length,
+          physics: const NeverScrollableScrollPhysics(),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 24.0,
+            crossAxisSpacing: 24.0,
+            mainAxisExtent: 360.0,
+          ),
+          itemBuilder: (context, index) {
+            ProjectModel project = projects[index];
+            return ProjectInfoWidget(screenEnum: screenEnum, project: project);
+          },
         );
-      case ScreenEnum.tablet:
-        return Wrap(
-          children: projects
-              .map((project) => ProjectInfoWidget(
-                    screenEnum: screenEnum,
-                    project: project,
-                  ))
-              .toList(),
+
+      case ScreenEnum.tabletLandscape:
+        return GridView.builder(
+          shrinkWrap: true,
+          itemCount: projects.length,
+          physics: const NeverScrollableScrollPhysics(),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            mainAxisSpacing: 24.0,
+            crossAxisSpacing: 24.0,
+            mainAxisExtent: 620.0,
+          ),
+          itemBuilder: (context, index) {
+            ProjectModel project = projects[index];
+            return ProjectInfoWidget(screenEnum: screenEnum, project: project);
+          },
         );
       case ScreenEnum.mobile:
         return Wrap(
@@ -56,6 +71,8 @@ class ProjectList extends StatelessWidget {
                   ))
               .toList(),
         );
+      case ScreenEnum.tabletPortrait:
+        return Wrap();
     }
   }
 }

@@ -21,4 +21,5 @@ class AppKeys {
   static final GlobalKey educationKey = GlobalKey();
   static final GlobalKey experienceKey = GlobalKey();
   static final GlobalKey contactsKey = GlobalKey();
+  static final GlobalKey skillsKey = GlobalKey();
 }

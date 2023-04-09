@@ -26,19 +26,25 @@ class TabletScreen extends StatefulWidget {
 class _TabletScreenState extends State<TabletScreen> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    Log.d(width, name: 'tablet_screen');
+
     return Scaffold(
-      body: ListView(
-        children: [
-          AboutMeSimple(screenEnum: ScreenEnum.tablet),
-          SizedBox(height: 32.0),
-          ProjectList(
-            screenEnum: ScreenEnum.tablet,
-            projects: ProjectsData().projects,
-          ),
-          SizedBox(height: 32.0),
-          EducationAndExperienceList(screenEnum: ScreenEnum.tablet),
-          ContactWidget(screenEnum: ScreenEnum.tablet)
-        ],
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 24.0),
+        child: Column(
+          children: [
+            AboutMeSimple(screenEnum: ScreenEnum.tabletLandscape),
+            SizedBox(height: 32.0),
+            ProjectList(
+              screenEnum: ScreenEnum.tabletLandscape,
+              projects: ProjectsData().projects,
+            ),
+            SizedBox(height: 32.0),
+            EducationAndExperienceList(screenEnum: ScreenEnum.tabletLandscape),
+            ContactWidget(screenEnum: ScreenEnum.tabletLandscape)
+          ],
+        ),
       ),
     );
   }

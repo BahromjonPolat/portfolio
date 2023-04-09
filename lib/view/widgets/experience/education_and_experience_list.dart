@@ -35,7 +35,7 @@ class EducationAndExperienceList extends StatelessWidget {
             Expanded(child: ExperienceListWidget(experience: experience)),
           ],
         );
-      case ScreenEnum.tablet:
+      case ScreenEnum.tabletLandscape:
         List<Expanded> children = [
           Expanded(child: ExperienceListWidget(experience: experience)),
           Expanded(child: ExperienceListWidget(experience: experience)),
@@ -56,6 +56,8 @@ class EducationAndExperienceList extends StatelessWidget {
           ExperienceListWidget(experience: experience),
           ExperienceListWidget(experience: experience),
         ]);
+      case ScreenEnum.tabletPortrait:
+        return Column();
     }
   }
 }

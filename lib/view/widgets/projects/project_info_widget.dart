@@ -32,6 +32,7 @@ class ProjectInfoWidget extends StatelessWidget {
       case ScreenEnum.desktop:
         return Container(
           padding: EdgeInsets.all(24.0),
+          // constraints: BoxConstraints(maxWidth: 500.0),
           decoration: BoxDecoration(
             color: AppColors.white.withOpacity(.07),
             borderRadius: BorderRadius.circular(24.0),
@@ -52,6 +53,7 @@ class ProjectInfoWidget extends StatelessWidget {
       default:
         return Container(
           padding: EdgeInsets.all(24.0),
+          constraints: BoxConstraints(maxWidth: 500.0),
           decoration: BoxDecoration(
             color: AppColors.white.withOpacity(.07),
             borderRadius: BorderRadius.circular(24.0),

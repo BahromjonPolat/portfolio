@@ -35,7 +35,7 @@ class ContactWidget extends StatelessWidget {
             MessageWidget(),
           ],
         );
-      case ScreenEnum.tablet:
+      case ScreenEnum.tabletLandscape:
         List<Widget> children = const [
           ContactsDataWidget(),
           MessageWidget(),
@@ -71,6 +71,8 @@ class ContactWidget extends StatelessWidget {
             MessageWidget(),
           ],
         );
+      case ScreenEnum.tabletPortrait:
+        return Container();
     }
   }
 }
