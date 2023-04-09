@@ -21,6 +21,7 @@ class AppStrings {
   static const String contacts = 'Contacts';
   static const String projects = 'Projects';
   static const String followMe = 'Follow me';
+  static const String educations = 'Educations';
   static const String about = 'About';
   static const String downloadCv = 'Download CV';
   static const String aboutMeFull =

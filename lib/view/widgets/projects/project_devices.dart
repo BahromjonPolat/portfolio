@@ -31,6 +31,7 @@ class ProjectDevices extends StatelessWidget {
     if (platform == PlatformEnum.android || platform == PlatformEnum.ios) {
       return Row(
         crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             height: 240.0,

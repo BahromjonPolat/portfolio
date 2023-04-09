@@ -11,9 +11,11 @@
 
 */
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/config.dart';
+import 'package:portfolio/core/data/experience_data.dart';
 import 'package:portfolio/core/data/projects_data.dart';
-import 'package:portfolio/core/enums/enums.dart';
 import 'package:portfolio/view/widgets/about/about_me_simple.dart';
+import 'package:portfolio/view/widgets/drawer/app_drawer.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
 
 class MobileScreen extends StatefulWidget {
@@ -24,22 +26,54 @@ class MobileScreen extends StatefulWidget {
 }
 
 class _MobileScreenState extends State<MobileScreen> {
+  final _scrollController = ScrollController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [
-          AboutMeSimple(screenEnum: ScreenEnum.mobile),
-          SizedBox(height: 32.0),
-          ProjectList(
-            screenEnum: ScreenEnum.mobile,
-            projects: ProjectsData().projects,
-          ),
-          SizedBox(height: 32.0),
-          EducationAndExperienceList(screenEnum: ScreenEnum.mobile),
-          SizedBox(height: 32.0),
-          ContactWidget(screenEnum: ScreenEnum.mobile),
-        ],
+      endDrawer: AppDrawer(),
+      appBar: AppBar(),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        controller: _scrollController,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AboutMeSimple(
+              key: AppKeys.homeKey,
+              screenEnum: ScreenEnum.mobile,
+            ),
+            SizedBox(height: 32.0),
+            Text(
+              AppStrings.projects,
+              key: AppKeys.projectsKey,
+              style: Theme.of(context).textTheme.displaySmall,
+            ),
+            SizedBox(height: 12.0),
+            ProjectList(
+              screenEnum: ScreenEnum.mobile,
+              projects: ProjectsData().projects,
+            ),
+            SizedBox(height: 32.0),
+            Text(
+              AppStrings.educations,
+              key: AppKeys.educationKey,
+              style: Theme.of(context).textTheme.displaySmall,
+            ),
+            ExperienceListWidget(experience: ExperienceData.experience),
+            SizedBox(height: 32.0),
+            Text(
+              AppStrings.experience,
+              key: AppKeys.experienceKey,
+              style: Theme.of(context).textTheme.displaySmall,
+            ),
+            ExperienceListWidget(experience: ExperienceData.experience),
+            SizedBox(height: 32.0),
+            ContactWidget(
+              key: AppKeys.contactsKey,
+              screenEnum: ScreenEnum.mobile,
+            ),
+          ],
+        ),
       ),
     );
   }
