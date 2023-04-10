@@ -36,7 +36,7 @@ class FollowMeOnWidget extends StatelessWidget {
               assetImage: AppIcons.linkedin,
               onPressed: () {
                 String url = 'https://www.linkedin.com/in/bahromjon-polat/';
-                LaunchService.launch(Uri.parse(url));
+                LaunchService.openInHtml(url);
               },
             ),
             const SizedBox(width: 24.0),
@@ -45,7 +45,7 @@ class FollowMeOnWidget extends StatelessWidget {
               onPressed: () {
                 String url =
                     'https://play.google.com/store/apps/dev?id=7896681899586309203';
-                LaunchService.launch(Uri.parse(url));
+                LaunchService.openInHtml(url);
               },
             ),
             const SizedBox(width: 24.0),
@@ -53,7 +53,7 @@ class FollowMeOnWidget extends StatelessWidget {
               assetImage: AppIcons.github,
               onPressed: () {
                 String url = "https://github.com/BahromjonPolat/";
-                LaunchService.launch(Uri.parse(url));
+                LaunchService.openInHtml(url);
               },
             ),
             const SizedBox(width: 24.0),
@@ -61,7 +61,7 @@ class FollowMeOnWidget extends StatelessWidget {
               assetImage: AppIcons.facebook,
               onPressed: () {
                 String url = "https://www.facebook.com/Bahromjon.Polat/";
-                LaunchService.launch(Uri.parse(url));
+                LaunchService.openInHtml(url);
               },
             ),
           ],

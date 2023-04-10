@@ -13,7 +13,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
-import 'package:portfolio/view/screens/home/home_screen.dart';
+import 'package:portfolio/routing/route_generator.dart';
+import 'package:portfolio/routing/routing.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -24,14 +25,10 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Bahromjon Po'lat",
       theme: AppTheme.getTheme(),
-      // home: const HomeScreen(),
       themeMode: ThemeMode.dark,
+      navigatorKey: AppNavigator.navigatorKey,
       initialRoute: '/',
-      routes: {
-        '/': (context) => const HomeScreen(),
-        '/test': (context) => const TestScreen(routeName: '/hello'),
-        '/hello': (context) => const TestScreen(routeName: '/'),
-      },
+      onGenerateRoute: RouteGenerator.onGenerateRoute,
     );
   }
 }

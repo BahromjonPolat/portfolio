@@ -26,7 +26,7 @@ class StoreWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        LaunchService.launch(Uri.parse(platform.link));
+        LaunchService.openInHtml(platform.link);
       },
       borderRadius: BorderRadius.circular(6.0),
       child: Padding(

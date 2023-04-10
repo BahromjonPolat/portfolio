@@ -12,6 +12,8 @@
 */
 
 import 'package:url_launcher/url_launcher.dart';
+// import 'dart:html' as html;
+import 'dart:js' as js;
 
 class LaunchService {
   const LaunchService._();
@@ -20,5 +22,10 @@ class LaunchService {
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     }
+  }
+
+  static Future<void> openInHtml(String url) async {
+    // await html.window.open(url, "tab");
+    js.context.callMethod("open", [url, "_blank"]);
   }
 }

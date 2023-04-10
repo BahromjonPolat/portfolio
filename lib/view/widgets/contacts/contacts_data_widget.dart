@@ -43,8 +43,7 @@ class ContactsDataWidget extends StatelessWidget {
             icon: Icons.phone_outlined,
             data: "+998931234567",
             onPressed: () {
-              Uri url = Uri.parse('tel:+998931234567');
-              LaunchService.launch(url);
+              LaunchService.openInHtml("tel:+998931234567");
             },
           ),
           const SizedBox(height: 12.0),

@@ -22,6 +22,7 @@ dependencies:
   flutter_svg: ^2.0.4
   freezed_annotation: ^2.2.0
   get_it: ^7.2.0
+  html: ^0.15.2
   json_annotation: ^4.8.0
   meta: ^1.8.0
   sendgrid_mailer: ^0.1.3

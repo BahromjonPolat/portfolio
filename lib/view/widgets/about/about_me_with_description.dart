@@ -14,9 +14,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
-import 'package:portfolio/services/api_service.dart';
-import 'package:portfolio/services/http_result.dart';
+import 'package:portfolio/services/launch_service.dart';
 import 'package:portfolio/view/widgets/follow_me_widget.dart';
+import 'dart:html' as html;
 
 class AboutMeWithDescription extends StatelessWidget {
   const AboutMeWithDescription({super.key});
@@ -76,8 +76,8 @@ class AboutMeWithDescription extends StatelessWidget {
           const SizedBox(height: 64.0),
           OutlinedButton(
             onPressed: () async {
-              HttpResult result = await ApiService().downloadCv();
-              Log.d(result.response, name: 'about_me_with_description');
+              String uri = html.window.location.href.replaceAll('#/', '');
+              LaunchService.openInHtml("$uri/assets/assets/files/resume.pdf");
             },
             child: Text(AppStrings.downloadCv),
           ),

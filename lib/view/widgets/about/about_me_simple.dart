@@ -21,7 +21,6 @@ class AboutMeSimple extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     switch (screenEnum) {
       case ScreenEnum.desktop:
         return Row(
