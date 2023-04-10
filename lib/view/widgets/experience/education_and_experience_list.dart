@@ -57,7 +57,10 @@ class EducationAndExperienceList extends StatelessWidget {
           ExperienceListWidget(experience: experience),
         ]);
       case ScreenEnum.tabletPortrait:
-        return Column();
+        return Column(children: [
+          ExperienceListWidget(experience: experience),
+          ExperienceListWidget(experience: experience),
+        ]);
     }
   }
 }

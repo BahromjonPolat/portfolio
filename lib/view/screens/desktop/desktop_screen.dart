@@ -14,7 +14,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/core/data/data.dart';
-import 'package:portfolio/core/data/projects_data.dart';
 import 'package:portfolio/models/project/project_model.dart';
 import 'package:portfolio/view/widgets/skills_widget.dart';
 

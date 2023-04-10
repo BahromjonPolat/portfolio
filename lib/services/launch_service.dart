@@ -18,11 +18,7 @@ class LaunchService {
 
   static Future<void> launch(Uri url) async {
     if (await canLaunchUrl(url)) {
-      await launchUrl(
-        url,
-        mode: LaunchMode.inAppWebView,
-        webOnlyWindowName: "_blank",
-      );
+      await launchUrl(url);
     }
   }
 }

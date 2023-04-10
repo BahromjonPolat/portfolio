@@ -72,7 +72,14 @@ class ContactWidget extends StatelessWidget {
           ],
         );
       case ScreenEnum.tabletPortrait:
-        return Container();
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ContactsDataWidget(),
+            SizedBox(height: 32.0),
+            MessageWidget(),
+          ],
+        );
     }
   }
 }

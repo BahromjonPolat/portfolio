@@ -49,6 +49,26 @@ class ProjectInfoWidget extends StatelessWidget {
             ],
           ),
         );
+      case ScreenEnum.tabletPortrait:
+        return Container(
+          padding: EdgeInsets.all(24.0),
+          // constraints: BoxConstraints(maxWidth: 500.0),
+          decoration: BoxDecoration(
+            color: AppColors.white.withOpacity(.07),
+            borderRadius: BorderRadius.circular(24.0),
+          ),
+          child: Row(
+            children: [
+              Expanded(child: ProjectDataWidget(project: project)),
+              const SizedBox(width: 32.0),
+              ProjectDevices(
+                primaryScreenshot: project.primaryScreenshot,
+                secondaryScreenshot: project.secondaryScreenshot,
+                platform: project.platforms.first.platform,
+              ),
+            ],
+          ),
+        );
 
       default:
         return Container(

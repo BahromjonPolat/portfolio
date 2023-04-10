@@ -13,7 +13,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
+import 'package:portfolio/core/data/data.dart';
 import 'package:portfolio/core/data/projects_data.dart';
+import 'package:portfolio/view/widgets/skills_widget.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
 
 class TabletScreen extends StatefulWidget {
@@ -35,7 +37,9 @@ class _TabletScreenState extends State<TabletScreen> {
         child: Column(
           children: [
             AboutMeSimple(screenEnum: ScreenEnum.tabletLandscape),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
+            SkillsWidget(skills: SkillsData.skills),
+            const SizedBox(height: 32.0),
             ProjectList(
               screenEnum: ScreenEnum.tabletLandscape,
               projects: ProjectsData().projects,

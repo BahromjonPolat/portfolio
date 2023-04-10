@@ -13,6 +13,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/view/screens/desktop/desktop_screen.dart';
 import 'package:portfolio/view/screens/mobile/mobile.dart';
+import 'package:portfolio/view/screens/tablet/tablet_portrait_screen.dart';
 import 'package:portfolio/view/screens/tablet/tablet_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,6 +26,8 @@ class HomeScreen extends StatelessWidget {
         double maxWidth = constraints.maxWidth;
         if (maxWidth < 500) {
           return const MobileScreen();
+        } else if (maxWidth < 900) {
+          return const TabletPortraitScreen();
         } else if (maxWidth < 1100) {
           return const TabletScreen();
         }

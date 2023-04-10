@@ -72,7 +72,15 @@ class ProjectList extends StatelessWidget {
               .toList(),
         );
       case ScreenEnum.tabletPortrait:
-        return Wrap();
+        return Wrap(
+          runSpacing: 16.0,
+          children: projects
+              .map((project) => ProjectInfoWidget(
+                    screenEnum: screenEnum,
+                    project: project,
+                  ))
+              .toList(),
+        );
     }
   }
 }

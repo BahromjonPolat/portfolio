@@ -34,24 +34,17 @@ class AboutMeSimple extends StatelessWidget {
         );
 
       case ScreenEnum.tabletLandscape:
-        List<Widget> children = const [
-          AboutMeImage(),
-          AboutMeWithDescription(),
-        ];
-        if (width > 900) {
-          children = const [
-            SizedBox(
-              width: 600,
-              child: AboutMeWithDescription(),
-            ),
-            SizedBox(width: 300.0, child: AboutMeImage()),
-          ];
-        }
         return Wrap(
           runSpacing: 32.0,
           alignment: WrapAlignment.center,
           crossAxisAlignment: WrapCrossAlignment.center,
-          children: children,
+          children: const [
+            SizedBox(
+              width: 570,
+              child: AboutMeWithDescription(),
+            ),
+            SizedBox(width: 280.0, child: AboutMeImage()),
+          ],
         );
 
       case ScreenEnum.mobile:
@@ -65,7 +58,14 @@ class AboutMeSimple extends StatelessWidget {
           ],
         );
       case ScreenEnum.tabletPortrait:
-        return Container();
+        return Wrap(
+          alignment: WrapAlignment.center,
+          runSpacing: 32.0,
+          children: const [
+            AboutMeImage(),
+            AboutMeWithDescription(),
+          ],
+        );
     }
   }
 }
