@@ -14,6 +14,8 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
+import 'package:portfolio/services/api_service.dart';
+import 'package:portfolio/services/http_result.dart';
 import 'package:portfolio/view/widgets/follow_me_widget.dart';
 
 class AboutMeWithDescription extends StatelessWidget {
@@ -73,7 +75,10 @@ class AboutMeWithDescription extends StatelessWidget {
           ),
           const SizedBox(height: 64.0),
           OutlinedButton(
-            onPressed: () {},
+            onPressed: () async {
+              HttpResult result = await ApiService().downloadCv();
+              Log.d(result.response, name: 'about_me_with_description');
+            },
             child: Text(AppStrings.downloadCv),
           ),
           const SizedBox(height: 24.0),
