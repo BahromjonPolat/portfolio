@@ -56,7 +56,6 @@ class _DesktopScreenState extends State<DesktopScreen> {
             const SizedBox(height: 12.0),
             SkillsWidget(skills: SkillsData.skills),
             const SizedBox(height: 32.0),
-
             Text(
               AppStrings.projects,
               key: AppKeys.projectsKey,
@@ -67,34 +66,23 @@ class _DesktopScreenState extends State<DesktopScreen> {
               screenEnum: ScreenEnum.desktop,
               projects: projects,
             ),
-            // SliverPadding(
-            //   padding: EdgeInsets.symmetric(horizontal: padding),
-            //   sliver: SliverGrid.builder(
-            //     itemCount: projects.length,
-            //     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            //       crossAxisCount: 2,
-            //       mainAxisExtent: 364.0,
-            //       mainAxisSpacing: 32.0,
-            //       crossAxisSpacing: 32.0,
-            //     ),
-            //     itemBuilder: (context, index) {
-            //       ProjectModel project = projects[index];
-            //       return ProjectInfoWidget(
-            //         key: ValueKey(index),
-            //         screenEnum: ScreenEnum.desktop,
-            //         project: project,
-            //       );
-            //     },
-            //   ),
-            // ),
             const SizedBox(height: 32.0),
             Row(
               children: [
-                Text(
-                  'Educations',
-                  key: AppKeys.educationKey,
-                  style: Theme.of(context).textTheme.displayMedium,
-                )
+                Expanded(
+                  child: Text(
+                    AppStrings.educations,
+                    key: AppKeys.educationKey,
+                    style: Theme.of(context).textTheme.displayMedium,
+                  ),
+                ),
+                Expanded(
+                  child: Text(
+                    AppStrings.experience,
+                    key: AppKeys.experienceKey,
+                    style: Theme.of(context).textTheme.displayMedium,
+                  ),
+                ),
               ],
             ),
             EducationAndExperienceList(screenEnum: ScreenEnum.desktop),
@@ -103,6 +91,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
               key: AppKeys.contactsKey,
               screenEnum: ScreenEnum.desktop,
             ),
+            const ScreenFooter(),
           ],
         ),
       ),

@@ -35,7 +35,10 @@ class EducationOrExperience extends StatelessWidget {
         children: [
           Text(
             experience.jobTitle,
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge
+                ?.copyWith(color: AppColors.white),
           ),
           const SizedBox(height: 8.0),
           Text(
@@ -45,7 +48,7 @@ class EducationOrExperience extends StatelessWidget {
           const SizedBox(height: 24.0),
           Text(
             experience.description,
-            style: Theme.of(context).textTheme.bodySmall,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ],
       ),

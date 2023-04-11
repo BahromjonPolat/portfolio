@@ -24,7 +24,7 @@ class AboutMeSimple extends StatelessWidget {
     switch (screenEnum) {
       case ScreenEnum.desktop:
         return Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: const [
             AboutMeWithDescription(),

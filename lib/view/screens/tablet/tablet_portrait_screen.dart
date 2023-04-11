@@ -78,7 +78,8 @@ class _TabletPortraitScreenState extends State<TabletPortraitScreen> {
             ContactWidget(
               key: AppKeys.contactsKey,
               screenEnum: ScreenEnum.tabletPortrait,
-            )
+            ),
+            ScreenFooter(),
           ],
         ),
       ),

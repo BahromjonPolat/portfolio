@@ -14,9 +14,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
-import 'package:portfolio/services/launch_service.dart';
 import 'package:portfolio/view/widgets/follow_me_widget.dart';
-import 'dart:html' as html;
 
 class AboutMeWithDescription extends StatelessWidget {
   const AboutMeWithDescription({super.key});
@@ -30,6 +28,7 @@ class AboutMeWithDescription extends StatelessWidget {
         minWidth: 500.0,
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text("Welcome to my world".toUpperCase()),
@@ -76,8 +75,10 @@ class AboutMeWithDescription extends StatelessWidget {
           const SizedBox(height: 64.0),
           OutlinedButton(
             onPressed: () async {
-              String uri = html.window.location.href.replaceAll('#/', '');
-              LaunchService.openInHtml("$uri/assets/assets/files/resume.pdf");
+              // if (kIsWeb) {
+              //   String uri = html.window.location.href.replaceAll('#/', '');
+              //   LaunchService.openInHtml("$uri/assets/assets/files/resume.pdf");
+              // }
             },
             child: Text(AppStrings.downloadCv),
           ),

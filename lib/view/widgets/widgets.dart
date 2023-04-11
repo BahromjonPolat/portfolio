@@ -19,3 +19,4 @@ export 'contacts/contacts.dart';
 export 'projects/projects.dart';
 export 'store_widget.dart';
 export 'drawer/drawer.dart';
+export 'screen_footer.dart';

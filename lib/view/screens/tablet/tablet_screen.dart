@@ -27,25 +27,57 @@ class TabletScreen extends StatefulWidget {
 class _TabletScreenState extends State<TabletScreen> {
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    Log.d(width, name: 'tablet_screen');
-
     return Scaffold(
+      appBar: AppBar(),
+      endDrawer: AppDrawer(),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            AboutMeSimple(screenEnum: ScreenEnum.tabletLandscape),
+            AboutMeSimple(
+              key: AppKeys.homeKey,
+              screenEnum: ScreenEnum.tabletLandscape,
+            ),
             const SizedBox(height: 32.0),
+            Text(
+              AppStrings.skills,
+              key: AppKeys.skillsKey,
+              style: Theme.of(context).textTheme.displaySmall,
+            ),
+            const SizedBox(height: 12.0),
             SkillsWidget(skills: SkillsData.skills),
             const SizedBox(height: 32.0),
+            Text(
+              AppStrings.projects,
+              key: AppKeys.projectsKey,
+              style: Theme.of(context).textTheme.displaySmall,
+            ),
+            const SizedBox(height: 12.0),
             ProjectList(
               screenEnum: ScreenEnum.tabletLandscape,
               projects: ProjectsData().projects,
             ),
             SizedBox(height: 32.0),
+            Row(
+              children: [
+                Text(
+                  AppStrings.educations,
+                  key: AppKeys.educationKey,
+                  style: Theme.of(context).textTheme.displaySmall,
+                ),
+                Text(
+                  AppStrings.experience,
+                  key: AppKeys.experienceKey,
+                  style: Theme.of(context).textTheme.displaySmall,
+                ),
+              ],
+            ),
+            const SizedBox(height: 12.0),
             EducationAndExperienceList(screenEnum: ScreenEnum.tabletLandscape),
-            ContactWidget(screenEnum: ScreenEnum.tabletLandscape)
+            const SizedBox(height: 32.0),
+            ContactWidget(screenEnum: ScreenEnum.tabletLandscape),
+            ScreenFooter(),
           ],
         ),
       ),

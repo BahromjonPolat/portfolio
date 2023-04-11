@@ -20,9 +20,11 @@ import 'app_route_name.dart';
 class RouteGenerator {
   static Route? onGenerateRoute(RouteSettings settings) {
     var routingData = settings.name?.getRoutingData;
+
     switch (routingData?.route) {
       case RouteNames.initial:
         return _route(HomeScreen());
+
       default:
         return null;
     }

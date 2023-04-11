@@ -28,7 +28,7 @@ class _MobileScreenState extends State<MobileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: AppDrawer(),
+      endDrawer: const AppDrawer(),
       appBar: AppBar(),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -40,44 +40,37 @@ class _MobileScreenState extends State<MobileScreen> {
               key: AppKeys.homeKey,
               screenEnum: ScreenEnum.mobile,
             ),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
             Text(
               AppStrings.projects,
               key: AppKeys.projectsKey,
               style: Theme.of(context).textTheme.displaySmall,
             ),
-            SizedBox(height: 12.0),
+            const SizedBox(height: 12.0),
             ProjectList(
               screenEnum: ScreenEnum.mobile,
               projects: ProjectsData().projects,
             ),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
             Text(
               AppStrings.educations,
               key: AppKeys.educationKey,
               style: Theme.of(context).textTheme.displaySmall,
             ),
             ExperienceListWidget(experience: ExperienceData.experience),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
             Text(
               AppStrings.experience,
               key: AppKeys.experienceKey,
               style: Theme.of(context).textTheme.displaySmall,
             ),
             ExperienceListWidget(experience: ExperienceData.experience),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
             ContactWidget(
               key: AppKeys.contactsKey,
               screenEnum: ScreenEnum.mobile,
             ),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 12.0),
-              alignment: Alignment.center,
-              child: Text(
-                "By Bakromjon Polat | 2023",
-                textAlign: TextAlign.center,
-              ),
-            )
+            const ScreenFooter(),
           ],
         ),
       ),

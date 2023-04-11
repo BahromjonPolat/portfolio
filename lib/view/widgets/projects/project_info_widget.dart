@@ -14,6 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/models/project/project_model.dart';
+import 'package:portfolio/view/widgets/projects/project_layout.dart';
 import 'project_data_widget.dart';
 import 'project_devices.dart';
 
@@ -30,65 +31,16 @@ class ProjectInfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (screenEnum) {
       case ScreenEnum.desktop:
-        return Container(
-          padding: EdgeInsets.all(24.0),
-          // constraints: BoxConstraints(maxWidth: 500.0),
-          decoration: BoxDecoration(
-            color: AppColors.white.withOpacity(.07),
-            borderRadius: BorderRadius.circular(24.0),
-          ),
-          child: Row(
-            children: [
-              Expanded(child: ProjectDataWidget(project: project)),
-              const SizedBox(width: 32.0),
-              ProjectDevices(
-                primaryScreenshot: project.primaryScreenshot,
-                secondaryScreenshot: project.secondaryScreenshot,
-                platform: project.platforms.first.platform,
-              ),
-            ],
-          ),
-        );
+        return ProjectLayout(isVertical: false, project: project);
       case ScreenEnum.tabletPortrait:
-        return Container(
-          padding: EdgeInsets.all(24.0),
-          // constraints: BoxConstraints(maxWidth: 500.0),
-          decoration: BoxDecoration(
-            color: AppColors.white.withOpacity(.07),
-            borderRadius: BorderRadius.circular(24.0),
-          ),
-          child: Row(
-            children: [
-              Expanded(child: ProjectDataWidget(project: project)),
-              const SizedBox(width: 32.0),
-              ProjectDevices(
-                primaryScreenshot: project.primaryScreenshot,
-                secondaryScreenshot: project.secondaryScreenshot,
-                platform: project.platforms.first.platform,
-              ),
-            ],
-          ),
-        );
-
+        double width = MediaQuery.of(context).size.width;
+        if (width < 700)
+          return SizedBox(
+              width: width,
+              child: ProjectLayout(isVertical: true, project: project));
+        return ProjectLayout(isVertical: false, project: project);
       default:
-        return Container(
-          padding: EdgeInsets.all(24.0),
-          constraints: BoxConstraints(maxWidth: 500.0),
-          decoration: BoxDecoration(
-            color: AppColors.white.withOpacity(.07),
-            borderRadius: BorderRadius.circular(24.0),
-          ),
-          child: Column(
-            children: [
-              ProjectDevices(
-                primaryScreenshot: project.primaryScreenshot,
-                secondaryScreenshot: project.secondaryScreenshot,
-                platform: project.platforms.first.platform,
-              ),
-              ProjectDataWidget(project: project),
-            ],
-          ),
-        );
+        return ProjectLayout(isVertical: true, project: project);
     }
   }
 }

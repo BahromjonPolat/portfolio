@@ -34,13 +34,10 @@ class AppTheme {
             foregroundColor: Colors.white,
           ),
         ),
-
         drawerTheme: DrawerThemeData(backgroundColor: AppColors.background),
-
         listTileTheme: ListTileThemeData(
           iconColor: AppColors.white,
         ),
-
         cardTheme: CardTheme(
           color: AppColors.cardBody,
           shadowColor: AppColors.white,
@@ -54,7 +51,7 @@ class AppTheme {
           bodyLarge: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 16.0,
-            color: AppColors.white,
+            color: AppColors.background,
           ),
           bodyMedium: TextStyle(color: AppColors.bodyText, fontSize: 16.0),
           bodySmall: TextStyle(
@@ -80,6 +77,9 @@ class AppTheme {
             ),
             fixedSize: const Size(double.infinity, 56.0),
           ),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          labelStyle: TextStyle(color: AppColors.background),
         ),
       );
 }

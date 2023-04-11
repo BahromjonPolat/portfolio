@@ -22,9 +22,6 @@ class ContactWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    bool isBig = width > 900;
-
     switch (screenEnum) {
       case ScreenEnum.desktop:
         return Row(
@@ -36,29 +33,17 @@ class ContactWidget extends StatelessWidget {
           ],
         );
       case ScreenEnum.tabletLandscape:
-        List<Widget> children = const [
-          ContactsDataWidget(),
-          MessageWidget(),
-        ];
-
-        if (isBig) {
-          children = [
-            SizedBox(
-              width: width * .58,
-              child: const ContactsDataWidget(),
-            ),
-            SizedBox(
-              width: width * .38,
-              child: const MessageWidget(),
-            ),
-          ];
-        }
-        return Wrap(
-          runAlignment: WrapAlignment.center,
-          alignment: WrapAlignment.center,
-          spacing: 32.0,
-          runSpacing: 32.0,
-          children: children,
+        return Column(
+          // runAlignment: WrapAlignment.center,
+          // alignment: WrapAlignment.center,
+          // spacing: 32.0,
+          // runSpacing: 32.0,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: const [
+            ContactsDataWidget(),
+            SizedBox(height: 32.0),
+            MessageWidget(),
+          ],
         );
       case ScreenEnum.mobile:
         return Wrap(
