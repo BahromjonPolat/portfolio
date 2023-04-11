@@ -56,6 +56,6 @@ class _AppTextButtonState extends State<AppTextButton> {
           style: TextStyle(color: textColor),
         ),
       ),
-    ).showCursorOnHover.moveUpOnHover;
+    );
   }
 }

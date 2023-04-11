@@ -56,14 +56,14 @@ class FollowMeOnWidget extends StatelessWidget {
                 LaunchService.openInHtml(url);
               },
             ),
-            const SizedBox(width: 24.0),
-            SquareButton(
-              assetImage: AppIcons.facebook,
-              onPressed: () {
-                String url = "https://www.facebook.com/Bahromjon.Polat/";
-                LaunchService.openInHtml(url);
-              },
-            ),
+            // const SizedBox(width: 24.0),
+            // SquareButton(
+            //   assetImage: AppIcons.facebook,
+            //   onPressed: () {
+            //     String url = "https://www.facebook.com/Bahromjon.Polat/";
+            //     LaunchService.openInHtml(url);
+            //   },
+            // ),
           ],
         ),
       ],

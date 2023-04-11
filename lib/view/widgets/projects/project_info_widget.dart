@@ -27,22 +27,18 @@ class ProjectInfoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Builder(
-      builder: (context) {
-        switch (screenEnum) {
-          case ScreenEnum.desktop:
-            return ProjectLayout(isVertical: false, project: project);
-          case ScreenEnum.tabletPortrait:
-            double width = MediaQuery.of(context).size.width;
-            if (width < 700)
-              return SizedBox(
-                  width: width,
-                  child: ProjectLayout(isVertical: true, project: project));
-            return ProjectLayout(isVertical: false, project: project);
-          default:
-            return ProjectLayout(isVertical: true, project: project);
-        }
-      },
-    ).showCursorOnHover.moveUpOnHover;
+    switch (screenEnum) {
+      case ScreenEnum.desktop:
+        return ProjectLayout(isVertical: false, project: project);
+      case ScreenEnum.tabletPortrait:
+        double width = MediaQuery.of(context).size.width;
+        if (width < 700)
+          return SizedBox(
+              width: width,
+              child: ProjectLayout(isVertical: true, project: project));
+        return ProjectLayout(isVertical: false, project: project);
+      default:
+        return ProjectLayout(isVertical: true, project: project);
+    }
   }
 }
