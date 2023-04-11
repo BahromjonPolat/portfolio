@@ -22,6 +22,7 @@ class Education with _$Education {
     @Default("") String title,
     @Default("") String school,
     @Default("") String degree,
+    @Default("") String description,
     @Default(0) int startedDate,
     @Default(0) int endDate,
   }) = _Education;

@@ -12,18 +12,18 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/models/experience/experience.dart';
-import 'package:portfolio/view/widgets/experience/education_or_experience_widget.dart';
+import 'education_or_experience_widget.dart';
 
 class ExperienceListWidget extends StatelessWidget {
-  final List<Experience> experience;
+  final List<Object> experience;
   const ExperienceListWidget({super.key, required this.experience});
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:
-          experience.map((e) => EducationOrExperience(experience: e)).toList(),
+      children: experience
+          .map((e) => EducationOrExperience(eduOrExperience: e))
+          .toList(),
     );
   }
 }

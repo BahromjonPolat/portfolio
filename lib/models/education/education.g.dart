@@ -11,6 +11,7 @@ _$_Education _$$_EducationFromJson(Map<String, dynamic> json) => _$_Education(
       title: json['title'] as String? ?? "",
       school: json['school'] as String? ?? "",
       degree: json['degree'] as String? ?? "",
+      description: json['description'] as String? ?? "",
       startedDate: json['startedDate'] as int? ?? 0,
       endDate: json['endDate'] as int? ?? 0,
     );
@@ -21,6 +22,7 @@ Map<String, dynamic> _$$_EducationToJson(_$_Education instance) =>
       'title': instance.title,
       'school': instance.school,
       'degree': instance.degree,
+      'description': instance.description,
       'startedDate': instance.startedDate,
       'endDate': instance.endDate,
     };

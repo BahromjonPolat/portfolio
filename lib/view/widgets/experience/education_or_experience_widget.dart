@@ -12,52 +12,48 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/constants/app_colors.dart';
 import 'package:portfolio/core/utils/app_formatter.dart';
-import 'package:portfolio/models/experience/experience.dart';
+import 'package:portfolio/models/models.dart';
+import 'package:portfolio/view/widgets/experience/education_or_experience_data.dart';
 
 class EducationOrExperience extends StatelessWidget {
-  final Experience experience;
-  const EducationOrExperience({super.key, required this.experience});
+  final Object eduOrExperience;
+  const EducationOrExperience({super.key, required this.eduOrExperience});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(24.0),
-      margin: EdgeInsets.all(8.0),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: AppColors.white.withOpacity(.07),
-        borderRadius: BorderRadius.circular(24.0),
+    if (eduOrExperience is Experience) {
+      var experience = eduOrExperience as Experience;
+      return EducationOrExperienceData(
+        title: experience.jobTitle,
+        date: _getCompanyNameAndDate(
+          title: experience.companyName,
+          startedDate: experience.startedDate,
+          endDate: experience.endDate,
+        ),
+        description: experience.description,
+      );
+    }
+
+    var edu = eduOrExperience as Education;
+    return EducationOrExperienceData(
+      title: edu.title,
+      date: _getCompanyNameAndDate(
+        title: edu.school,
+        startedDate: edu.startedDate,
+        endDate: edu.endDate,
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            experience.jobTitle,
-            style: Theme.of(context)
-                .textTheme
-                .bodyLarge
-                ?.copyWith(color: AppColors.white),
-          ),
-          const SizedBox(height: 8.0),
-          Text(
-            _getCompanyNameAndDate(),
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
-          const SizedBox(height: 24.0),
-          Text(
-            experience.description,
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-        ],
-      ),
+      description: edu.description,
     );
   }
 
-  String _getCompanyNameAndDate() {
-    String started = AppFormatter.formatDateFromMills(experience.startedDate);
-    String end = AppFormatter.formatDateFromMills(experience.endDate);
-    return '${experience.companyName} ($started - to $end)';
+  String _getCompanyNameAndDate({
+    String title = "",
+    int startedDate = 0,
+    int endDate = 0,
+  }) {
+    String started = AppFormatter.formatDateFromMills(startedDate);
+    String end = AppFormatter.formatDateFromMills(endDate);
+    return '$title ($started - to $end)';
   }
 }

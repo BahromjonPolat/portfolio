@@ -24,6 +24,7 @@ mixin _$Education {
   String get title => throw _privateConstructorUsedError;
   String get school => throw _privateConstructorUsedError;
   String get degree => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   int get startedDate => throw _privateConstructorUsedError;
   int get endDate => throw _privateConstructorUsedError;
 
@@ -43,6 +44,7 @@ abstract class $EducationCopyWith<$Res> {
       String title,
       String school,
       String degree,
+      String description,
       int startedDate,
       int endDate});
 }
@@ -64,6 +66,7 @@ class _$EducationCopyWithImpl<$Res, $Val extends Education>
     Object? title = null,
     Object? school = null,
     Object? degree = null,
+    Object? description = null,
     Object? startedDate = null,
     Object? endDate = null,
   }) {
@@ -83,6 +86,10 @@ class _$EducationCopyWithImpl<$Res, $Val extends Education>
       degree: null == degree
           ? _value.degree
           : degree // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       startedDate: null == startedDate
           ? _value.startedDate
@@ -108,6 +115,7 @@ abstract class _$$_EducationCopyWith<$Res> implements $EducationCopyWith<$Res> {
       String title,
       String school,
       String degree,
+      String description,
       int startedDate,
       int endDate});
 }
@@ -127,6 +135,7 @@ class __$$_EducationCopyWithImpl<$Res>
     Object? title = null,
     Object? school = null,
     Object? degree = null,
+    Object? description = null,
     Object? startedDate = null,
     Object? endDate = null,
   }) {
@@ -146,6 +155,10 @@ class __$$_EducationCopyWithImpl<$Res>
       degree: null == degree
           ? _value.degree
           : degree // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       startedDate: null == startedDate
           ? _value.startedDate
@@ -167,6 +180,7 @@ class _$_Education implements _Education {
       this.title = "",
       this.school = "",
       this.degree = "",
+      this.description = "",
       this.startedDate = 0,
       this.endDate = 0});
 
@@ -187,6 +201,9 @@ class _$_Education implements _Education {
   final String degree;
   @override
   @JsonKey()
+  final String description;
+  @override
+  @JsonKey()
   final int startedDate;
   @override
   @JsonKey()
@@ -194,7 +211,7 @@ class _$_Education implements _Education {
 
   @override
   String toString() {
-    return 'Education(id: $id, title: $title, school: $school, degree: $degree, startedDate: $startedDate, endDate: $endDate)';
+    return 'Education(id: $id, title: $title, school: $school, degree: $degree, description: $description, startedDate: $startedDate, endDate: $endDate)';
   }
 
   @override
@@ -206,6 +223,8 @@ class _$_Education implements _Education {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.school, school) || other.school == school) &&
             (identical(other.degree, degree) || other.degree == degree) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.startedDate, startedDate) ||
                 other.startedDate == startedDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate));
@@ -213,8 +232,8 @@ class _$_Education implements _Education {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, title, school, degree, startedDate, endDate);
+  int get hashCode => Object.hash(runtimeType, id, title, school, degree,
+      description, startedDate, endDate);
 
   @JsonKey(ignore: true)
   @override
@@ -236,6 +255,7 @@ abstract class _Education implements Education {
       final String title,
       final String school,
       final String degree,
+      final String description,
       final int startedDate,
       final int endDate}) = _$_Education;
 
@@ -250,6 +270,8 @@ abstract class _Education implements Education {
   String get school;
   @override
   String get degree;
+  @override
+  String get description;
   @override
   int get startedDate;
   @override
