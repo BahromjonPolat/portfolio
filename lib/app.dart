@@ -13,7 +13,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
-import 'package:portfolio/routing/route_generator.dart';
 import 'package:portfolio/routing/routing.dart';
 
 class AppWidget extends StatelessWidget {

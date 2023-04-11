@@ -25,7 +25,7 @@ class ExperienceData {
     workingType: "Part time",
     logo: "https://logobank.uz:8005/media/logos_preview/Najot_Talim-01.png",
     description:
-        "Education is not preparation for life, education is life itself. For doing the life better, we assist young to build their future with IT.",
+        "Working with the students, examining their knowledge and explaining what they miss, assessing their overall performance.",
   );
   static final Experience mirrikhSoftware = Experience(
     id: '2',
@@ -48,7 +48,7 @@ class ExperienceData {
     webSite: "https://in1.uz/",
     workingType: "Full time",
     description:
-        "Invan kompaniyasi 2019-yilda o'z faoliyatini boshlagan bo'lib, ko'plab kompaniyalarning sotuv jarayonlarini avtomatlashtirib kelmoqda. Hozirgi kundan 100 dan ziyod kompaniyalar Invan avtomatlashtirish tizimidan foydalanib kelmoqda.",
+        "Work automation and e-commerce applications. Integrations with Soliq, Humo, Click, Payme and Uzum",
   );
 
   static List<Experience> experience = [najot, mirrikhSoftware, invanSoft];

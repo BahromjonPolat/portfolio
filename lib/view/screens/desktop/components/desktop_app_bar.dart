@@ -63,6 +63,18 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
             },
           ),
           AppTextButton(
+            label: AppStrings.educations,
+            textColor: Colors.grey,
+            onHover: AppColors.primary,
+            onPressed: () {
+              BuildContext? context = AppKeys.educationKey.currentContext;
+              Scrollable.ensureVisible(
+                context!,
+                duration: const Duration(milliseconds: 500),
+              );
+            },
+          ),
+          AppTextButton(
             label: AppStrings.experience,
             textColor: Colors.grey,
             onHover: AppColors.primary,

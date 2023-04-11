@@ -77,6 +77,18 @@ class SkillsData {
       imageUrl: "",
     ),
     SkillModel(
+      name: "Web Socket",
+      url: "",
+      description: "Web Socket",
+      imageUrl: "",
+    ),
+    SkillModel(
+      name: "Shelf",
+      url: "",
+      description: "Package for backend",
+      imageUrl: "https://pub.dev/packages/shelf",
+    ),
+    SkillModel(
       name: "CI CD",
       url: "",
       description: "Continous integration, Continous Delivery",

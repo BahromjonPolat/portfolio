@@ -12,7 +12,6 @@
 */
 
 import 'package:flutter/material.dart';
-import 'package:portfolio/core/config.dart';
 
 // ignore: must_be_immutable
 class AppTextButton extends StatefulWidget {
