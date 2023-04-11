@@ -14,9 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/models/project/project_model.dart';
-import 'package:portfolio/view/widgets/projects/project_layout.dart';
-import 'project_data_widget.dart';
-import 'project_devices.dart';
+import 'project_layout.dart';
 
 class ProjectInfoWidget extends StatelessWidget {
   final ScreenEnum screenEnum;
@@ -29,18 +27,22 @@ class ProjectInfoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    switch (screenEnum) {
-      case ScreenEnum.desktop:
-        return ProjectLayout(isVertical: false, project: project);
-      case ScreenEnum.tabletPortrait:
-        double width = MediaQuery.of(context).size.width;
-        if (width < 700)
-          return SizedBox(
-              width: width,
-              child: ProjectLayout(isVertical: true, project: project));
-        return ProjectLayout(isVertical: false, project: project);
-      default:
-        return ProjectLayout(isVertical: true, project: project);
-    }
+    return Builder(
+      builder: (context) {
+        switch (screenEnum) {
+          case ScreenEnum.desktop:
+            return ProjectLayout(isVertical: false, project: project);
+          case ScreenEnum.tabletPortrait:
+            double width = MediaQuery.of(context).size.width;
+            if (width < 700)
+              return SizedBox(
+                  width: width,
+                  child: ProjectLayout(isVertical: true, project: project));
+            return ProjectLayout(isVertical: false, project: project);
+          default:
+            return ProjectLayout(isVertical: true, project: project);
+        }
+      },
+    ).showCursorOnHover.moveUpOnHover;
   }
 }

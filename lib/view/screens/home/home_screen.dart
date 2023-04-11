@@ -11,6 +11,7 @@
 
 */
 import 'package:flutter/material.dart';
+import 'package:portfolio/core/config.dart';
 import 'package:portfolio/view/screens/desktop/desktop_screen.dart';
 import 'package:portfolio/view/screens/mobile/mobile.dart';
 import 'package:portfolio/view/screens/tablet/tablet_portrait_screen.dart';

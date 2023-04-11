@@ -11,3 +11,5 @@
 
 */
 export 'widget_extensions.dart';
+export 'string_extension.dart';
+export 'hover_extension.dart';
