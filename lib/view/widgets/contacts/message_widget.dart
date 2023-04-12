@@ -12,11 +12,13 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio/blocs/bloc/message_bloc.dart';
 import 'package:portfolio/core/constants/app_colors.dart';
 import 'package:portfolio/core/utils/app_validator.dart';
 import 'package:portfolio/models/models.dart';
 import 'package:portfolio/services/message_service.dart';
+import 'package:portfolio/view/widgets/app_snackbar.dart';
 
 class MessageWidget extends StatefulWidget {
   const MessageWidget({super.key});
@@ -87,29 +89,59 @@ class _MessageWidgetState extends State<MessageWidget> {
             const SizedBox(height: 42.0),
             BlocProvider(
               create: (context) => MessageBloc(),
-              child: ElevatedButton(
-                onPressed: () {
-                  FormState? formState = _formKey.currentState;
-                  bool isValidate = formState?.validate() ?? false;
-                  if (!isValidate) return;
+              child: BlocConsumer<MessageBloc, MessageState>(
+                listener: (context, state) {
+                  AppSnackbar snackbar = AppSnackbar(context);
 
-                  String name = _nameController.text.trim();
-                  String email = _emailController.text;
-                  String subject = _subjectController.text.trim();
-                  String msg = _messageController.text.trim();
-
-                  Message message = Message(
-                    name: name,
-                    lastName: "",
-                    email: email,
-                    subject: subject,
-                    message: msg,
-                    date: DateTime.now(),
+                  state.when(
+                    initial: () {},
+                    processing: () {},
+                    success: () {
+                      snackbar.show(content: "Success");
+                      _emailController.clear();
+                      _messageController.clear();
+                      _nameController.clear();
+                      _subjectController.clear();
+                    },
+                    failed: (error) {
+                      snackbar.show(content: error, isError: true);
+                    },
                   );
-
-                  MessageService().sendMessage(message);
                 },
-                child: const Center(child: Text('Send')),
+                builder: (context, state) {
+                  bool isLoading = state is MessageProcessing;
+                  return ElevatedButton(
+                    onPressed: isLoading
+                        ? null
+                        : () {
+                            FormState? formState = _formKey.currentState;
+                            bool isValidate = formState?.validate() ?? false;
+                            if (!isValidate) return;
+
+                            String name = _nameController.text.trim();
+                            String email = _emailController.text;
+                            String subject = _subjectController.text.trim();
+                            String msg = _messageController.text.trim();
+
+                            Message message = Message(
+                              name: name,
+                              lastName: "",
+                              email: email,
+                              subject: subject,
+                              message: msg,
+                              date: DateTime.now(),
+                            );
+
+                            BlocProvider.of<MessageBloc>(context)
+                                .add(MessageEvent.started(message: message));
+                          },
+                    child: Center(
+                      child: isLoading
+                          ? CircularProgressIndicator()
+                          : Text('Send'),
+                    ),
+                  );
+                },
               ),
             ),
           ],

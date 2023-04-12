@@ -260,26 +260,26 @@ mixin _$MessageState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Processing value) processing,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(MessageInitial value) initial,
+    required TResult Function(MessageProcessing value) processing,
+    required TResult Function(MessageSuccess value) success,
+    required TResult Function(MessageFailed value) failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Processing value)? processing,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(MessageInitial value)? initial,
+    TResult? Function(MessageProcessing value)? processing,
+    TResult? Function(MessageSuccess value)? success,
+    TResult? Function(MessageFailed value)? failed,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Processing value)? processing,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failed value)? failed,
+    TResult Function(MessageInitial value)? initial,
+    TResult Function(MessageProcessing value)? processing,
+    TResult Function(MessageSuccess value)? success,
+    TResult Function(MessageFailed value)? failed,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -304,24 +304,25 @@ class _$MessageStateCopyWithImpl<$Res, $Val extends MessageState>
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$MessageInitialCopyWith<$Res> {
+  factory _$$MessageInitialCopyWith(
+          _$MessageInitial value, $Res Function(_$MessageInitial) then) =
+      __$$MessageInitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res>
-    extends _$MessageStateCopyWithImpl<$Res, _$_Initial>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+class __$$MessageInitialCopyWithImpl<$Res>
+    extends _$MessageStateCopyWithImpl<$Res, _$MessageInitial>
+    implements _$$MessageInitialCopyWith<$Res> {
+  __$$MessageInitialCopyWithImpl(
+      _$MessageInitial _value, $Res Function(_$MessageInitial) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$MessageInitial implements MessageInitial {
+  const _$MessageInitial();
 
   @override
   String toString() {
@@ -331,7 +332,7 @@ class _$_Initial implements _Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType && other is _$MessageInitial);
   }
 
   @override
@@ -377,10 +378,10 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Processing value) processing,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(MessageInitial value) initial,
+    required TResult Function(MessageProcessing value) processing,
+    required TResult Function(MessageSuccess value) success,
+    required TResult Function(MessageFailed value) failed,
   }) {
     return initial(this);
   }
@@ -388,10 +389,10 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Processing value)? processing,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(MessageInitial value)? initial,
+    TResult? Function(MessageProcessing value)? processing,
+    TResult? Function(MessageSuccess value)? success,
+    TResult? Function(MessageFailed value)? failed,
   }) {
     return initial?.call(this);
   }
@@ -399,10 +400,10 @@ class _$_Initial implements _Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Processing value)? processing,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failed value)? failed,
+    TResult Function(MessageInitial value)? initial,
+    TResult Function(MessageProcessing value)? processing,
+    TResult Function(MessageSuccess value)? success,
+    TResult Function(MessageFailed value)? failed,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -412,30 +413,30 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements MessageState {
-  const factory _Initial() = _$_Initial;
+abstract class MessageInitial implements MessageState {
+  const factory MessageInitial() = _$MessageInitial;
 }
 
 /// @nodoc
-abstract class _$$_ProcessingCopyWith<$Res> {
-  factory _$$_ProcessingCopyWith(
-          _$_Processing value, $Res Function(_$_Processing) then) =
-      __$$_ProcessingCopyWithImpl<$Res>;
+abstract class _$$MessageProcessingCopyWith<$Res> {
+  factory _$$MessageProcessingCopyWith(
+          _$MessageProcessing value, $Res Function(_$MessageProcessing) then) =
+      __$$MessageProcessingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ProcessingCopyWithImpl<$Res>
-    extends _$MessageStateCopyWithImpl<$Res, _$_Processing>
-    implements _$$_ProcessingCopyWith<$Res> {
-  __$$_ProcessingCopyWithImpl(
-      _$_Processing _value, $Res Function(_$_Processing) _then)
+class __$$MessageProcessingCopyWithImpl<$Res>
+    extends _$MessageStateCopyWithImpl<$Res, _$MessageProcessing>
+    implements _$$MessageProcessingCopyWith<$Res> {
+  __$$MessageProcessingCopyWithImpl(
+      _$MessageProcessing _value, $Res Function(_$MessageProcessing) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Processing implements _Processing {
-  const _$_Processing();
+class _$MessageProcessing implements MessageProcessing {
+  const _$MessageProcessing();
 
   @override
   String toString() {
@@ -445,7 +446,7 @@ class _$_Processing implements _Processing {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Processing);
+        (other.runtimeType == runtimeType && other is _$MessageProcessing);
   }
 
   @override
@@ -491,10 +492,10 @@ class _$_Processing implements _Processing {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Processing value) processing,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(MessageInitial value) initial,
+    required TResult Function(MessageProcessing value) processing,
+    required TResult Function(MessageSuccess value) success,
+    required TResult Function(MessageFailed value) failed,
   }) {
     return processing(this);
   }
@@ -502,10 +503,10 @@ class _$_Processing implements _Processing {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Processing value)? processing,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(MessageInitial value)? initial,
+    TResult? Function(MessageProcessing value)? processing,
+    TResult? Function(MessageSuccess value)? success,
+    TResult? Function(MessageFailed value)? failed,
   }) {
     return processing?.call(this);
   }
@@ -513,10 +514,10 @@ class _$_Processing implements _Processing {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Processing value)? processing,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failed value)? failed,
+    TResult Function(MessageInitial value)? initial,
+    TResult Function(MessageProcessing value)? processing,
+    TResult Function(MessageSuccess value)? success,
+    TResult Function(MessageFailed value)? failed,
     required TResult orElse(),
   }) {
     if (processing != null) {
@@ -526,29 +527,30 @@ class _$_Processing implements _Processing {
   }
 }
 
-abstract class _Processing implements MessageState {
-  const factory _Processing() = _$_Processing;
+abstract class MessageProcessing implements MessageState {
+  const factory MessageProcessing() = _$MessageProcessing;
 }
 
 /// @nodoc
-abstract class _$$_SuccessCopyWith<$Res> {
-  factory _$$_SuccessCopyWith(
-          _$_Success value, $Res Function(_$_Success) then) =
-      __$$_SuccessCopyWithImpl<$Res>;
+abstract class _$$MessageSuccessCopyWith<$Res> {
+  factory _$$MessageSuccessCopyWith(
+          _$MessageSuccess value, $Res Function(_$MessageSuccess) then) =
+      __$$MessageSuccessCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_SuccessCopyWithImpl<$Res>
-    extends _$MessageStateCopyWithImpl<$Res, _$_Success>
-    implements _$$_SuccessCopyWith<$Res> {
-  __$$_SuccessCopyWithImpl(_$_Success _value, $Res Function(_$_Success) _then)
+class __$$MessageSuccessCopyWithImpl<$Res>
+    extends _$MessageStateCopyWithImpl<$Res, _$MessageSuccess>
+    implements _$$MessageSuccessCopyWith<$Res> {
+  __$$MessageSuccessCopyWithImpl(
+      _$MessageSuccess _value, $Res Function(_$MessageSuccess) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Success implements _Success {
-  const _$_Success();
+class _$MessageSuccess implements MessageSuccess {
+  const _$MessageSuccess();
 
   @override
   String toString() {
@@ -558,7 +560,7 @@ class _$_Success implements _Success {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Success);
+        (other.runtimeType == runtimeType && other is _$MessageSuccess);
   }
 
   @override
@@ -604,10 +606,10 @@ class _$_Success implements _Success {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Processing value) processing,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(MessageInitial value) initial,
+    required TResult Function(MessageProcessing value) processing,
+    required TResult Function(MessageSuccess value) success,
+    required TResult Function(MessageFailed value) failed,
   }) {
     return success(this);
   }
@@ -615,10 +617,10 @@ class _$_Success implements _Success {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Processing value)? processing,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(MessageInitial value)? initial,
+    TResult? Function(MessageProcessing value)? processing,
+    TResult? Function(MessageSuccess value)? success,
+    TResult? Function(MessageFailed value)? failed,
   }) {
     return success?.call(this);
   }
@@ -626,10 +628,10 @@ class _$_Success implements _Success {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Processing value)? processing,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failed value)? failed,
+    TResult Function(MessageInitial value)? initial,
+    TResult Function(MessageProcessing value)? processing,
+    TResult Function(MessageSuccess value)? success,
+    TResult Function(MessageFailed value)? failed,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -639,23 +641,25 @@ class _$_Success implements _Success {
   }
 }
 
-abstract class _Success implements MessageState {
-  const factory _Success() = _$_Success;
+abstract class MessageSuccess implements MessageState {
+  const factory MessageSuccess() = _$MessageSuccess;
 }
 
 /// @nodoc
-abstract class _$$_FailedCopyWith<$Res> {
-  factory _$$_FailedCopyWith(_$_Failed value, $Res Function(_$_Failed) then) =
-      __$$_FailedCopyWithImpl<$Res>;
+abstract class _$$MessageFailedCopyWith<$Res> {
+  factory _$$MessageFailedCopyWith(
+          _$MessageFailed value, $Res Function(_$MessageFailed) then) =
+      __$$MessageFailedCopyWithImpl<$Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$_FailedCopyWithImpl<$Res>
-    extends _$MessageStateCopyWithImpl<$Res, _$_Failed>
-    implements _$$_FailedCopyWith<$Res> {
-  __$$_FailedCopyWithImpl(_$_Failed _value, $Res Function(_$_Failed) _then)
+class __$$MessageFailedCopyWithImpl<$Res>
+    extends _$MessageStateCopyWithImpl<$Res, _$MessageFailed>
+    implements _$$MessageFailedCopyWith<$Res> {
+  __$$MessageFailedCopyWithImpl(
+      _$MessageFailed _value, $Res Function(_$MessageFailed) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -663,7 +667,7 @@ class __$$_FailedCopyWithImpl<$Res>
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$_Failed(
+    return _then(_$MessageFailed(
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -674,8 +678,8 @@ class __$$_FailedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Failed implements _Failed {
-  const _$_Failed({required this.error});
+class _$MessageFailed implements MessageFailed {
+  const _$MessageFailed({required this.error});
 
   @override
   final String error;
@@ -689,7 +693,7 @@ class _$_Failed implements _Failed {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Failed &&
+            other is _$MessageFailed &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -699,8 +703,8 @@ class _$_Failed implements _Failed {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FailedCopyWith<_$_Failed> get copyWith =>
-      __$$_FailedCopyWithImpl<_$_Failed>(this, _$identity);
+  _$$MessageFailedCopyWith<_$MessageFailed> get copyWith =>
+      __$$MessageFailedCopyWithImpl<_$MessageFailed>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -742,10 +746,10 @@ class _$_Failed implements _Failed {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Processing value) processing,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Failed value) failed,
+    required TResult Function(MessageInitial value) initial,
+    required TResult Function(MessageProcessing value) processing,
+    required TResult Function(MessageSuccess value) success,
+    required TResult Function(MessageFailed value) failed,
   }) {
     return failed(this);
   }
@@ -753,10 +757,10 @@ class _$_Failed implements _Failed {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Processing value)? processing,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Failed value)? failed,
+    TResult? Function(MessageInitial value)? initial,
+    TResult? Function(MessageProcessing value)? processing,
+    TResult? Function(MessageSuccess value)? success,
+    TResult? Function(MessageFailed value)? failed,
   }) {
     return failed?.call(this);
   }
@@ -764,10 +768,10 @@ class _$_Failed implements _Failed {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Processing value)? processing,
-    TResult Function(_Success value)? success,
-    TResult Function(_Failed value)? failed,
+    TResult Function(MessageInitial value)? initial,
+    TResult Function(MessageProcessing value)? processing,
+    TResult Function(MessageSuccess value)? success,
+    TResult Function(MessageFailed value)? failed,
     required TResult orElse(),
   }) {
     if (failed != null) {
@@ -777,11 +781,11 @@ class _$_Failed implements _Failed {
   }
 }
 
-abstract class _Failed implements MessageState {
-  const factory _Failed({required final String error}) = _$_Failed;
+abstract class MessageFailed implements MessageState {
+  const factory MessageFailed({required final String error}) = _$MessageFailed;
 
   String get error;
   @JsonKey(ignore: true)
-  _$$_FailedCopyWith<_$_Failed> get copyWith =>
+  _$$MessageFailedCopyWith<_$MessageFailed> get copyWith =>
       throw _privateConstructorUsedError;
 }

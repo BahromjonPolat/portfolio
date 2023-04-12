@@ -79,7 +79,16 @@ class AppTheme {
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
-          labelStyle: TextStyle(color: AppColors.background),
+          labelStyle: TextStyle(color: AppColors.white),
+        ),
+        snackBarTheme: SnackBarThemeData(
+          backgroundColor: AppColors.white.withOpacity(.5),
+          width: 240.0,
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50.0),
+          ),
+          contentTextStyle: TextStyle(color: AppColors.white),
         ),
       );
 }
