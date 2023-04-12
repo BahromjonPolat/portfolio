@@ -6,6 +6,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:portfolio/services/http_result.dart';
 import 'package:portfolio/services/services.dart';
 
+import '../../core/utils/logger.dart';
+
 part 'image_event.dart';
 part 'image_state.dart';
 part 'image_bloc.freezed.dart';
@@ -20,17 +22,14 @@ class ImageBloc extends Bloc<ImageEvent, ImageState> {
     Emitter<ImageState> emit,
   ) async {
     ApiService service = ApiService.instance;
-    event.map(
-      started: (event) async {
-        emit(ImageState.loading());
-        HttpResult result = await service.download(event.imageUrl);
-        if (result.isSuccess) {
-          Uint8List bytes = Uint8List.fromList(result.response as List<int>);
-          emit(ImageState.success(bytes));
-        } else {
-          emit(ImageState.failed());
-        }
-      },
-    );
+
+    emit(ImageState.loading());
+    final result = await service.download(event.imageUrl);
+    if (result.isSuccess) {
+      List<int> bytes = result.response as List<int>;
+      emit(ImageState.success(Uint8List.fromList(bytes)));
+    } else {
+      emit(ImageState.failed());
+    }
   }
 }

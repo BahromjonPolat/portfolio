@@ -22,7 +22,11 @@ class ApiService {
       Uri url = Uri.parse(uri);
       http.Response response = await http.get(url);
       if (response.statusCode == 200) {
-        return HttpResult(statusCode: 200, response: response.bodyBytes);
+        return HttpResult(
+          statusCode: 200,
+          isSuccess: true,
+          response: response.bodyBytes,
+        );
       }
       return HttpResult(
         statusCode: response.statusCode,

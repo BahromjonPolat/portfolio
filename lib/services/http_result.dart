@@ -20,4 +20,9 @@ class HttpResult {
     required this.response,
     this.isSuccess = false,
   });
+
+  @override
+  String toString() {
+    return "HttpResult(isSuccess: $isSuccess, statusCode: $statusCode)";
+  }
 }

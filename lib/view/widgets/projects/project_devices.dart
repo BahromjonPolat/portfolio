@@ -14,6 +14,7 @@
 import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/models/platform/platform_model.dart';
+import 'package:portfolio/view/widgets/app_image.dart';
 
 class ProjectDevices extends StatelessWidget {
   final String primaryScreenshot;
@@ -38,20 +39,14 @@ class ProjectDevices extends StatelessWidget {
             transform: Matrix4.translationValues(26.0, 0.0, 0.0),
             child: DeviceFrame(
               device: Devices.ios.iPhone13ProMax,
-              screen: Image.network(
-                secondaryScreenshot,
-                fit: BoxFit.cover,
-              ),
+              screen: AppImage(imageUrl: secondaryScreenshot),
             ),
           ),
           SizedBox(
             height: 280.0,
             child: DeviceFrame(
               device: Devices.ios.iPhone13ProMax,
-              screen: Image.network(
-                primaryScreenshot,
-                fit: BoxFit.cover,
-              ),
+              screen: AppImage(imageUrl: primaryScreenshot),
             ),
           ),
         ],
@@ -64,20 +59,14 @@ class ProjectDevices extends StatelessWidget {
           height: 160.0,
           child: DeviceFrame(
             device: Devices.windows.wideMonitor,
-            screen: Image.network(
-              secondaryScreenshot,
-              fit: BoxFit.cover,
-            ),
+            screen: AppImage(imageUrl: secondaryScreenshot),
           ),
         ),
         SizedBox(
           height: 100.0,
           child: DeviceFrame(
             device: Devices.windows.laptop,
-            screen: Image.network(
-              primaryScreenshot,
-              fit: BoxFit.cover,
-            ),
+            screen: AppImage(imageUrl: primaryScreenshot),
           ),
         )
       ],

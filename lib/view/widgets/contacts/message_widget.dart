@@ -32,6 +32,7 @@ class _MessageWidgetState extends State<MessageWidget> {
   final _emailController = TextEditingController();
   final _subjectController = TextEditingController();
   final _messageController = TextEditingController();
+  final _focusNode = FocusNode();
   @override
   Widget build(BuildContext context) {
     return Container(

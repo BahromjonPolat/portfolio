@@ -46,6 +46,7 @@ class EducationAndExperienceList extends StatelessWidget {
 
         if (width > 900) {
           return Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: children,
           );
