@@ -20,12 +20,12 @@ class AppLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text.rich(
       TextSpan(
-        text: "Bahromjon",
+        text: "BAHROMJON",
         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
             color: AppColors.primary, fontFamily: "Montserrat", fontSize: 24.0),
         children: [
           TextSpan(
-            text: ".uz",
+            text: ".UZ",
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.white,
                   fontFamily: "Montserrat",

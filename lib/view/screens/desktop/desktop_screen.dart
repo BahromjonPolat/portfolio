@@ -36,7 +36,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
     double padding = horizontal.isNegative ? 16 : horizontal;
 
     return Scaffold(
-      // extendBodyBehindAppBar: true,
+      extendBodyBehindAppBar: true,
       appBar: DesktopAppBar(),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: padding),
