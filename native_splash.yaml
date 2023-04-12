@@ -1,9 +1,7 @@
 flutter_native_splash:
   color: "#000000"
-  image: assets/icons/loading.gif
 
   android_12:
-    image: assets/icons/loading.gif
     icon_background_color: "#000000"
 
   web: true

@@ -24,20 +24,19 @@ class ProjectDataWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      // mainAxisSize: MainAxisSize.min,
+      mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const SizedBox(height: 24.0),
-        Wrap(
-          spacing: 12.0,
-          children: project.categories
-              .map((category) => Chip(
-                    label: Text(category.name),
-                    avatar: Icon(Icons.add),
-                  ))
-              .toList(),
-        ),
-        const SizedBox(height: 12.0),
+        // Wrap(
+        //   spacing: 12.0,
+        //   children: project.categories
+        //       .map((category) => Chip(
+        //             label: Text(category.name),
+        //             avatar: Icon(Icons.add),
+        //           ))
+        //       .toList(),
+        // ),
+        // const SizedBox(height: 12.0),
         ProjectTitle(
           projectName: project.title,
           projectIcon: project.logo,
@@ -52,7 +51,7 @@ class ProjectDataWidget extends StatelessWidget {
           project.description,
           style: Theme.of(context).textTheme.bodySmall,
         ),
-        const SizedBox(height: 12.0),
+        const Spacer(),
         Row(
           children: project.platforms
               .map((platform) => StoreWidget(platform: platform))

@@ -18,4 +18,10 @@ extension WidgetExtension on Widget {
         key: key,
         child: this,
       );
+
+  Widget wrapExpanded({int flex = 1, Key? key}) => Expanded(
+        child: this,
+        flex: flex,
+        key: key,
+      );
 }

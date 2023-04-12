@@ -47,6 +47,12 @@ class SkillsData {
       imageUrl: "",
     ),
     SkillModel(
+      name: "Git",
+      url: "",
+      description: "",
+      imageUrl: "",
+    ),
+    SkillModel(
       name: "MVVM",
       url: "https://flutter.dev/",
       description: "Model, View, View Model",
@@ -104,6 +110,43 @@ class SkillsData {
       name: "Hive",
       url: "https://pub.dev/packages/hive",
       description: "Hive NoSQL database",
+      imageUrl: "",
+    ),
+    SkillModel(
+      name: "Freezed",
+      url: "https://pub.dev/packages/freezed",
+      description: "",
+      imageUrl: "",
+    ),
+    SkillModel(
+      name: "Google APIs",
+      url: "https://developers.google.com/",
+      description:
+          "The Google APIs Explorer is a tool available on most REST API reference documentation pages that lets you try Google API methods without writing code.",
+      imageUrl: "",
+    ),
+    SkillModel(
+      name: "Google Maps",
+      url: "https://pub.dev/packages/google_maps",
+      description: "",
+      imageUrl: "",
+    ),
+    SkillModel(
+      name: "Yandex Map Kit",
+      url: "https://pub.dev/packages/yandex_mapkit",
+      description: "",
+      imageUrl: "",
+    ),
+    SkillModel(
+      name: "Google play",
+      url: "https://play.google.com",
+      description: "Publish to Play store",
+      imageUrl: "",
+    ),
+    SkillModel(
+      name: "App Store",
+      url: "https://developer.apple.com/",
+      description: "Publish to App store",
       imageUrl: "",
     ),
   ];

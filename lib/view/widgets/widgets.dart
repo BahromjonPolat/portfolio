@@ -20,3 +20,4 @@ export 'projects/projects.dart';
 export 'store_widget.dart';
 export 'drawer/drawer.dart';
 export 'screen_footer.dart';
+export 'app_logo.dart';

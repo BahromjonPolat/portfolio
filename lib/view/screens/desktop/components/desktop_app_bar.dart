@@ -24,7 +24,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
       padding: EdgeInsets.all(12.0),
       child: Row(
         children: [
-          const Text("Bahromjon Po'lat"),
+          const AppLogo(),
           const Spacer(),
           AppTextButton(
             label: AppStrings.home,

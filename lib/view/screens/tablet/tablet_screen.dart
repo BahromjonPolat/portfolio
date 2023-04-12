@@ -28,7 +28,7 @@ class _TabletScreenState extends State<TabletScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(title: const AppLogo()),
       endDrawer: AppDrawer(),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -61,15 +61,19 @@ class _TabletScreenState extends State<TabletScreen> {
             SizedBox(height: 32.0),
             Row(
               children: [
-                Text(
-                  AppStrings.educations,
+                Expanded(
                   key: AppKeys.educationKey,
-                  style: Theme.of(context).textTheme.displaySmall,
+                  child: Text(
+                    AppStrings.educations,
+                    style: Theme.of(context).textTheme.displaySmall,
+                  ),
                 ),
-                Text(
-                  AppStrings.experience,
+                Expanded(
                   key: AppKeys.experienceKey,
-                  style: Theme.of(context).textTheme.displaySmall,
+                  child: Text(
+                    AppStrings.experience,
+                    style: Theme.of(context).textTheme.displaySmall,
+                  ),
                 ),
               ],
             ),

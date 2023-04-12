@@ -21,23 +21,10 @@ class AppImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => ImageBloc()..add(ImageEvent(imageUrl)),
-      child: BlocBuilder<ImageBloc, ImageState>(
-        builder: (context, state) {
-          return state.when(
-            initial: () => const SizedBox(),
-            loading: () => const Center(child: CircularProgressIndicator()),
-            failed: () => const SizedBox(),
-            success: (imageBytes) {
-              return Image.memory(
-                imageBytes,
-                fit: BoxFit.cover,
-              );
-            },
-          );
-        },
-      ),
+    return FadeInImage.assetNetwork(
+      placeholder: "assets/icons/loading.gif",
+      image: imageUrl,
+      fit: BoxFit.cover,
     );
   }
 }

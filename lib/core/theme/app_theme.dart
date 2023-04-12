@@ -58,9 +58,18 @@ class AppTheme {
             color: AppColors.bodyText,
             fontWeight: FontWeight.w400,
           ),
-          displayMedium: TextStyle(color: AppColors.white),
-          displayLarge: TextStyle(color: AppColors.white),
-          displaySmall: TextStyle(color: AppColors.white),
+          displayMedium: TextStyle(
+            color: AppColors.white,
+            fontFamily: "Montserrat",
+          ),
+          displayLarge: TextStyle(
+            color: AppColors.white,
+            fontFamily: "Montserrat",
+          ),
+          displaySmall: TextStyle(
+            color: AppColors.white,
+            fontFamily: "Montserrat",
+          ),
           // bodyLarge: TextStyle(color: Colors.blue),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(

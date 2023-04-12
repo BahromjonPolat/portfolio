@@ -43,9 +43,13 @@ class _DesktopScreenState extends State<DesktopScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            AboutMeSimple(
-              key: AppKeys.homeKey,
-              screenEnum: ScreenEnum.desktop,
+            Container(
+              height: 880.0,
+              alignment: Alignment.center,
+              child: AboutMeSimple(
+                key: AppKeys.homeKey,
+                screenEnum: ScreenEnum.desktop,
+              ),
             ),
             const SizedBox(height: 32.0),
             Text(

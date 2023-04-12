@@ -32,7 +32,11 @@ class ProjectLayout extends StatelessWidget {
     if (isVertical) {
       return Container(
         padding: EdgeInsets.all(24.0),
-        constraints: BoxConstraints(maxWidth: 500.0),
+        constraints: BoxConstraints(
+          maxWidth: 500.0,
+          maxHeight: 560,
+          minHeight: 460.0,
+        ),
         decoration: BoxDecoration(
           color: AppColors.white.withOpacity(.07),
           borderRadius: BorderRadius.circular(24.0),
@@ -44,13 +48,19 @@ class ProjectLayout extends StatelessWidget {
               secondaryScreenshot: project.secondaryScreenshot,
               platform: project.platforms.first.platform,
             ),
-            ProjectDataWidget(project: project),
+            const SizedBox(height: 16.0),
+            Expanded(child: ProjectDataWidget(project: project)),
           ],
         ),
       );
     }
     return Container(
       padding: EdgeInsets.all(24.0),
+      width: MediaQuery.of(context).size.width,
+      constraints: BoxConstraints(
+        maxHeight: 380,
+        minHeight: 380.0,
+      ),
       decoration: BoxDecoration(
         color: AppColors.white.withOpacity(.07),
         borderRadius: BorderRadius.circular(24.0),

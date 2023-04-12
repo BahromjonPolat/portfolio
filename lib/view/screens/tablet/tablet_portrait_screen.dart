@@ -29,7 +29,7 @@ class _TabletPortraitScreenState extends State<TabletPortraitScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       endDrawer: AppDrawer(),
-      appBar: AppBar(),
+      appBar: AppBar(title: const AppLogo()),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
