@@ -13,12 +13,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:portfolio/blocs/bloc/message_bloc.dart';
 import 'package:portfolio/core/constants/app_colors.dart';
 import 'package:portfolio/core/utils/app_validator.dart';
 import 'package:portfolio/models/models.dart';
-import 'package:portfolio/services/message_service.dart';
 import 'package:portfolio/view/widgets/app_snackbar.dart';
+import 'package:portfolio/blocs/blocs.dart';
 
 class MessageWidget extends StatefulWidget {
   const MessageWidget({super.key});

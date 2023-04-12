@@ -14,3 +14,4 @@
 export 'launch_service.dart';
 export 'message_service.dart';
 export 'project_service.dart';
+export 'api_service.dart';
