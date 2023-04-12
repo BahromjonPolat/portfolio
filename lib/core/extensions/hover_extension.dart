@@ -12,19 +12,19 @@
 */
 
 import 'package:flutter/material.dart';
-import 'dart:html' as html;
+// import 'dart:html' as html;
 
 import 'package:portfolio/view/widgets/translation_on_hover.dart';
 
 extension HoverExtension on Widget {
-  static final appContainer =
-      html.window.document.getElementById("app-container");
+  // static final appContainer =
+  //     html.window.document.getElementById("app-container");
 
-  Widget get showCursorOnHover => MouseRegion(
-        child: this,
-        onEnter: (event) => appContainer?.style.cursor = "pointer",
-        onExit: (event) => appContainer?.style.cursor = "default",
-      );
+  // Widget get showCursorOnHover => MouseRegion(
+  //       child: this,
+  //       onEnter: (event) => appContainer?.style.cursor = "pointer",
+  //       onExit: (event) => appContainer?.style.cursor = "default",
+  //     );
 
   Widget get moveUpOnHover => TranslationOnHover(child: this);
 }

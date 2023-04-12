@@ -12,6 +12,7 @@
 */
 
 import 'package:flutter/material.dart';
+import 'package:portfolio/blocs/bloc/message_bloc.dart';
 import 'package:portfolio/core/constants/app_colors.dart';
 import 'package:portfolio/core/utils/app_validator.dart';
 import 'package:portfolio/models/models.dart';
@@ -84,29 +85,32 @@ class _MessageWidgetState extends State<MessageWidget> {
               textCapitalization: TextCapitalization.sentences,
             ),
             const SizedBox(height: 42.0),
-            ElevatedButton(
-              onPressed: () {
-                FormState? formState = _formKey.currentState;
-                bool isValidate = formState?.validate() ?? false;
-                if (!isValidate) return;
+            BlocProvider(
+              create: (context) => MessageBloc(),
+              child: ElevatedButton(
+                onPressed: () {
+                  FormState? formState = _formKey.currentState;
+                  bool isValidate = formState?.validate() ?? false;
+                  if (!isValidate) return;
 
-                String name = _nameController.text.trim();
-                String email = _emailController.text;
-                String subject = _subjectController.text.trim();
-                String msg = _messageController.text.trim();
+                  String name = _nameController.text.trim();
+                  String email = _emailController.text;
+                  String subject = _subjectController.text.trim();
+                  String msg = _messageController.text.trim();
 
-                Message message = Message(
-                  name: name,
-                  lastName: "",
-                  email: email,
-                  subject: subject,
-                  message: msg,
-                  date: DateTime.now(),
-                );
+                  Message message = Message(
+                    name: name,
+                    lastName: "",
+                    email: email,
+                    subject: subject,
+                    message: msg,
+                    date: DateTime.now(),
+                  );
 
-                MessageService().sendMessage(message);
-              },
-              child: const Center(child: Text('Send')),
+                  MessageService().sendMessage(message);
+                },
+                child: const Center(child: Text('Send')),
+              ),
             ),
           ],
         ),

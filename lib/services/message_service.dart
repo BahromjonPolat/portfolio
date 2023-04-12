@@ -20,7 +20,7 @@ abstract class IMessageService {
 }
 
 class MessageService extends IMessageService {
-  Future<void> sendMessage(Message message) async {
+  Future<String> sendMessage(Message message) async {
     try {
       String token = AppSecure.botToken;
       String chatId = AppSecure.chatId;
@@ -29,9 +29,12 @@ class MessageService extends IMessageService {
           "https://api.telegram.org/bot$token/sendMessage?chat_id=$chatId&parse_mode=HTML&text=$msg";
       Uri url = Uri.parse(uri);
       http.Response response = await http.get(url);
-      response;
+      if (response.statusCode == 200) {
+        return "Success";
+      }
+      return "Failed";
     } catch (err) {
-      print(err);
+      throw "$err";
     }
   }
 
