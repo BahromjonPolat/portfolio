@@ -3,10 +3,7 @@ import 'dart:typed_data';
 
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:portfolio/services/http_result.dart';
 import 'package:portfolio/services/services.dart';
-
-import '../../core/utils/logger.dart';
 
 part 'image_event.dart';
 part 'image_state.dart';

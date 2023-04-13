@@ -1,0 +1,60 @@
+name: Flutter CI CD
+
+on:
+  push:
+    branches:
+        - "master"
+
+env:
+  FLUTTER_CHANNEL: "stable"
+  FLUTTER_VERSION: "latest"
+
+
+jobs:
+  code-analysis-and-testing:
+    if: true
+    name: Code analysis and testing
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        
+        
+        - name: Set up Flutter
+          uses: subosito/flutter-action@v2
+          with: 
+            channel: ${{ env.FLUTTER_CHANNEL }}
+            version: ${{ env.FLUTTER_VERSION }}
+        
+        - name: Flutter Doctor
+          run: flutter doctor
+        
+        - name: Flutter version
+          run: flutter --version
+
+        - name: Analyze
+          run: flutter analyze
+        
+        - name: Testing
+          run: flutter test
+
+  build-web:
+    if: false
+    name: Build web application
+    needs: code-analysis-and-testing
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
+        
+        
+        - name: Set up Flutter
+          uses: subosito/flutter-action@v2
+          with: 
+            channel: ${{ env.FLUTTER_CHANNEL }}
+            version: ${{ env.FLUTTER_VERSION }}    
+        
+        
