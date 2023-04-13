@@ -19,7 +19,7 @@ void main() {
     test('formatDate returns correct format for "hh:mm:ss" pattern', () {
       final date = DateTime(2022, 1, 1, 12, 30, 45);
       final formatted = AppFormatter.formatDate(date, pattern: 'hh:mm:ss');
-      expect(formatted, equals('12:3045'));
+      expect(formatted, equals('12:30:45'));
     });
 
     test('formatDate returns correct format for "dd.mm.yyyy" pattern', () {

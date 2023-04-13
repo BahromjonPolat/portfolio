@@ -40,6 +40,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
                   Scrollable.ensureVisible(
                     context!,
                     duration: const Duration(milliseconds: 500),
+                    alignment: 1.2,
                   );
                 },
               ),
@@ -52,6 +53,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
                   Scrollable.ensureVisible(
                     context!,
                     duration: const Duration(milliseconds: 500),
+                    alignment: .15,
                   );
                 },
               ),
@@ -64,6 +66,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
                   Scrollable.ensureVisible(
                     context!,
                     duration: const Duration(milliseconds: 500),
+                    alignment: .15,
                   );
                 },
               ),
@@ -76,6 +79,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
                   Scrollable.ensureVisible(
                     context!,
                     duration: const Duration(milliseconds: 500),
+                    alignment: .15,
                   );
                 },
               ),
@@ -88,6 +92,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
                   Scrollable.ensureVisible(
                     context!,
                     duration: const Duration(milliseconds: 500),
+                    alignment: .15,
                   );
                 },
               ),
@@ -100,6 +105,7 @@ class DesktopAppBar extends StatelessWidget with PreferredSizeWidget {
                   Scrollable.ensureVisible(
                     context!,
                     duration: const Duration(milliseconds: 500),
+                    alignment: .15,
                   );
                 },
               ),

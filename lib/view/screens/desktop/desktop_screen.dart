@@ -89,7 +89,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
                 ),
               ],
             ),
-            EducationAndExperienceList(screenEnum: ScreenEnum.desktop),
+            const EducationAndExperienceList(screenEnum: ScreenEnum.desktop),
             const SizedBox(height: 32.0),
             ContactWidget(
               key: AppKeys.contactsKey,

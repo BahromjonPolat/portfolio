@@ -26,7 +26,7 @@ class AppFormatter {
 
     switch (pattern) {
       case 'hh:mm:ss':
-        formatted = '$hh:$mm$ss';
+        formatted = '$hh:$mm:$ss';
         break;
       case 'dd.mm.yyyy':
         formatted = '$day.$month.$year';

@@ -285,9 +285,10 @@ class ProjectsData {
       logo:
           "https://play-lh.googleusercontent.com/XsR74TLnoi3-phB9AcLsze5fG5_dD2tFMlYkqlntGkUhKLv_N8pxjViaPb_KWAadrlTv=w240-h480-rw",
       primaryScreenshot:
-          "https://in1.uz/_next/image?url=%2Fimages%2Fblog%2Fblog-1.webp&w=384&q=75",
+          "https://drive.google.com/u/0/uc?id=1qdW5PXpPuoLxgqYDKuqJOkYcgNavN9qB&export=download",
       secondaryScreenshot:
-          "https://in1.uz/_next/image?url=%2Fimages%2Fequipment.png&w=640&q=75",
+          "https://drive.google.com/u/0/uc?id=1VQRXCLsH9y_4UGHLEi-6xUMIy_Voqb2F&export=download",
+      // 1qdW5PXpPuoLxgqYDKuqJOkYcgNavN9qB
       platforms: [
         PlatformModel(
           platform: PlatformEnum.windows,

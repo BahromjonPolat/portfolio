@@ -24,7 +24,7 @@ class LaunchService {
     }
   }
 
-  static Future<void> openInHtml(String url) async {
-    js.context.callMethod("open", [url, "_blank"]);
+  static Future<void> openInHtml(String url, {String target = "_blank"}) async {
+    js.context.callMethod("open", [url, target]);
   }
 }
