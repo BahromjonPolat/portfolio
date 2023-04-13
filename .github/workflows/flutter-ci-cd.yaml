@@ -8,6 +8,7 @@ on:
 env:
   FLUTTER_CHANNEL: "stable"
   FLUTTER_VERSION: "latest"
+  APP_SECURE: ${{ secrets.APP_SECURE }}
 
 
 jobs:
@@ -20,6 +21,14 @@ jobs:
         - name: Checkout repository
           uses: actions/checkout@v3
         
+        - name: Decode App Secure
+          run: |
+            echo "Convert key base64 string to a file"
+            echo "$APP_SECURE" >> secure.dart.base64
+            base64 --decode secure.dart.base64 > secure.dart
+          
+          working-directory: "lib/core/constants/"
+
         
         - name: Set up Flutter
           uses: subosito/flutter-action@v2
@@ -33,11 +42,17 @@ jobs:
         - name: Flutter version
           run: flutter --version
 
+        - name: Get dependencies
+          run: flutter pub get
+
         - name: Analyze
           run: flutter analyze
         
         - name: Testing
           run: flutter test
+        
+        - name: Removing security file
+          run: rm lib/core/constants/secure.dart
 
   build-web:
     if: false
