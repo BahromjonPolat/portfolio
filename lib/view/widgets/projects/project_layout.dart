@@ -14,6 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/models/project/project_model.dart';
+import 'package:portfolio/routing/routing.dart';
 
 import 'project_data_widget.dart';
 import 'project_devices.dart';
@@ -30,51 +31,67 @@ class ProjectLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (isVertical) {
-      return Container(
+      return InkWell(
+        onTap: () {
+          // AppNavigator.pushNamed(
+          //   RouteNames.project,
+          //   queryParams: {'id': project.id},
+          // );
+        },
+        child: Container(
+          padding: EdgeInsets.all(24.0),
+          constraints: BoxConstraints(
+            maxWidth: 500.0,
+            maxHeight: 560,
+            minHeight: 460.0,
+          ),
+          decoration: BoxDecoration(
+            color: AppColors.white.withOpacity(.07),
+            borderRadius: BorderRadius.circular(24.0),
+          ),
+          child: Column(
+            children: [
+              ProjectDevices(
+                primaryScreenshot: project.primaryScreenshot,
+                secondaryScreenshot: project.secondaryScreenshot,
+                platform: project.platforms.first.platform,
+              ),
+              const SizedBox(height: 16.0),
+              Expanded(child: ProjectDataWidget(project: project)),
+            ],
+          ),
+        ),
+      );
+    }
+    return InkWell(
+      onTap: () {
+        // AppNavigator.pushNamed(
+        //   RouteNames.project,
+        //   queryParams: {'id': project.id},
+        // );
+      },
+      child: Container(
         padding: EdgeInsets.all(24.0),
+        width: MediaQuery.of(context).size.width,
         constraints: BoxConstraints(
-          maxWidth: 500.0,
-          maxHeight: 560,
-          minHeight: 460.0,
+          maxHeight: 380,
+          minHeight: 380.0,
         ),
         decoration: BoxDecoration(
           color: AppColors.white.withOpacity(.07),
           borderRadius: BorderRadius.circular(24.0),
         ),
-        child: Column(
+        child: Row(
           children: [
+            Expanded(child: ProjectDataWidget(project: project)),
+            const SizedBox(width: 32.0),
             ProjectDevices(
               primaryScreenshot: project.primaryScreenshot,
               secondaryScreenshot: project.secondaryScreenshot,
               platform: project.platforms.first.platform,
             ),
-            const SizedBox(height: 16.0),
-            Expanded(child: ProjectDataWidget(project: project)),
           ],
         ),
-      );
-    }
-    return Container(
-      padding: EdgeInsets.all(24.0),
-      width: MediaQuery.of(context).size.width,
-      constraints: BoxConstraints(
-        maxHeight: 380,
-        minHeight: 380.0,
-      ),
-      decoration: BoxDecoration(
-        color: AppColors.white.withOpacity(.07),
-        borderRadius: BorderRadius.circular(24.0),
-      ),
-      child: Row(
-        children: [
-          Expanded(child: ProjectDataWidget(project: project)),
-          const SizedBox(width: 32.0),
-          ProjectDevices(
-            primaryScreenshot: project.primaryScreenshot,
-            secondaryScreenshot: project.secondaryScreenshot,
-            platform: project.platforms.first.platform,
-          ),
-        ],
       ),
     );
   }

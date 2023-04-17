@@ -13,6 +13,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/app.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void main() async {
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +23,8 @@ void main() async {
   //       options: DefaultFirebaseOptions.currentPlatform);
   //   FlutterNativeSplash.remove();
   // }
+
+  usePathUrlStrategy();
 
   runApp(const AppWidget());
 }

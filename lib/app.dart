@@ -14,6 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/routing/routing.dart';
+import 'package:portfolio/view/screens/home/home_screen.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -28,6 +29,7 @@ class AppWidget extends StatelessWidget {
       navigatorKey: AppNavigator.navigatorKey,
       initialRoute: '/',
       onGenerateRoute: RouteGenerator.onGenerateRoute,
+      builder: (context, child) => child!,
     );
   }
 }

@@ -56,7 +56,7 @@ class _TabletScreenState extends State<TabletScreen> {
             const SizedBox(height: 12.0),
             ProjectList(
               screenEnum: ScreenEnum.tabletLandscape,
-              projects: ProjectsData().projects,
+              projects: ProjectsData.projects,
             ),
             SizedBox(height: 32.0),
             Row(

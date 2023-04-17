@@ -22,7 +22,7 @@ class ScreenFooter extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 12.0),
       alignment: Alignment.center,
       child: Text(
-        "By Bakromjon Polat | 2023",
+        "By Bakhromjon Polat | 2023",
         textAlign: TextAlign.center,
       ),
     );

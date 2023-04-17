@@ -14,6 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/extensions/string_extension.dart';
 import 'package:portfolio/view/screens/home/home_screen.dart';
+import 'package:portfolio/view/screens/project/project_details_screen.dart';
 
 import 'app_route_name.dart';
 
@@ -23,13 +24,45 @@ class RouteGenerator {
 
     switch (routingData?.route) {
       case RouteNames.initial:
-        return _route(HomeScreen());
+        return _route(HomeScreen(), settings.name);
+
+      case RouteNames.project:
+        return _route(
+          ProjectDetailsScreen(id: routingData?['id'] ?? "0"),
+          settings.name,
+        );
 
       default:
         return null;
     }
   }
 
-  static MaterialPageRoute _route(Widget route) =>
-      MaterialPageRoute(builder: (_) => route);
+  static _FadeRoute _route(Widget route, String? routeName) => _FadeRoute(
+        child: route,
+        routeName: routeName,
+      );
+}
+
+class _FadeRoute extends PageRouteBuilder {
+  final Widget child;
+  final String? routeName;
+  _FadeRoute({
+    required this.child,
+    required this.routeName,
+  }) : super(
+          settings: RouteSettings(name: routeName),
+          pageBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+          ) =>
+              child,
+          transitionsBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+            Widget child,
+          ) =>
+              FadeTransition(opacity: animation, child: child),
+        );
 }

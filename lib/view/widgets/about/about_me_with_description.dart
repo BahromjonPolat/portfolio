@@ -77,8 +77,9 @@ class AboutMeWithDescription extends StatelessWidget {
           const SizedBox(height: 64.0),
           OutlinedButton(
             onPressed: () async {
+              String fileName = "Bahromjon-Polats-resume.pdf";
               String uri = html.window.location.href.replaceAll('#/', '');
-              LaunchService.openInHtml("$uri/assets/assets/files/resume.pdf");
+              LaunchService.openInHtml("$uri/assets/assets/files/$fileName");
             },
             child: Text(AppStrings.downloadCv),
           ),

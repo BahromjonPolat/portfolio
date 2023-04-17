@@ -49,7 +49,7 @@ class _MobileScreenState extends State<MobileScreen> {
             const SizedBox(height: 12.0),
             ProjectList(
               screenEnum: ScreenEnum.mobile,
-              projects: ProjectsData().projects,
+              projects: ProjectsData.projects,
             ),
             const SizedBox(height: 32.0),
             Text(

@@ -56,7 +56,7 @@ class _TabletPortraitScreenState extends State<TabletPortraitScreen> {
             const SizedBox(height: 12.0),
             ProjectList(
               screenEnum: ScreenEnum.tabletPortrait,
-              projects: ProjectsData().projects,
+              projects: ProjectsData.projects,
             ),
             SizedBox(height: 32.0),
             Text(

@@ -17,7 +17,9 @@ import 'package:portfolio/models/platform/platform_model.dart';
 import 'package:portfolio/models/project/project_model.dart';
 
 class ProjectsData {
-  final List<ProjectModel> projects = [
+  ProjectsData._();
+
+  static final List<ProjectModel> projects = [
     // Tiin Loyalty
     ProjectModel(
       id: "1",
@@ -121,7 +123,7 @@ class ProjectsData {
     ),
     // Inventory
     ProjectModel(
-      id: "3",
+      id: "4",
       title: "Inventory App",
       description:
           "Multi-user app for stock management and tracking sales and purchases. Especially useful for small retailers or warehouses but also suitable for wholesale business. You can control multiple stores and multiple employees in a single application.",
@@ -153,7 +155,7 @@ class ProjectsData {
     ),
 
     ProjectModel(
-      id: "3",
+      id: "5",
       title: "Agent",
       description: "",
       startedDate: DateTime(2022, 11).millisecondsSinceEpoch,
@@ -365,7 +367,7 @@ class ProjectsData {
       ],
     ),
     ProjectModel(
-      id: "11",
+      id: "12",
       title: "Bahromjon Po'lat",
       description: "My personal application",
       startedDate: DateTime(2022, 01).millisecondsSinceEpoch,
@@ -395,4 +397,14 @@ class ProjectsData {
       ],
     ),
   ];
+
+  static ProjectModel getProjectById(String sId) {
+    int? id = int.tryParse(sId);
+    ProjectModel project = ProjectModel(id: '0');
+    if (id == null) return project;
+    if (id < 1) return project;
+    if (id > projects.length) return project;
+    project = projects[id - 1];
+    return project;
+  }
 }

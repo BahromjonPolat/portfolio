@@ -41,9 +41,9 @@ class ContactsDataWidget extends StatelessWidget {
           const SizedBox(height: 32.0),
           TextWithIcon(
             icon: Icons.phone_outlined,
-            data: "+998931234567",
+            data: "+998 93 188 13 33",
             onPressed: () {
-              LaunchService.openInHtml("tel:+998931234567");
+              LaunchService.openInHtml("tel:+998931881333");
             },
           ),
           const SizedBox(height: 12.0),

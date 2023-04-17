@@ -28,7 +28,7 @@ class DesktopScreen extends StatefulWidget {
 }
 
 class _DesktopScreenState extends State<DesktopScreen> {
-  List<ProjectModel> projects = ProjectsData().projects;
+  List<ProjectModel> projects = ProjectsData.projects;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -37,7 +37,7 @@ class _DesktopScreenState extends State<DesktopScreen> {
 
     return Scaffold(
       extendBodyBehindAppBar: true,
-      appBar: DesktopAppBar(),
+      appBar: const DesktopAppBar(),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: padding),
         child: Column(
