@@ -14,7 +14,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/models/project/project_model.dart';
-import 'package:portfolio/routing/routing.dart';
 
 import 'project_data_widget.dart';
 import 'project_devices.dart';

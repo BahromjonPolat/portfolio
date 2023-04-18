@@ -32,6 +32,7 @@ class ProjectList extends StatelessWidget {
         return GridView.builder(
           shrinkWrap: true,
           itemCount: projects.length,
+          padding: EdgeInsets.zero,
           physics: const NeverScrollableScrollPhysics(),
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,

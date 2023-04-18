@@ -29,15 +29,14 @@ class ContactsDataWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Contacts',
+            AppStrings.contacts,
             style: Theme.of(context)
                 .textTheme
                 .headlineLarge
                 ?.copyWith(color: AppColors.white),
           ),
-          const Text(
-            "Duis anim consequat nisi culpa et nulla aute irure do magna amet eu. Aliqua nulla qui minim consequat ut in veniam aliquip fugiat. Non ut laborum id ea cillum proident sint ea.",
-          ),
+          const SizedBox(height: 12.0),
+          const Text(AppStrings.contactMeHeader),
           const SizedBox(height: 32.0),
           TextWithIcon(
             icon: Icons.phone_outlined,
@@ -51,13 +50,8 @@ class ContactsDataWidget extends StatelessWidget {
             icon: Icons.email_outlined,
             data: "bahromjon.ergashboyev@gmail.com",
             onPressed: () {
-              Uri url = Uri(
-                scheme: 'mailto',
-                path: 'bahromjon.ergashboyev@gmail.com',
-                queryParameters: {'subject': '', 'body': ''},
-              );
-
-              LaunchService.launch(url);
+              String url = "mailto:bahromjon.ergashboyev@gmail.com";
+              LaunchService.openInHtml(url);
             },
           ),
           const SizedBox(height: 64.0),

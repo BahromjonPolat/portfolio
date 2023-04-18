@@ -31,6 +31,7 @@ class FollowMeOnWidget extends StatelessWidget {
         ),
         const SizedBox(height: 12.0),
         Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             SquareButton(
               assetImage: AppIcons.linkedin,
@@ -56,14 +57,14 @@ class FollowMeOnWidget extends StatelessWidget {
                 LaunchService.openInHtml(url);
               },
             ),
-            // const SizedBox(width: 24.0),
-            // SquareButton(
-            //   assetImage: AppIcons.facebook,
-            //   onPressed: () {
-            //     String url = "https://www.facebook.com/Bahromjon.Polat/";
-            //     LaunchService.openInHtml(url);
-            //   },
-            // ),
+            const SizedBox(width: 24.0),
+            SquareButton(
+              assetImage: AppIcons.telegram,
+              onPressed: () {
+                String url = "https://t.me/BahromjonPolat/";
+                LaunchService.openInHtml(url);
+              },
+            ),
           ],
         ),
       ],

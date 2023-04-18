@@ -11,6 +11,8 @@
 
 */
 
+import 'dart:io';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
@@ -71,15 +73,15 @@ class AboutMeWithDescription extends StatelessWidget {
           ),
           const SizedBox(height: 32.0),
           Text(
-            "Et elit sunt minim eiusmod laboris esse consectetur. Nulla ea mollit aliquip et dolor labore proident irure labore cillum. Nisi Lorem cillum laborum ullamco dolore mollit aliqua. Non reprehenderit magna excepteur sint aliquip pariatur culpa minim consectetur proident commodo esse. In dolore mollit sint pariatur est excepteur eu laborum anim.",
+            AppStrings.aboutMeFull,
             style: Theme.of(context).textTheme.bodySmall?.copyWith(height: 2.0),
           ),
           const SizedBox(height: 64.0),
           OutlinedButton(
             onPressed: () async {
               String fileName = "Bahromjon-Polats-resume.pdf";
-              String uri = html.window.location.href.replaceAll('#/', '');
-              LaunchService.openInHtml("$uri/assets/assets/files/$fileName");
+              String uri = html.window.location.href;
+              LaunchService.openInHtml("${uri}assets/assets/files/$fileName");
             },
             child: Text(AppStrings.downloadCv),
           ),
