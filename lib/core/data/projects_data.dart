@@ -396,6 +396,66 @@ class ProjectsData {
         ),
       ],
     ),
+    ProjectModel(
+      id: "13",
+      title: "Opke Delivery",
+      description: "Eltib beruvchilar uchun ilova",
+      startedDate: DateTime(2023, 04).millisecondsSinceEpoch,
+      endDate: DateTime(2024, 04).millisecondsSinceEpoch,
+      experience: ExperienceData.strategicGroup,
+      logo:
+          "https://play-lh.googleusercontent.com/Rtqz85XdY5bFI4TBJm-Hy6yHgwN0Job4OfXhc6eaSfV3u43PTcVAUHHxQuDFX4YbZXc=w240-h480-rw",
+      primaryScreenshot:
+          "https://play-lh.googleusercontent.com/ELO7BTcc6GK9IX0EQsrOjpz2PJhnmcPS-GrLawjeg4qkoOLydKtPBrJM3NlYhnrKdHw=w526-h296-rw",
+      secondaryScreenshot:
+          "https://play-lh.googleusercontent.com/bD1IBoYRCXhjvInZZ2hqZ98o7V8_tA89W_Prk3lD46ND1bUAAtdDw4HAJ0u5Uaw6uA=w526-h296-rw",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 5.0,
+          id: "1",
+          link:
+              "https://play.google.com/store/apps/details?id=uz.nomakler.mobile",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "Driver",
+        ),
+      ],
+    ),
+    ProjectModel(
+      id: "14",
+      title: "Nomakler",
+      description: "Oson uy topish",
+      startedDate: DateTime(2023, 05).millisecondsSinceEpoch,
+      endDate: DateTime.now().millisecondsSinceEpoch,
+      experience: ExperienceData.mirrikhSoftware,
+      logo:
+          "https://play-lh.googleusercontent.com/AyCdzz9rfvJ7hUNI695xLp_SaBy2pxLF1Ep3ELUk8H1lxT52Y6xt1x5xgdSA_1hcwQ=w240-h480-rw",
+      primaryScreenshot:
+          "https://play-lh.googleusercontent.com/ez8mzFaU7E3HaM8W5I7sNSpd-0cBiVwx5dfMViW0YwPfNff8ew2I6x0xVMcdYRnyKw_q=w526-h296-rw",
+      secondaryScreenshot:
+          "https://play-lh.googleusercontent.com/-jHhMTv_QlH_5x5HTX3rT3CfHqifXHduSWbdjhI5LV0vDvdTvkK6BX7k9QO_0iC3M_0=w526-h296-rw",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 5.0,
+          id: "1",
+          link:
+              "https://play.google.com/store/apps/details?id=uz.mirrikhsoftware.bring_it",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "Booking",
+        ),
+      ],
+    ),
   ];
 
   static ProjectModel getProjectById(String sId) {

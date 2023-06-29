@@ -50,6 +50,34 @@ class ExperienceData {
     description:
         "Work automation and e-commerce applications. Integrations with Soliq, Humo, Click, Payme and Uzum",
   );
+  static final Experience hilolNashr = Experience(
+    id: '4',
+    companyName: "Hilol Nashr LLC",
+    startedDate: DateTime(2023, 05).millisecondsSinceEpoch,
+    endDate: 0,
+    jobTitle: "Flutter Developer",
+    logo: "",
+    description: "Hilol nashe",
+    webSite: "https://hilolnashr.uz/",
+    workingType: "Online",
+  );
 
-  static List<Experience> experience = [najot, mirrikhSoftware, invanSoft];
+  static final Experience strategicGroup = Experience(
+    id: '5',
+    companyName: "Strategic Group",
+    startedDate: DateTime(2023, 05).millisecondsSinceEpoch,
+    endDate: 0,
+    jobTitle: "Flutter Developer",
+    logo: "",
+    description: "Strategic Group",
+    webSite: "https://nomakler.uz/",
+    workingType: "Online",
+  );
+
+  static List<Experience> experience = [
+    najot,
+    mirrikhSoftware,
+    invanSoft,
+    strategicGroup,
+  ];
 }

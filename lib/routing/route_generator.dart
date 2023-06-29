@@ -40,11 +40,6 @@ class RouteGenerator {
         );
     }
   }
-
-  static _FadeRoute _route(Widget route, String? routeName) => _FadeRoute(
-        child: route,
-        routeName: routeName,
-      );
 }
 
 class _FadeRoute extends PageRouteBuilder {

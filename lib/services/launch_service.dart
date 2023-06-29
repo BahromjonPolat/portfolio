@@ -11,11 +11,7 @@
 
 */
 
-import 'dart:typed_data';
-
-import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'dart:html' as html;
 import 'dart:js' as js;
 
 class LaunchService {
