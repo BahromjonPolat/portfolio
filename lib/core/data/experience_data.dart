@@ -57,7 +57,7 @@ class ExperienceData {
     endDate: 0,
     jobTitle: "Flutter Developer",
     logo: "",
-    description: "Hilol nashe",
+    description: "Hilol nashr",
     webSite: "https://hilolnashr.uz/",
     workingType: "Online",
   );
@@ -78,6 +78,7 @@ class ExperienceData {
     najot,
     mirrikhSoftware,
     invanSoft,
+    hilolNashr,
     strategicGroup,
   ];
 }
