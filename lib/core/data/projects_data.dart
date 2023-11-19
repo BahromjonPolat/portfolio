@@ -415,7 +415,7 @@ class ProjectsData {
           rating: 5.0,
           id: "1",
           link:
-              "https://play.google.com/store/apps/details?id=uz.nomakler.mobile",
+              "https://play.google.com/store/apps/details?id=uz.mirrikhsoftware.bring_it",
         ),
       ],
       categories: [
@@ -432,7 +432,7 @@ class ProjectsData {
       description: "Oson uy topish",
       startedDate: DateTime(2023, 05).millisecondsSinceEpoch,
       endDate: DateTime.now().millisecondsSinceEpoch,
-      experience: ExperienceData.mirrikhSoftware,
+      experience: ExperienceData.strategicGroup,
       logo:
           "https://play-lh.googleusercontent.com/AyCdzz9rfvJ7hUNI695xLp_SaBy2pxLF1Ep3ELUk8H1lxT52Y6xt1x5xgdSA_1hcwQ=w240-h480-rw",
       primaryScreenshot:
@@ -445,7 +445,7 @@ class ProjectsData {
           rating: 5.0,
           id: "1",
           link:
-              "https://play.google.com/store/apps/details?id=uz.mirrikhsoftware.bring_it",
+              "https://play.google.com/store/apps/details?id=uz.nomakler.mobile",
         ),
       ],
       categories: [
@@ -453,6 +453,79 @@ class ProjectsData {
           id: "2",
           icon: "",
           name: "Booking",
+        ),
+      ],
+    ),
+
+    ProjectModel(
+      id: "15",
+      title: "Tafsiri hilol 3.4.0",
+      description:
+          "\"Hilol Nashr\" publishing house presenting the elecrtronic version of the \"Tafsir Hilal\". ",
+      startedDate: DateTime(2023, 09).millisecondsSinceEpoch,
+      endDate: DateTime.now().millisecondsSinceEpoch,
+      experience: ExperienceData.hilolNashr,
+      logo:
+          "https://play-lh.googleusercontent.com/JIMp5fBD60MDDjtFTn7uNEECOgwiqs76y8eE1WmNl12PeBnCps-3VmYVPhFQgJZm874=w240-h480-rw",
+      primaryScreenshot:
+          "https://play-lh.googleusercontent.com/10ouX6UI24PgCIFAstC0w_qwPg8OU1jHk79RTJPfe2dq-sCagYCZxX7Z7YzC6NHWvVk=w526-h296-rw",
+      secondaryScreenshot:
+          "https://play-lh.googleusercontent.com/SoLxcxfqVA5HPuNKztPNVgCfkazc-sAugZ2uriEdDwVezkgxa0FgSU6wj1jg8n9seNNN=w526-h296-rw",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.ios,
+          rating: 4.7,
+          id: "1",
+          link: "https://apps.apple.com/ru/app/tafsiri-hilol/id1130844977",
+        ),
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 4.9,
+          id: "1",
+          link: "https://play.google.com/store/apps/details?id=uz.hilal.tafsir",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "Books",
+        ),
+      ],
+    ),
+
+    ProjectModel(
+      id: "16",
+      title: "Hilol eBook",
+      description:
+          "Ушбу Hilol eBook дастури ёрдамида Сиз e-hilolnashr.uz саҳифасидан харид қилган электрон ва аудио китоблардан фойдаланишингиз мумкин. ",
+      startedDate: DateTime(2023, 06).millisecondsSinceEpoch,
+      endDate: DateTime.now().millisecondsSinceEpoch,
+      experience: ExperienceData.hilolNashr,
+      logo: "https://e-hilolnashr.uz/Application/images/and-1.png",
+      primaryScreenshot:
+          "https://e-hilolnashr.uz/Application/images/windows-hilol.png",
+      secondaryScreenshot:
+          "https://e-hilolnashr.uz/Application/images/linux.png",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.windows,
+          rating: 4.7,
+          id: "1",
+          link: "https://e-hilolnashr.uz/download",
+        ),
+        PlatformModel(
+          platform: PlatformEnum.linux,
+          rating: 4.9,
+          id: "1",
+          link: "https://e-hilolnashr.uz/download",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "Books",
         ),
       ],
     ),
