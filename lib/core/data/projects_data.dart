@@ -441,9 +441,15 @@ class ProjectsData {
           "https://play-lh.googleusercontent.com/-jHhMTv_QlH_5x5HTX3rT3CfHqifXHduSWbdjhI5LV0vDvdTvkK6BX7k9QO_0iC3M_0=w526-h296-rw",
       platforms: [
         PlatformModel(
-          platform: PlatformEnum.android,
-          rating: 5.0,
+          platform: PlatformEnum.ios,
+          rating: 4.5,
           id: "1",
+          link: "https://apps.apple.com/uz/app/nomakler/id6477270693",
+        ),
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 4.7,
+          id: "2",
           link:
               "https://play.google.com/store/apps/details?id=uz.nomakler.mobile",
         ),
@@ -496,7 +502,7 @@ class ProjectsData {
 
     ProjectModel(
       id: "16",
-      title: "Hilol eBook",
+      title: "Hilol eBook Desktop",
       description:
           "Ушбу Hilol eBook дастури ёрдамида Сиз e-hilolnashr.uz саҳифасидан харид қилган электрон ва аудио китоблардан фойдаланишингиз мумкин. ",
       startedDate: DateTime(2023, 06).millisecondsSinceEpoch,
@@ -529,10 +535,46 @@ class ProjectsData {
         ),
       ],
     ),
+    ProjectModel(
+      id: "17",
+      title: "Hilol uz",
+      description: "",
+      startedDate: DateTime(2024, 01).millisecondsSinceEpoch,
+      endDate: DateTime.now().millisecondsSinceEpoch,
+      experience: ExperienceData.hilolNashr,
+      logo:
+          "https://play-lh.googleusercontent.com/awE1CZj4dd-3pyOET_w90Wg0wVlSX5LiozZXm7OQB1cnarW_dmEnptcEJYvCoQupyqs=w240-h480-rw",
+      primaryScreenshot:
+          "https://e-hilolnashr.uz/Application/images/windows-hilol.png",
+      secondaryScreenshot:
+          "https://e-hilolnashr.uz/Application/images/linux.png",
+      platforms: [
+        PlatformModel(
+          platform: PlatformEnum.ios,
+          rating: 4.7,
+          id: "1",
+          link: "https://e-hilolnashr.uz/download",
+        ),
+        PlatformModel(
+          platform: PlatformEnum.android,
+          rating: 4.9,
+          id: "1",
+          link:
+              "https://play.google.com/store/apps/details?id=uz.hilal.hilol_uz",
+        ),
+      ],
+      categories: [
+        Category(
+          id: "2",
+          icon: "",
+          name: "Books",
+        ),
+      ],
+    ),
   ];
 
   static ProjectModel getProjectById(String sId) {
-    int? id = int.tryParse(sId);
+    final id = int.tryParse(sId);
     ProjectModel project = ProjectModel(id: '0');
     if (id == null) return project;
     if (id < 1) return project;

@@ -12,7 +12,7 @@
 */
 
 import 'package:url_launcher/url_launcher.dart';
-import 'dart:js' as js;
+// import 'dart:js' as js;
 
 class LaunchService {
   const LaunchService._();
@@ -24,6 +24,6 @@ class LaunchService {
   }
 
   static Future<void> openInHtml(String url, {String target = "_blank"}) async {
-    js.context.callMethod("open", [url, target]);
+    // js.context.callMethod("open", [url, target]);
   }
 }

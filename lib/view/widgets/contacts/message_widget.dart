@@ -113,16 +113,16 @@ class _MessageWidgetState extends State<MessageWidget> {
                     onPressed: isLoading
                         ? null
                         : () {
-                            FormState? formState = _formKey.currentState;
-                            bool isValidate = formState?.validate() ?? false;
+                            final formState = _formKey.currentState;
+                            final isValidate = formState?.validate() ?? false;
                             if (!isValidate) return;
 
-                            String name = _nameController.text.trim();
-                            String email = _emailController.text;
-                            String subject = _subjectController.text.trim();
-                            String msg = _messageController.text.trim();
+                            final name = _nameController.text.trim();
+                            final email = _emailController.text;
+                            final subject = _subjectController.text.trim();
+                            final msg = _messageController.text.trim();
 
-                            Message message = Message(
+                            final message = Message(
                               name: name,
                               lastName: "",
                               email: email,

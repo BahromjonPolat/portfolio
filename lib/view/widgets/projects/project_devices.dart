@@ -65,6 +65,7 @@ class ProjectDevices extends StatelessWidget {
         SizedBox(
           height: 100.0,
           child: DeviceFrame(
+            isFrameVisible: true,
             device: Devices.windows.laptop,
             screen: AppImage(imageUrl: primaryScreenshot),
           ),

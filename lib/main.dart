@@ -13,7 +13,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/app.dart';
-import 'package:flutter_web_plugins/flutter_web_plugins.dart';
+// import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void main() async {
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +24,6 @@ void main() async {
   //   FlutterNativeSplash.remove();
   // }
 
-  usePathUrlStrategy();
-
+  // usePathUrlStrategy();
   runApp(const AppWidget());
 }

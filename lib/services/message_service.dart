@@ -12,7 +12,7 @@
 */
 
 import 'package:http/http.dart' as http;
-import 'package:portfolio/core/constants/secure.dart';
+// import 'package:portfolio/core/constants/secure.dart';
 import 'package:portfolio/models/models.dart';
 
 abstract class IMessageService {
@@ -22,13 +22,13 @@ abstract class IMessageService {
 class MessageService extends IMessageService {
   Future<String> sendMessage(Message message) async {
     try {
-      String token = AppSecure.botToken;
-      String chatId = AppSecure.chatId;
-      String msg = messageToString(message);
+      const token = 'AppSecure.botToken';
+      const chatId = 'AppSecure.chatId';
+      final msg = messageToString(message);
       String uri =
           "https://api.telegram.org/bot$token/sendMessage?chat_id=$chatId&parse_mode=HTML&text=$msg";
       Uri url = Uri.parse(uri);
-      http.Response response = await http.get(url);
+      final response = await http.get(url);
       if (response.statusCode == 200) {
         return "Success";
       }
