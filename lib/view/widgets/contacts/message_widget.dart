@@ -52,6 +52,7 @@ class _MessageWidgetState extends State<MessageWidget> {
               textInputAction: TextInputAction.next,
               validator: AppValidator.general,
               textCapitalization: TextCapitalization.words,
+
               // auto correct: false,
               autofillHints: const [
                 AutofillHints.name,

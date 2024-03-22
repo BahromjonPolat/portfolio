@@ -14,7 +14,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/core/data/data.dart';
-import 'package:portfolio/models/project/project_model.dart';
 import 'package:portfolio/view/widgets/skills_widget.dart';
 
 import 'package:portfolio/view/widgets/widgets.dart';
@@ -28,7 +27,7 @@ class DesktopScreen extends StatefulWidget {
 }
 
 class _DesktopScreenState extends State<DesktopScreen> {
-  List<ProjectModel> projects = ProjectsData.projects;
+  final projects = ProjectsData.projects;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;

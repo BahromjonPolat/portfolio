@@ -12,6 +12,7 @@
 */
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
+import 'package:portfolio/core/data/education_data.dart';
 import 'package:portfolio/core/data/experience_data.dart';
 import 'package:portfolio/core/data/projects_data.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
@@ -57,7 +58,7 @@ class _MobileScreenState extends State<MobileScreen> {
               key: AppKeys.educationKey,
               style: Theme.of(context).textTheme.displaySmall,
             ),
-            ExperienceListWidget(experience: ExperienceData.experience),
+            ExperienceListWidget(experience: EducationData.education),
             const SizedBox(height: 32.0),
             Text(
               AppStrings.experience,

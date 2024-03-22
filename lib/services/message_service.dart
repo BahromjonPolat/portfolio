@@ -12,7 +12,7 @@
 */
 
 import 'package:http/http.dart' as http;
-// import 'package:portfolio/core/constants/secure.dart';
+import 'package:portfolio/core/constants/secure.dart';
 import 'package:portfolio/models/models.dart';
 
 abstract class IMessageService {
@@ -22,12 +22,19 @@ abstract class IMessageService {
 class MessageService extends IMessageService {
   Future<String> sendMessage(Message message) async {
     try {
-      const token = 'AppSecure.botToken';
-      const chatId = 'AppSecure.chatId';
+      const token = AppSecure.botToken;
+      const chatId = AppSecure.chatId;
       final msg = messageToString(message);
-      String uri =
-          "https://api.telegram.org/bot$token/sendMessage?chat_id=$chatId&parse_mode=HTML&text=$msg";
-      Uri url = Uri.parse(uri);
+
+      final url = Uri(
+          scheme: 'https',
+          host: 'api.telegram.org',
+          path: '/bot$token/sendMessage',
+          queryParameters: {
+            'chat_id': chatId,
+            'parse_mode': 'HTML',
+            'text': Uri.decodeQueryComponent(msg),
+          });
       final response = await http.get(url);
       if (response.statusCode == 200) {
         return "Success";
@@ -39,7 +46,7 @@ class MessageService extends IMessageService {
   }
 
   String messageToString(Message message) {
-    String msg = """<b>Date: ${message.date.toIso8601String()}</b>
+    final msg = """<b>Date: ${message.date.toIso8601String()}</b>
 
 <b>Name:</b> ${message.name} ${message.lastName}
 <b>Email:</b> ${message.email}

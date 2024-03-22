@@ -14,6 +14,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/core/data/data.dart';
+import 'package:portfolio/core/data/education_data.dart';
 import 'package:portfolio/view/widgets/skills_widget.dart';
 import 'package:portfolio/view/widgets/widgets.dart';
 
@@ -65,7 +66,7 @@ class _TabletPortraitScreenState extends State<TabletPortraitScreen> {
               style: Theme.of(context).textTheme.displaySmall,
             ),
             const SizedBox(height: 12.0),
-            ExperienceListWidget(experience: ExperienceData.experience),
+            ExperienceListWidget(experience: EducationData.education),
             const SizedBox(height: 32.0),
             Text(
               AppStrings.experience,

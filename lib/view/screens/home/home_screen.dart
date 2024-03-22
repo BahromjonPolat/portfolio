@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, constraints) {
-        double maxWidth = constraints.maxWidth;
+        final maxWidth = constraints.maxWidth;
         if (maxWidth < 500) {
           return const MobileScreen();
         } else if (maxWidth < 900) {

@@ -15,7 +15,7 @@ import 'package:portfolio/models/experience/experience.dart';
 
 class ExperienceData {
   const ExperienceData._();
-  static final Experience najot = Experience(
+  static final najot = Experience(
     id: '1',
     companyName: "Najot Ta'lim",
     startedDate: DateTime(2022, 01).millisecondsSinceEpoch,
@@ -27,7 +27,7 @@ class ExperienceData {
     description:
         "Working with the students, examining their knowledge and explaining what they miss, assessing their overall performance.",
   );
-  static final Experience mirrikhSoftware = Experience(
+  static final mirrikhSoftware = Experience(
     id: '2',
     companyName: "Mirrikh Software",
     startedDate: DateTime(2022, 02).millisecondsSinceEpoch,
@@ -38,7 +38,7 @@ class ExperienceData {
     webSite: "https://mirrikhsoftware.uz/",
     workingType: "Hybrid",
   );
-  static final Experience invanSoft = Experience(
+  static final invanSoft = Experience(
     id: '3',
     companyName: "Invan Soft",
     startedDate: DateTime(2022, 04).millisecondsSinceEpoch,
@@ -50,7 +50,7 @@ class ExperienceData {
     description:
         "Work automation and e-commerce applications. Integrations with Soliq, Humo, Click, Payme and Uzum",
   );
-  static final Experience hilolNashr = Experience(
+  static final hilolNashr = Experience(
     id: '4',
     companyName: "Hilol Nashr LLC",
     startedDate: DateTime(2023, 05).millisecondsSinceEpoch,
@@ -62,9 +62,9 @@ class ExperienceData {
     workingType: "Online",
   );
 
-  static final Experience strategicGroup = Experience(
+  static final nomakler = Experience(
     id: '5',
-    companyName: "Strategic Group",
+    companyName: "Nomakler LLC",
     startedDate: DateTime(2023, 05).millisecondsSinceEpoch,
     endDate: 0,
     jobTitle: "Flutter Developer",
@@ -75,10 +75,10 @@ class ExperienceData {
   );
 
   static List<Experience> experience = [
-    najot,
+    hilolNashr,
+    nomakler,
     mirrikhSoftware,
     invanSoft,
-    hilolNashr,
-    strategicGroup,
+    najot,
   ];
 }

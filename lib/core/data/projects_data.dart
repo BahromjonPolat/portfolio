@@ -19,108 +19,111 @@ import 'package:portfolio/models/project/project_model.dart';
 class ProjectsData {
   ProjectsData._();
 
-  static final List<ProjectModel> projects = [
-    // Tiin Loyalty
-    ProjectModel(
-      id: "1",
-      title: "Tiin Loyalty",
-      description: "Application Loyalty Tiin market",
-      startedDate: DateTime(2022, 04).millisecondsSinceEpoch,
-      endDate: DateTime(2023, 04).millisecondsSinceEpoch,
-      experience: ExperienceData.invanSoft,
-      logo:
-          "https://play-lh.googleusercontent.com/Klj3MYGqK6Tqt5Mjj9er7-JIXsGdChxXm4PiWUjm55NfF5tgdwIZL9-u_xf_9l9C79Td=w240-h480-rw",
-      primaryScreenshot:
-          "https://play-lh.googleusercontent.com/_-Pv9i8gJoGGSp4FPwqEghKEV68uYFeGvFe3VnUCiGoVVCBKhoczBhctn2rt6oTU6QU=w526-h296-rw",
-      secondaryScreenshot:
-          "https://play-lh.googleusercontent.com/C6evt3avimnAju6RI7a812y4jOWPptcXQSS32mcD_dWHy7Elae0niBa7WdEG3J_W_w=w526-h296-rw",
-      platforms: [
-        PlatformModel(
-          platform: PlatformEnum.android,
-          rating: 4.2,
-          id: "1",
-          link: "https://play.google.com/store/apps/details?id=cashback.in1.uz",
-        ),
-        PlatformModel(
-          platform: PlatformEnum.ios,
-          rating: 2.5,
-          id: "2",
-          link: "https://apps.apple.com/uz/app/tiin-loyalty/id1609771623",
-        ),
-      ],
-      categories: [
-        Category(
-          id: "2",
-          icon: "",
-          name: "Shopping",
-        ),
-      ],
-    ),
+  // ? TIIN LOYALTY
+  static final tiin = ProjectModel(
+    id: "1",
+    title: "Tiin Loyalty",
+    description: "Application Loyalty Tiin market",
+    startedDate: DateTime(2022, 04).millisecondsSinceEpoch,
+    endDate: DateTime(2023, 04).millisecondsSinceEpoch,
+    experience: ExperienceData.invanSoft,
+    logo:
+        "https://play-lh.googleusercontent.com/Klj3MYGqK6Tqt5Mjj9er7-JIXsGdChxXm4PiWUjm55NfF5tgdwIZL9-u_xf_9l9C79Td=w240-h480-rw",
+    primaryScreenshot:
+        "https://play-lh.googleusercontent.com/_-Pv9i8gJoGGSp4FPwqEghKEV68uYFeGvFe3VnUCiGoVVCBKhoczBhctn2rt6oTU6QU=w526-h296-rw",
+    secondaryScreenshot:
+        "https://play-lh.googleusercontent.com/C6evt3avimnAju6RI7a812y4jOWPptcXQSS32mcD_dWHy7Elae0niBa7WdEG3J_W_w=w526-h296-rw",
+    platforms: [
+      PlatformModel(
+        platform: PlatformEnum.android,
+        rating: 4.2,
+        id: "1",
+        link: "https://play.google.com/store/apps/details?id=cashback.in1.uz",
+      ),
+      PlatformModel(
+        platform: PlatformEnum.ios,
+        rating: 2.5,
+        id: "2",
+        link: "https://apps.apple.com/uz/app/tiin-loyalty/id1609771623",
+      ),
+    ],
+    categories: [
+      Category(
+        id: "2",
+        icon: "",
+        name: "Shopping",
+      ),
+    ],
+  );
 
-    // Beeto
-    ProjectModel(
-      id: "2",
-      title: "Beeto",
-      description: "E-commerce application for Tiin market",
-      startedDate: DateTime(2022, 05).millisecondsSinceEpoch,
-      endDate: DateTime(2023, 04).millisecondsSinceEpoch,
-      experience: ExperienceData.invanSoft,
-      logo:
-          "https://play-lh.googleusercontent.com/tpl8g5aOVbPyT_5sL7bJjRibnM3LjnDdbYir4X4YMnxyEAl7qSFCEZRYL5XKV-3jGhuu=w240-h480-rw",
-      primaryScreenshot:
-          "https://play-lh.googleusercontent.com/r_0UN88Wi50QnPXIJHhr6jPEIDQBeCnCiUsBDSHEzNVSWl6QzprWCfU53ygU_RlanKQ=w2560-h1440-rw",
-      secondaryScreenshot:
-          "https://play-lh.googleusercontent.com/UEc3MuY_5-O8h7x_hxKR-Fp6MvWcmFa6h9XrfVn19kMyWkJ-2uc-kotwAW-aoayX5TQ5=w526-h296-rw",
-      platforms: [
-        PlatformModel(
-          platform: PlatformEnum.android,
-          rating: 5.0,
-          id: "1",
-          link:
-              "https://play.google.com/store/apps/details?id=uz.group.beeto_supermarket",
-        ),
-      ],
-      categories: [
-        Category(
-          id: "2",
-          icon: "",
-          name: "Shopping",
-        ),
-      ],
-    ),
+  // ? BEETO
+  static final beeto = ProjectModel(
+    id: "2",
+    title: "Beeto",
+    description: "E-commerce application for Tiin market",
+    startedDate: DateTime(2022, 05).millisecondsSinceEpoch,
+    endDate: DateTime(2023, 04).millisecondsSinceEpoch,
+    experience: ExperienceData.invanSoft,
+    logo:
+        "https://play-lh.googleusercontent.com/tpl8g5aOVbPyT_5sL7bJjRibnM3LjnDdbYir4X4YMnxyEAl7qSFCEZRYL5XKV-3jGhuu=w240-h480-rw",
+    primaryScreenshot:
+        "https://play-lh.googleusercontent.com/r_0UN88Wi50QnPXIJHhr6jPEIDQBeCnCiUsBDSHEzNVSWl6QzprWCfU53ygU_RlanKQ=w2560-h1440-rw",
+    secondaryScreenshot:
+        "https://play-lh.googleusercontent.com/UEc3MuY_5-O8h7x_hxKR-Fp6MvWcmFa6h9XrfVn19kMyWkJ-2uc-kotwAW-aoayX5TQ5=w526-h296-rw",
+    platforms: [
+      PlatformModel(
+        platform: PlatformEnum.android,
+        rating: 5.0,
+        id: "1",
+        link:
+            "https://play.google.com/store/apps/details?id=uz.group.beeto_supermarket",
+      ),
+    ],
+    categories: [
+      Category(
+        id: "2",
+        icon: "",
+        name: "Shopping",
+      ),
+    ],
+  );
 
-    // Beeto Driver
-    ProjectModel(
-      id: "3",
-      title: "Beeto Driver",
-      description:
-          "Bee to driver — служба быстрой доставки. Вы можете сделать заказ в этом приложении",
-      startedDate: DateTime(2022, 04).millisecondsSinceEpoch,
-      endDate: DateTime(2022, 12).millisecondsSinceEpoch,
-      experience: ExperienceData.invanSoft,
-      logo:
-          "https://play-lh.googleusercontent.com/re6eeAPrvjmr1_L3mfjZohA7viFnMyRi4mWn9pf8rTXfh3Ge-QbHZQWNU5k5BQ_-WA=w240-h480-rw",
-      primaryScreenshot:
-          "https://play-lh.googleusercontent.com/II8rTDVwWKcB8Y-n41KSaEBpAH49fQesYGfisCKRO_q2kOutc1-N9emg04dIHXJ6bW0=w526-h296-rw",
-      secondaryScreenshot:
-          "https://play-lh.googleusercontent.com/aPVf-G5BkAZehmkigmtdjhQuEYmzCOg9G0BkAODdSOsgmApw5mwU7RNvGVSqS21FR91y=w2560-h1440-rw",
-      platforms: [
-        PlatformModel(
-          platform: PlatformEnum.android,
-          rating: 5.0,
-          id: "1",
-          link:
-              "https://play.google.com/store/apps/details?id=uz.in1.betoodelivery.betoodelivery",
-        ),
-      ],
-      categories: [
-        Category(
-          id: "2",
-          icon: "",
-          name: "Delivery",
-        ),
-      ],
-    ),
+  // ? BEETO DRIVER
+  static final beetoDriver = ProjectModel(
+    id: "3",
+    title: "Beeto Driver",
+    description:
+        "Bee to driver — служба быстрой доставки. Вы можете сделать заказ в этом приложении",
+    startedDate: DateTime(2022, 04).millisecondsSinceEpoch,
+    endDate: DateTime(2022, 12).millisecondsSinceEpoch,
+    experience: ExperienceData.invanSoft,
+    logo:
+        "https://play-lh.googleusercontent.com/re6eeAPrvjmr1_L3mfjZohA7viFnMyRi4mWn9pf8rTXfh3Ge-QbHZQWNU5k5BQ_-WA=w240-h480-rw",
+    primaryScreenshot:
+        "https://play-lh.googleusercontent.com/II8rTDVwWKcB8Y-n41KSaEBpAH49fQesYGfisCKRO_q2kOutc1-N9emg04dIHXJ6bW0=w526-h296-rw",
+    secondaryScreenshot:
+        "https://play-lh.googleusercontent.com/aPVf-G5BkAZehmkigmtdjhQuEYmzCOg9G0BkAODdSOsgmApw5mwU7RNvGVSqS21FR91y=w2560-h1440-rw",
+    platforms: [
+      PlatformModel(
+        platform: PlatformEnum.android,
+        rating: 5.0,
+        id: "1",
+        link:
+            "https://play.google.com/store/apps/details?id=uz.in1.betoodelivery.betoodelivery",
+      ),
+    ],
+    categories: [
+      Category(
+        id: "2",
+        icon: "",
+        name: "Delivery",
+      ),
+    ],
+  );
+  static final projects = <ProjectModel>[
+    tiin,
+    beeto,
+    beetoDriver,
     // Inventory
     ProjectModel(
       id: "4",
@@ -401,8 +404,8 @@ class ProjectsData {
       title: "Opke Delivery",
       description: "Eltib beruvchilar uchun ilova",
       startedDate: DateTime(2023, 04).millisecondsSinceEpoch,
-      endDate: DateTime(2024, 04).millisecondsSinceEpoch,
-      experience: ExperienceData.strategicGroup,
+      endDate: DateTime(2023, 04).millisecondsSinceEpoch,
+      experience: ExperienceData.mirrikhSoftware,
       logo:
           "https://play-lh.googleusercontent.com/Rtqz85XdY5bFI4TBJm-Hy6yHgwN0Job4OfXhc6eaSfV3u43PTcVAUHHxQuDFX4YbZXc=w240-h480-rw",
       primaryScreenshot:
@@ -432,7 +435,7 @@ class ProjectsData {
       description: "Oson uy topish",
       startedDate: DateTime(2023, 05).millisecondsSinceEpoch,
       endDate: DateTime.now().millisecondsSinceEpoch,
-      experience: ExperienceData.strategicGroup,
+      experience: ExperienceData.nomakler,
       logo:
           "https://play-lh.googleusercontent.com/AyCdzz9rfvJ7hUNI695xLp_SaBy2pxLF1Ep3ELUk8H1lxT52Y6xt1x5xgdSA_1hcwQ=w240-h480-rw",
       primaryScreenshot:
@@ -465,11 +468,11 @@ class ProjectsData {
 
     ProjectModel(
       id: "15",
-      title: "Tafsiri hilol 3.4.0",
+      title: "Tafsiri hilol 3.3.10",
       description:
           "\"Hilol Nashr\" publishing house presenting the elecrtronic version of the \"Tafsir Hilal\". ",
       startedDate: DateTime(2023, 09).millisecondsSinceEpoch,
-      endDate: DateTime.now().millisecondsSinceEpoch,
+      endDate: DateTime(2024, 2).millisecondsSinceEpoch,
       experience: ExperienceData.hilolNashr,
       logo:
           "https://play-lh.googleusercontent.com/JIMp5fBD60MDDjtFTn7uNEECOgwiqs76y8eE1WmNl12PeBnCps-3VmYVPhFQgJZm874=w240-h480-rw",

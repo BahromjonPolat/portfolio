@@ -35,7 +35,7 @@ class SkillsData {
       imageUrl: "",
     ),
     SkillModel(
-      name: "Solid",
+      name: "SOLID",
       url: "https://flutter.dev/",
       description: "SOLID Principles",
       imageUrl: "",
@@ -103,7 +103,19 @@ class SkillsData {
     SkillModel(
       name: "Sqflite",
       url: "https://pub.dev/packages/sqflite",
+      description: "SQLite Database for Flutter",
+      imageUrl: "",
+    ),
+    SkillModel(
+      name: "Sqlite3",
+      url: "https://pub.dev/packages/sqlite3",
       description: "SQLite Database",
+      imageUrl: "",
+    ),
+    SkillModel(
+      name: "Sql cipher",
+      url: "https://www.zetetic.net/sqlcipher/",
+      description: "SQLite Database cipher",
       imageUrl: "",
     ),
     SkillModel(

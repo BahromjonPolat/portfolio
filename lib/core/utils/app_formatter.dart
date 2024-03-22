@@ -54,10 +54,15 @@ class AppFormatter {
 
   static String formatDateFromMills(int mills, {String pattern = "MM yyyy"}) {
     if (mills == 0) return "present";
-    return formatDate(
+    final now = formatDate(DateTime.now(), pattern: pattern);
+    final date = formatDate(
       DateTime.fromMillisecondsSinceEpoch(mills),
       pattern: pattern,
     );
+    if (now == date) {
+      return 'present';
+    }
+    return date;
   }
 
   static String getMonthName(int month) {
