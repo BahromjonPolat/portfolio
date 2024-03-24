@@ -16,7 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/core/config.dart';
 import 'package:portfolio/services/services.dart';
 import 'package:portfolio/view/widgets/follow_me_widget.dart';
-// import 'dart:html' as html;
+import 'dart:html' as html;
 
 class AboutMeWithDescription extends StatelessWidget {
   const AboutMeWithDescription({super.key});
@@ -77,9 +77,9 @@ class AboutMeWithDescription extends StatelessWidget {
           const SizedBox(height: 64.0),
           OutlinedButton(
             onPressed: () async {
-              // String fileName = "Bahromjon-Polats-resume.pdf";
-              // String uri = html.window.location.href;
-              // LaunchService.openInHtml("${uri}assets/assets/files/$fileName");
+              String fileName = "Bahromjon-Polats-resume.pdf";
+              String uri = html.window.location.href;
+              LaunchService.openInHtml("${uri}assets/assets/files/$fileName");
             },
             child: Text(AppStrings.downloadCv),
           ),
