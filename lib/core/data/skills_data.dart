@@ -161,5 +161,11 @@ class SkillsData {
       description: "Publish to App store",
       imageUrl: "",
     ),
+    SkillModel(
+      name: "Clean Architecture",
+      url: "",
+      description: "",
+      imageUrl: "",
+    ),
   ];
 }

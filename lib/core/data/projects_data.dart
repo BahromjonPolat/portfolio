@@ -222,7 +222,7 @@ class ProjectsData {
         "Arabic text, transcription and translation of meanings of Surah Yasin. There is also an audio of the surah.",
     startedDate: DateTime(2021, 06).millisecondsSinceEpoch,
     endDate: DateTime(2023, 03).millisecondsSinceEpoch,
-    experience: ExperienceData.invanSoft,
+    experience: ExperienceData.mirrikhSoftware,
     logo:
         "https://play-lh.googleusercontent.com/12zCiNhSY2yY0sXb-07VSjiavXY3FY0rbBJemTm7XDfSr7I8mwA8OKSOrJ_NPJDjvg=w240-h480-rw",
     primaryScreenshot:
@@ -255,7 +255,7 @@ class ProjectsData {
         "Translation of the Arabic text and meanings of the Holy Quran.",
     startedDate: DateTime(2022, 08).millisecondsSinceEpoch,
     endDate: DateTime(2023, 03).millisecondsSinceEpoch,
-    experience: ExperienceData.invanSoft,
+    experience: ExperienceData.mirrikhSoftware,
     logo:
         "https://play-lh.googleusercontent.com/i4Ngy_DqVTNUsaimflvzHiJQuQkFXLr7j5osB1JXkTmaPvHjsUY-XhlfQ460L2uS4iM=w240-h480-rw",
     primaryScreenshot:
@@ -347,7 +347,7 @@ class ProjectsData {
     description: "There are 45+ screens in application for Food delivery.",
     startedDate: DateTime(2022, 01).millisecondsSinceEpoch,
     endDate: DateTime(2022, 04).millisecondsSinceEpoch,
-    experience: ExperienceData.invanSoft,
+    experience: ExperienceData.mirrikhSoftware,
     logo:
         "https://play-lh.googleusercontent.com/nJV9xPlUhORzw_5rFifLrRoBnxdjAh3vBInJ3HALE_6Y0tPVWbhtS4HWQ7R1nsmDRcE=w240-h480-rw",
     primaryScreenshot:
@@ -376,7 +376,7 @@ class ProjectsData {
     description: "My personal application",
     startedDate: DateTime(2022, 01).millisecondsSinceEpoch,
     endDate: DateTime(2022, 04).millisecondsSinceEpoch,
-    experience: ExperienceData.invanSoft,
+    experience: ExperienceData.mirrikhSoftware,
     logo:
         "https://play-lh.googleusercontent.com/GiA-NuSxfCVkYLiPOPC_r6Ec3i2GMmf8SK6NigFDw0aCf7jeIH1tlJNe_ZLCPhfcWc4D=w240-h480-rw",
     primaryScreenshot:
@@ -548,18 +548,19 @@ class ProjectsData {
     logo:
         "https://play-lh.googleusercontent.com/awE1CZj4dd-3pyOET_w90Wg0wVlSX5LiozZXm7OQB1cnarW_dmEnptcEJYvCoQupyqs=w240-h480-rw",
     primaryScreenshot:
-        "https://e-hilolnashr.uz/Application/images/windows-hilol.png",
-    secondaryScreenshot: "https://e-hilolnashr.uz/Application/images/linux.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/3f/b1/e4/3fb1e4c2-a342-3564-a31c-c42b63c48ff5/8c1cb78c-ad8b-4246-8bbf-4dca4174edc7_image_185.png/230x0w.webp",
+    secondaryScreenshot:
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/fc/4f/e3/fc4fe36c-9bb5-ff49-0418-6eca71422a60/66294520-5696-468a-b2a6-3ff21cbf68f4_image_186.png/230x0w.webp",
     platforms: [
       PlatformModel(
         platform: PlatformEnum.ios,
         rating: 4.7,
         id: "1",
-        link: "https://e-hilolnashr.uz/download",
+        link: "https://apps.apple.com/us/app/hilol/id6454192226",
       ),
       PlatformModel(
         platform: PlatformEnum.android,
-        rating: 4.9,
+        rating: 4.7,
         id: "1",
         link: "https://play.google.com/store/apps/details?id=uz.hilal.hilol_uz",
       ),

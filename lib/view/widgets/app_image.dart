@@ -23,6 +23,8 @@ class AppImage extends StatelessWidget {
       placeholder: "assets/icons/loading.gif",
       image: imageUrl,
       fit: BoxFit.cover,
+      imageErrorBuilder: (context, error, stackTrace) =>
+          Image.asset('assets/icons/loading.gif'),
     );
   }
 }
