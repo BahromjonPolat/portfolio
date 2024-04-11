@@ -468,6 +468,42 @@ class ProjectsData {
       ),
     ],
   );
+
+  static final nomaklerAgent = ProjectModel(
+    id: "15",
+    title: "Nomakler Agent",
+    description: "For Agents",
+    startedDate: DateTime(2023, 09).millisecondsSinceEpoch,
+    endDate: DateTime.now().millisecondsSinceEpoch,
+    experience: ExperienceData.nomakler,
+    logo:
+        "https://play-lh.googleusercontent.com/PmaAyPIKXNgpfsTQ49kET_08tmsiBVcp_l5zuyhVRmd_5LzZ3MTcFYl9LvUN93pO0EY=w240-h480-rw",
+    primaryScreenshot:
+        "https://play-lh.googleusercontent.com/q24ArX3mpJKllC0KokkICvMPo73re-8HMvGce2Vf-a6nVJuPromA-2B9zajNTVlSQ7g=w526-h296-rw",
+    secondaryScreenshot:
+        "https://play-lh.googleusercontent.com/-mBmclOZ38IaKs__EqwTu3dioL1igbtGVf4VrCSoMkasrjPTpCRPdq2w1GToBoxlHKs=w526-h296-rw",
+    platforms: [
+      // PlatformModel(
+      //   platform: PlatformEnum.ios,
+      //   rating: 4.5,
+      //   id: "1",
+      //   link: "https://apps.apple.com/uz/app/6477285368",
+      // ),
+      PlatformModel(
+        platform: PlatformEnum.android,
+        rating: 4.7,
+        id: "2",
+        link: "https://play.google.com/store/apps/details?id=uz.nomakler.agent",
+      ),
+    ],
+    categories: [
+      Category(
+        id: "2",
+        icon: "",
+        name: "Business",
+      ),
+    ],
+  );
   static final tafsiriHilol = ProjectModel(
     id: "15",
     title: "Tafsiri hilol 3.3.10",
@@ -576,6 +612,7 @@ class ProjectsData {
   static final projects = <ProjectModel>[
     hilolUz,
     nomakler,
+    nomaklerAgent,
     hilolEBook,
     tafsiriHilol,
     pos,
